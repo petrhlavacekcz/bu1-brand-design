@@ -1,0 +1,11 @@
+{
+  "color": {
+    "primary": "#d2147c",
+    "black": "#141414",
+    "white": "#FFFFFF"
+  },
+  "font": {
+    "heading": "Oswald",
+    "body": "Nunito Sans"
+  }
+}

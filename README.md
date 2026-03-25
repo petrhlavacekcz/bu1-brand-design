@@ -1,32 +1,22 @@
 # BU1SPORT Brand System
 
-Tento repozitář obsahuje source of truth pro BU1SPORT design systém.
+Toto je source of truth pro BU1SPORT design systém.
 
-## Struktura
+## Jak to funguje
 
-### /source
-Hlavní pravda (ručně spravované):
-- brand-rules.md
-- ai-design-pack.md
-- shopify-symmetry-rules.md
-- brand-tokens.json
+/source = hlavní pravda (neměnit bez rozhodnutí)
+/outputs = generované výstupy (vytvoří Codex)
 
-### /outputs
-Odvozené výstupy:
-- tailwind-preset.ts
-- theme.css
-- shopify-bridge.css
-- figma mapping
+## Postup práce
 
-## Pravidlo
+1. upravuj pouze soubory v /source
+2. použij Codex pro generování výstupů
+3. commitni změny
 
-Změny se dělají vždy nejdřív v `/source`.
+## Cíl
 
-Výstupy se aktualizují až následně.
-
-## Workflow
-
-1. uprav pravidla nebo tokeny
-2. validuj změnu
-3. použij Codex pro generování výstupů
-4. commit
+Vytvořit design systém použitelný pro:
+- Shopify (Symmetry)
+- frontend (Tailwind)
+- Figma
+- AI návrhy (Stitch, Codex)
