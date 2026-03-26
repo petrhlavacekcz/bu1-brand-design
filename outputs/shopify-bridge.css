@@ -1,0 +1,336 @@
+/*
+  BU1SPORT Shopify bridge for Symmetry.
+  Load this after theme.css so it can consume the shared BU1 variables.
+*/
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family: var(--bu1-font-body);
+}
+
+.section-title,
+.section-heading,
+.page-title,
+.product-title,
+.product__title,
+.card__heading,
+.card-information__text {
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-heading);
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.card__title,
+.product-card__title,
+.grid-product__title,
+.product-item__title {
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.shopify-section .button,
+.shopify-section .btn,
+.shopify-section button[type="submit"],
+.shopify-payment-button__button--unbranded,
+.product-form__cart-submit,
+.add-to-cart,
+.product-add {
+  min-height: 3.25rem;
+  padding: 0.875rem 1.5rem;
+  border: 2px solid var(--bu1-border-base);
+  border-radius: var(--bu1-radius-sm);
+  font-family: var(--bu1-font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease,
+    box-shadow 160ms ease, transform 160ms ease;
+}
+
+.product-form__cart-submit,
+.add-to-cart,
+.product-add,
+.product-form .button:not(.shopify-payment-button__button),
+.product-form .btn:not(.shopify-payment-button__button) {
+  background: var(--bu1-bg-accent);
+  border-color: var(--bu1-border-accent);
+  box-shadow: var(--bu1-shadow-cta);
+  color: var(--bu1-text-inverse);
+}
+
+.product-form__cart-submit:hover,
+.product-form__cart-submit:focus-visible,
+.add-to-cart:hover,
+.add-to-cart:focus-visible,
+.product-add:hover,
+.product-add:focus-visible,
+.product-form .button:not(.shopify-payment-button__button):hover,
+.product-form .button:not(.shopify-payment-button__button):focus-visible,
+.product-form .btn:not(.shopify-payment-button__button):hover,
+.product-form .btn:not(.shopify-payment-button__button):focus-visible {
+  background: #a90f64;
+  border-color: #a90f64;
+  color: var(--bu1-text-inverse);
+}
+
+.shopify-payment-button,
+.dynamic-payment-buttons,
+.product-form__payment-container {
+  margin-top: var(--bu1-space-4);
+  padding-top: var(--bu1-space-4);
+  border-top: 1px solid rgba(20, 20, 20, 0.12);
+}
+
+.shopify-payment-button__button,
+.shopify-payment-button__button--branded,
+.shopify-payment-button__more-options {
+  min-height: 3rem;
+  border-radius: var(--bu1-radius-sm);
+  box-shadow: none;
+}
+
+.shopify-payment-button__button--unbranded,
+.shopify-payment-button__more-options {
+  background: var(--bu1-bg-page);
+  border-color: var(--bu1-border-base);
+  color: var(--bu1-text-base);
+}
+
+.shopify-payment-button__button--unbranded:hover,
+.shopify-payment-button__button--unbranded:focus-visible,
+.shopify-payment-button__more-options:hover,
+.shopify-payment-button__more-options:focus-visible {
+  border-color: var(--bu1-border-accent);
+  color: var(--bu1-text-accent);
+}
+
+.product,
+.product-detail,
+.product__info-container,
+.product-form,
+.product-meta {
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-body);
+}
+
+.product .product-title,
+.product .product__title,
+.product-detail .product-title,
+.product-meta__title,
+.product-single__title {
+  margin-bottom: var(--bu1-space-3);
+}
+
+.price,
+.price__current,
+.price-item--regular,
+.price-item--sale,
+.product-price,
+.product__price,
+.product-meta__price,
+.card__price,
+.product-card__price {
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-heading);
+  font-size: 1.375rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+.price dd,
+.price .unit-price,
+.price .tax-note,
+.product-meta__unit-price,
+.product-card__vendor,
+.card__vendor,
+.product-card__meta,
+.card__meta {
+  color: rgba(20, 20, 20, 0.68);
+  font-family: var(--bu1-font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.card-wrapper,
+.product-card,
+.grid-product,
+.card-product,
+.product-item {
+  color: var(--bu1-text-base);
+}
+
+.card-wrapper .card,
+.product-card,
+.grid-product__content,
+.card-product {
+  background: var(--bu1-bg-page);
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  box-shadow: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.card-wrapper .card:hover,
+.product-card:hover,
+.grid-product__content:hover,
+.card-product:hover {
+  border-color: rgba(20, 20, 20, 0.16);
+  box-shadow: var(--bu1-shadow-card);
+}
+
+.card__heading,
+.card-information__text,
+.grid-product__title,
+.product-item__title,
+.product-card__title {
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-transform: none;
+}
+
+.card-information,
+.grid-product__meta,
+.product-item__meta {
+  display: grid;
+  gap: var(--bu1-space-2);
+}
+
+.quick-add,
+.quick-buy,
+.card__quick-add,
+.product-card__quick-buy {
+  margin-top: var(--bu1-space-3);
+}
+
+.quick-add .button,
+.quick-buy .button,
+.card__quick-add .button,
+.product-card__quick-buy .button {
+  min-height: 2.875rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9375rem;
+}
+
+.product__info-container > * + *,
+.product-form > * + *,
+.product-meta > * + * {
+  margin-top: var(--bu1-space-4);
+}
+
+.product-form__buttons,
+.product-form__controls-group,
+.product-form__input,
+.selector-wrapper,
+.variant-input-wrap {
+  margin-top: var(--bu1-space-4);
+}
+
+.selector-wrapper label,
+.product-form__input legend,
+.variant-input-wrap label {
+  display: block;
+  margin-bottom: var(--bu1-space-2);
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.variant-input,
+.variant-input-wrap input + label,
+.swatch-element label,
+.product-form__input input[type="radio"] + label,
+.product-form__input select,
+.selector-wrapper select {
+  border: 2px solid var(--bu1-border-base);
+  border-radius: var(--bu1-radius-sm);
+  background: var(--bu1-bg-page);
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-heading);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.variant-input-wrap input + label,
+.swatch-element label,
+.product-form__input input[type="radio"] + label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  min-height: 3rem;
+  padding: 0.75rem 1rem;
+}
+
+.variant-input-wrap input:checked + label,
+.swatch-element input:checked + label,
+.product-form__input input[type="radio"]:checked + label {
+  background: var(--bu1-bg-inverse);
+  border-color: var(--bu1-border-base);
+  color: var(--bu1-text-inverse);
+  box-shadow: 0 0 0 1px rgba(20, 20, 20, 0.08);
+}
+
+.variant-input-wrap input:disabled + label,
+.swatch-element input:disabled + label,
+.product-form__input input[type="radio"]:disabled + label,
+.variant-input-wrap .disabled label,
+.swatch-element.soldout label,
+.swatch-element.unavailable label {
+  border-color: rgba(20, 20, 20, 0.22);
+  background: rgba(20, 20, 20, 0.04);
+  color: rgba(20, 20, 20, 0.46);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.variant-input-wrap input:focus-visible + label,
+.swatch-element input:focus-visible + label,
+.product-form__input input[type="radio"]:focus-visible + label,
+.selector-wrapper select:focus-visible {
+  border-color: var(--bu1-border-accent);
+  outline: 0;
+  box-shadow: 0 0 0 3px rgba(210, 20, 124, 0.18);
+}
+
+.badge,
+.card__badge,
+.product-label,
+.product-card__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--bu1-space-1);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(20, 20, 20, 0.16);
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--bu1-text-base);
+  font-family: var(--bu1-font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.badge + .badge,
+.card__badge + .card__badge,
+.product-label + .product-label {
+  margin-left: var(--bu1-space-1);
+}
