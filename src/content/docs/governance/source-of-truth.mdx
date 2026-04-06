@@ -1,0 +1,31 @@
+---
+title: Source of Truth
+description: Co je canonical vrstva systému a co jsou jen odvozené exporty nebo assety.
+sidebar:
+  order: 1
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Source of Truth</span>
+  <p>Markdown + JSON jsou jediné autoritativní zdroje. Web je copy.</p>
+</div>
+
+## Canonical vrstvy
+
+<ul class="bu1-template-list">
+  <li>textové pravidla v `src/content/docs/`</li>
+  <li>tokeny v `src/content/data/brand-tokens.json` (barvy, fonty, spacing, radius, shadow, logo metadata)</li>
+</ul>
+
+## Odvozené výstupy
+
+<ul class="bu1-template-list">
+  <li>`generated/brand/tokens.css`</li>
+  <li>`generated/brand/theme.css`</li>
+  <li>`generated/brand/tailwind-preset.ts`</li>
+  <li>`generated/brand/shopify-tokens.liquid`</li>
+  <li>`generated/brand/figma-variables.json`</li>
+  <li>`public/brand/logos/`</li>
+</ul>
+
+<p class="bu1-template-example">Jsou důležité pro integraci, ale neumýtni je mi canonical layer.</p>

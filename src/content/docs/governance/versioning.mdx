@@ -1,0 +1,43 @@
+---
+title: Versioning
+description: Jak verzovat tokeny, pravidla a významné změny systému.
+sidebar:
+  order: 2
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Versioning</span>
+  <p>Verzujeme systém, ne jen web. Každý krok má svoji kategorii.</p>
+</div>
+
+## Patch
+
+<ul class="bu1-template-list">
+  <li>opravné pravidlo bez změny významu</li>
+  <li>technická oprava exportu</li>
+  <li>drobná korekce dokumentace</li>
+</ul>
+
+## Minor
+
+<ul class="bu1-template-list">
+  <li>nová sekce pravidel</li>
+  <li>nové tokeny bez rozbití existujících rolí</li>
+  <li>nové generované exporty</li>
+</ul>
+
+## Major
+
+<ul class="bu1-template-list">
+  <li>změna core barev</li>
+  <li>změna font systému</li>
+  <li>změna významu tokenů</li>
+  <li>změna struktury source of truth</li>
+</ul>
+
+## Povinnosti
+
+<ul class="bu1-template-list">
+  <li>změnu zapiš do `CHANGELOG.md`</li>
+  <li>po změně tokenů regeneruj `generated/brand/`</li>
+</ul>

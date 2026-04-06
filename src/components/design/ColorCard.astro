@@ -1,0 +1,19 @@
+---
+interface Props {
+  name: string;
+  value: string;
+  role?: string;
+  subtitle?: string;
+  text?: 'light' | 'dark';
+}
+const { name, value, role, subtitle, text = 'dark' } = Astro.props;
+---
+<div class="bu1-card">
+  <div class="bu1-swatch" style={`background:${value}; color:${text === 'light' ? '#fff' : '#141414'};`}></div>
+  <div class="bu1-card-body">
+    <p class="bu1-card-title">{name}</p>
+    <p class="bu1-card-meta"><code>{value}</code></p>
+    {subtitle && <p class="bu1-card-meta">{subtitle}</p>}
+    {role && <p class="bu1-card-meta">{role}</p>}
+  </div>
+</div>

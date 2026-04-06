@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "language": "cs-CZ",
+  "personasRequired": false,
+  "personasStatus": "pending-input",
+  "global_rules": {
+    "short_sentences": true,
+    "no_marketing_fluff": true,
+    "product_first": true,
+    "single_primary_cta": true,
+    "no_unverified_claims": true,
+    "respect_brand_tokens": true
+  },
+  "required_context": [
+    "goal",
+    "audience",
+    "channel",
+    "facts",
+    "output_format"
+  ],
+  "canonical_sources": [
+    "src/content/data/brand-tokens.json",
+    "src/content/docs/brand/tone-of-voice.mdx",
+    "src/content/docs/design/",
+    "src/content/docs/ecommerce/",
+    "src/content/docs/ai/"
+  ],
+  "tasks": {
+    "product_description": {
+      "required_inputs": [
+        "product_name",
+        "category",
+        "benefits",
+        "materials_or_construction",
+        "target_user",
+        "cta"
+      ],
+      "output_sections": ["intro", "benefits", "detail", "cta"]
+    },
+    "instagram_post": {
+      "required_inputs": ["message", "audience", "benefit", "cta", "post_type"],
+      "output_sections": ["hook", "body", "cta"]
+    },
+    "email": {
+      "required_inputs": ["subject_goal", "offer_or_update", "audience", "benefits", "cta"],
+      "output_sections": ["subject", "preheader", "hero_line", "body", "cta"]
+    }
+  },
+  "forbidden_patterns": [
+    "luxury-without-proof",
+    "soft-lifestyle-tone",
+    "multiple-equal-ctas",
+    "invented-discounts",
+    "invented-product-claims",
+    "invented-personas"
+  ]
+}

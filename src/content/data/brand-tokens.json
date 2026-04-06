@@ -1,0 +1,256 @@
+{
+  "version": "2.1.0",
+  "brand": "BU1SPORT",
+  "updatedAt": "2026-04-06",
+  "guidelines": {
+    "version": "1.0",
+    "publishedAt": "2026-03-28",
+    "platform": "Shopify Symmetry"
+  },
+  "principles": [
+    "Product first.",
+    "Pink is action, not decoration.",
+    "Commerce must stay readable.",
+    "Campaign can be louder than commerce."
+  ],
+  "colors": {
+    "primary": {
+      "name": "Hot Rose",
+      "value": "#D2147C",
+      "rgb": [210, 20, 124],
+      "pantone": "225 C",
+      "cmyk": "C0 M90 Y12 K5",
+      "roles": ["cta", "action", "hover", "active"]
+    },
+    "black": {
+      "name": "Onyx",
+      "value": "#141414",
+      "rgb": [20, 20, 20],
+      "pantone": "Black 6 C",
+      "cmyk": "C0 M0 Y0 K91",
+      "roles": ["base", "text", "background", "contrast"]
+    },
+    "white": {
+      "name": "White",
+      "value": "#FFFFFF",
+      "rgb": [255, 255, 255],
+      "cmyk": "C0 M0 Y0 K0",
+      "roles": ["space", "background", "inverse"]
+    },
+    "neutral": {
+      "800": "#282828",
+      "700": "#575757",
+      "600": "#858585",
+      "300": "#E2E2E2",
+      "200": "#F1F1F1",
+      "100": "#F8F8F8"
+    },
+    "pinkDerivationPercentages": {
+      "tints": [10, 20, 40, 70],
+      "shades": [20, 40, 60, 80]
+    },
+    "onyxDerivationPercentages": {
+      "tints": [5, 10, 25, 50, 75, 85, 90],
+      "deepHex": "#282828"
+    },
+    "fluorescent": {
+      "safetyYellow": {
+        "value": "#FFE600",
+        "reference": "RAL 1026",
+        "label": "Safety Yellow"
+      },
+      "neonOrange": {
+        "value": "#FF6B00",
+        "reference": "RAL 2005",
+        "label": "Neon Orange"
+      },
+      "hotPink": {
+        "value": "#FF3399",
+        "reference": "RAL 4003 approx",
+        "label": "Hot Pink"
+      },
+      "neonGreen": {
+        "value": "#00FF88",
+        "reference": "RAL 6038",
+        "label": "Neon Green"
+      },
+      "acidBlue": {
+        "value": "#00CFFF",
+        "reference": "Pantone 801 C",
+        "label": "Acid Blue"
+      },
+      "electricPurple": {
+        "value": "#CC00FF",
+        "reference": "Pantone 807 C",
+        "label": "Electric Purple"
+      }
+    },
+    "contrast": {
+      "whiteOnBlack": "18.42:1",
+      "blackOnWhite": "18.42:1",
+      "pinkOnWhite": "5.08:1",
+      "whiteOnPink": "5.08:1",
+      "pinkOnBlack": "3.62:1",
+      "blackOnPink": "3.62:1"
+    }
+  },
+  "typography": {
+    "heading": {
+      "family": "Oswald",
+      "fallback": ["Arial Narrow", "sans-serif"],
+      "weights": [400, 600, 700],
+      "case": "uppercase",
+      "usage": ["headings", "cta", "display", "labels"]
+    },
+    "body": {
+      "family": "Nunito Sans",
+      "fallback": ["Arial", "sans-serif"],
+      "weights": [400, 600, 700, 800],
+      "case": "sentence",
+      "usage": ["body", "ui", "description", "price"]
+    },
+    "scale": {
+      "display-sm": {
+        "size": "2.5rem",
+        "px": 40,
+        "weight": 700,
+        "family": "Oswald",
+        "usage": "Hero, campaign"
+      },
+      "heading-lg": {
+        "size": "2rem",
+        "px": 32,
+        "weight": 700,
+        "family": "Oswald",
+        "usage": "H1 produktu"
+      },
+      "heading-md": {
+        "size": "1.5rem",
+        "px": 24,
+        "weight": 700,
+        "family": "Oswald",
+        "usage": "H2, sekce"
+      },
+      "title-lg": {
+        "size": "1.25rem",
+        "px": 20,
+        "weight": 700,
+        "family": "Oswald",
+        "usage": "Product card title"
+      },
+      "price": {
+        "size": "1.375rem",
+        "px": 22,
+        "weight": 800,
+        "family": "Nunito Sans",
+        "usage": "Cena všude"
+      },
+      "body": {
+        "size": "1rem",
+        "px": 16,
+        "weight": 600,
+        "family": "Nunito Sans",
+        "usage": "Popis, UI text"
+      },
+      "label": {
+        "size": "0.875rem",
+        "px": 14,
+        "weight": 700,
+        "family": "Nunito Sans",
+        "usage": "Badge, meta"
+      }
+    }
+  },
+  "spacing": {
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "5": "1.25rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "10": "2.5rem",
+    "12": "3rem"
+  },
+  "radius": {
+    "sm": "2px",
+    "md": "8px"
+  },
+  "shadow": {
+    "card": "0 8px 24px rgba(20, 20, 20, 0.08)",
+    "cta": "0 10px 24px rgba(210, 20, 124, 0.22)"
+  },
+  "metrics": {
+    "primaryButton": {
+      "minHeight": "52px",
+      "paddingX": "24px",
+      "border": "2px solid",
+      "radius": "2px"
+    },
+    "secondaryButton": {
+      "minHeight": "52px",
+      "paddingX": "24px",
+      "border": "2px solid",
+      "radius": "2px"
+    },
+    "variantChip": {
+      "minHeight": "48px",
+      "paddingX": "14px",
+      "border": "2px solid",
+      "radius": "2px"
+    },
+    "productCard": {
+      "padding": "16px",
+      "border": "1px solid",
+      "radius": "2px"
+    }
+  },
+  "logo": {
+    "minHeight": "24px",
+    "families": [
+      {
+        "id": "bu1sport-long",
+        "label": "BU1SPORT Long",
+        "variants": [
+          "white-on-black",
+          "black-on-white",
+          "white-on-hot-rose",
+          "hot-rose-on-black"
+        ]
+      },
+      {
+        "id": "bu1sport-znak",
+        "label": "BU1SPORT Znak",
+        "variants": [
+          "white-on-black",
+          "black-on-white",
+          "white-on-hot-rose"
+        ]
+      },
+      {
+        "id": "bu1-znak",
+        "label": "BU1 Znak",
+        "variants": [
+          "white-on-black",
+          "black-on-white",
+          "white-on-hot-rose"
+        ]
+      }
+    ],
+    "forbidden": [
+      "distort",
+      "rotate",
+      "recombine",
+      "apply effects",
+      "use unapproved colors"
+    ]
+  },
+  "usageRules": {
+    "productFirst": true,
+    "primaryCtaDominant": true,
+    "expressCheckoutSecondary": true,
+    "maxBadgesPerProduct": 2,
+    "gradients": "forbidden",
+    "personasStatus": "active"
+  }
+}

@@ -1,0 +1,220 @@
+---
+title: Colors
+description: Canonical paleta BU1SPORT — core barvy, neutrály, fluo doplněk, tints & shades a pravidla použití.
+sidebar:
+  order: 2
+---
+
+import ColorCard from '../../../components/design/ColorCard.astro';
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Color System</span>
+  <p>Tři core barvy. Jasné role. Silný kontrast. Žádný chaos, žádné gradienty.</p>
+</div>
+
+## Core palette
+
+Tři barvy tvoří základ celého vizuálního systému. Každá má pevně danou roli — nezaměňuj ji.
+
+<div class="bu1-swatch-grid">
+  <ColorCard name="Hot Rose" value="#D2147C" subtitle="Pantone 225 C · C0 M90 Y12 K5" role="CTA · Akce · Hover · Aktivní stav" text="light" />
+  <ColorCard name="Onyx" value="#141414" subtitle="Pantone Black 6 C · C0 M0 Y0 K91" role="Text · Základ · Tmavé pozadí" text="light" />
+  <ColorCard name="White" value="#FFFFFF" subtitle="C0 M0 Y0 K0" role="Pozadí · Prostor · Inverzní text" />
+</div>
+
+:::note[Tisková reference]
+Pantone hodnoty jsou aproximace — pro fyzický tisk vždy ověř na fyzickém vzorníku. Hot Rose ≈ Pantone 225 C. Onyx ≈ Pantone Black 6 C.
+:::
+
+## Neutral UI scale
+
+Neutrály drží UI čitelné bez toho, aby soupeřily s Hot Rose. Používej je na pozadí, bordery a sekundární text.
+
+<div class="bu1-swatch-grid">
+  <ColorCard name="Neutral 800" value="#282828" role="Téměř černá, silný text na světlém bg" text="light" />
+  <ColorCard name="Neutral 700" value="#575757" role="Sekundární text, ikony" text="light" />
+  <ColorCard name="Neutral 600" value="#858585" role="Placeholder, disabled text" />
+  <ColorCard name="Neutral 300" value="#E2E2E2" role="Border, oddělovač" />
+  <ColorCard name="Neutral 200" value="#F1F1F1" role="Jemné pozadí, hover stav" />
+  <ColorCard name="Neutral 100" value="#F8F8F8" role="Stránkové pozadí, alternativní sekce" />
+</div>
+
+## Tints & Shades
+
+Hot Rose a Onyx lze derivovat mísením s bílou (tint) nebo černou (shade). Nikdy nepřidávej jinou barvu — zachovej čistotu palety.
+
+<div class="bu1-swatch-grid">
+  <div class="bu1-card">
+    <div class="bu1-card-body">
+      <p class="bu1-card-title">Hot Rose — Tints (světlejší)</p>
+      <ul class="bu1-card-list">
+        <li><strong>10 %</strong> — hover stav na bílém pozadí</li>
+        <li><strong>20 %</strong> — soft accent pozadí</li>
+        <li><strong>40 %</strong> — disabled / neaktivní CTA</li>
+        <li><strong>70 %</strong> — velmi jemný background akcent</li>
+      </ul>
+      <p style="margin-top:0.75rem;font-size:0.875rem;color:#858585;">Derivuj přimísením bílé (#FFFFFF) do Hot Rose (#D2147C) v daném procentu.</p>
+    </div>
+  </div>
+  <div class="bu1-card">
+    <div class="bu1-card-body">
+      <p class="bu1-card-title">Hot Rose — Shades (tmavší)</p>
+      <ul class="bu1-card-list">
+        <li><strong>20 %</strong> — pressed / active stav CTA</li>
+        <li><strong>40 %</strong> — silný accent, velký text</li>
+        <li><strong>60 %</strong> — tmavý pink pro speciální použití</li>
+        <li><strong>80 %</strong> — near-black pink, jen výjimečně</li>
+      </ul>
+      <p style="margin-top:0.75rem;font-size:0.875rem;color:#858585;">Derivuj přimísením černé (#141414) do Hot Rose v daném procentu.</p>
+    </div>
+  </div>
+  <div class="bu1-card">
+    <div class="bu1-card-body">
+      <p class="bu1-card-title">Onyx — Tints (UI škála)</p>
+      <ul class="bu1-card-list">
+        <li><strong>5 %</strong> → #1E1E1E — téměř Onyx</li>
+        <li><strong>10 %</strong> → #282828 — Neutral 800</li>
+        <li><strong>25 %</strong> → #484848 — silný sekundární text</li>
+        <li><strong>50 %</strong> → #8A8A8A — střed</li>
+        <li><strong>75 %</strong> → #CBCBCB — světlý border</li>
+        <li><strong>85 %</strong> → #E0E0E0 — Neutral 300 approx</li>
+        <li><strong>90 %</strong> → #EBEBEB — jemné pozadí</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+:::caution[Pravidlo derivace]
+Tints a shades slouží pro UI stavy (hover, active, disabled) a jemné pozadí. Nikdy je nepoužívej jako náhražku core barev v hlavních elementech.
+:::
+
+## Fluorescent palette
+
+Fluo barvy jsou doplněk pro **produktové barevné varianty** — potisk, barvení materiálu a sportovní vybavení. Nikdy jako UI barva nebo pozadí.
+
+<div class="bu1-swatch-grid">
+  <ColorCard name="Safety Yellow" value="#FFE600" subtitle="RAL 1026 · Luminous series" role="Produktová varianta" />
+  <ColorCard name="Neon Orange" value="#FF6B00" subtitle="RAL 2005 · Luminous series" role="Produktová varianta" />
+  <ColorCard name="Hot Pink" value="#FF3399" subtitle="RAL 4003 approx" role="Produktová varianta" />
+  <ColorCard name="Neon Green" value="#00FF88" subtitle="RAL 6038 · Luminous series" role="Produktová varianta" />
+  <ColorCard name="Acid Blue" value="#00CFFF" subtitle="Pantone 801 C" role="Produktová varianta" />
+  <ColorCard name="Electric Purple" value="#CC00FF" subtitle="Pantone 807 C" role="Produktová varianta" text="light" />
+</div>
+
+:::note[Tisková reference fluorescent]
+RAL Luminous series pro žlutou, oranžovou a zelenou. Pantone 801–807 C pro modrou a fialovou. Pro tisk použij konkrétní referenci.
+:::
+
+## WCAG kontrasty
+
+<div class="bu1-swatch-grid">
+  <div class="bu1-card">
+    <div class="bu1-contrast-row" style="background:#141414;color:#fff;">White on Black · 18.42:1</div>
+    <div class="bu1-card-body"><p class="bu1-card-title">AAA</p><p>Hlavní text a inverse layout.</p></div>
+  </div>
+  <div class="bu1-card">
+    <div class="bu1-contrast-row" style="background:#fff;color:#141414;">Black on White · 18.42:1</div>
+    <div class="bu1-card-body"><p class="bu1-card-title">AAA</p><p>Základní čitelnost commerce.</p></div>
+  </div>
+  <div class="bu1-card">
+    <div class="bu1-contrast-row" style="background:#fff;color:#D2147C;">Pink on White · 5.08:1</div>
+    <div class="bu1-card-body"><p class="bu1-card-title">AA</p><p>Accent text, CTA text na světlém bg.</p></div>
+  </div>
+  <div class="bu1-card">
+    <div class="bu1-contrast-row" style="background:#D2147C;color:#fff;">White on Pink · 5.08:1</div>
+    <div class="bu1-card-body"><p class="bu1-card-title">AA</p><p>Hlavní CTA button — splňuje AA.</p></div>
+  </div>
+</div>
+
+:::caution[Pink on Black — 3.62:1]
+Kombinace Pink na Black nesplňuje AA pro běžný text. Použij ji **pouze pro velký text (18pt+) nebo dekorativní UI prvky**. Nikdy pro body text nebo small labels.
+:::
+
+## Barvy v praxi
+
+Každá barva má jasný kontext. Překračovat tyto role znamená narušit systém.
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Hot Rose</span>
+    <ul class="bu1-template-list">
+      <li>Primární CTA button (Add to Cart, Koupit)</li>
+      <li>Hover stav odkazů a tlačítek</li>
+      <li>Aktivní stav navigace</li>
+      <li>Promo / sale badge pozadí</li>
+      <li>Akcent v campaign hero</li>
+    </ul>
+    <p class="bu1-template-example">Nepoužívej jako dekoraci, pozadí celé sekce nebo na velké plochy bez účelu.</p>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Onyx</span>
+    <ul class="bu1-template-list">
+      <li>Všechen body text a nadpisy</li>
+      <li>Tmavé stránkové pozadí (dark mode)</li>
+      <li>Border na commerce elementech</li>
+      <li>Sekundární button (White bg, Onyx border/text)</li>
+      <li>Header a footer</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">White</span>
+    <ul class="bu1-template-list">
+      <li>Výchozí stránkové pozadí (light mode)</li>
+      <li>Card a tile povrch</li>
+      <li>Inverzní text na tmavém nebo růžovém bg</li>
+      <li>Breathing room v layoutu</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Neutrals</span>
+    <ul class="bu1-template-list">
+      <li>100, 200 — jemné pozadí, hover stav</li>
+      <li>300 — border, oddělovač</li>
+      <li>600 — placeholder, disabled text</li>
+      <li>700 — sekundární text, metadata</li>
+      <li>800 — silný text, téměř Onyx</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Fluorescent</span>
+    <ul class="bu1-template-list">
+      <li>Produktové barevné varianty (potisk, materiál)</li>
+      <li>Barevný čip v selektoru variant</li>
+    </ul>
+    <p class="bu1-template-example">Nikdy jako UI barva, pozadí, text nebo button fill.</p>
+  </section>
+</div>
+
+## Žádné gradienty
+
+Gradienty nejsou součástí BU1SPORT design systému. Nepoužívej je nikde — ani v commerce, ani v kampani, ani jako overlay.
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Místo gradientu použij</span>
+    <ul class="bu1-template-list">
+      <li>Plnou barvu — Onyx, White nebo Hot Rose</li>
+      <li>Čistý přechod kontextu přes layout (light sekce → dark sekce)</li>
+      <li>Rgba průhlednost pro overlay přes fotku (max 60 % opacity)</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Zakázáno</span>
+    <ul class="bu1-template-list">
+      <li>CSS linear-gradient nebo radial-gradient v brand výstupech</li>
+      <li>Přechod z jedné brand barvy do druhé</li>
+      <li>Soft overlay přes produktové fotografie</li>
+    </ul>
+  </section>
+</div>
+
+## Exporty
+
+Canonical zdroj je `src/content/data/brand-tokens.json`.
+Odvozené exporty generuj přes `npm run generate:brand`:
+
+- `generated/brand/tokens.css` — CSS custom properties
+- `generated/brand/theme.css` — component classes
+- `generated/brand/tailwind-preset.ts` — Tailwind konfigurace
+- `generated/brand/shopify-tokens.liquid` — Shopify variables
+- `generated/brand/figma-variables.json` — Figma tokens

@@ -1,0 +1,101 @@
+---
+title: Logo Usage
+description: Schválené rodiny loga, jejich varianty, pravidla použití a zakázané úpravy.
+sidebar:
+  order: 1
+---
+
+import LogoCard from '../../../components/design/LogoCard.astro';
+import bu1sportLongWhiteBlack from '../../../assets/logos/bu1sport-long-white-on-black.svg';
+import bu1sportLongBlackWhite from '../../../assets/logos/bu1sport-long-black-on-white.svg';
+import bu1sportLongWhitePink from '../../../assets/logos/bu1sport-long-white-on-hot-rose.svg';
+import bu1sportLongPinkBlack from '../../../assets/logos/bu1sport-long-hot-rose-on-black.svg';
+import bu1sportZnakWhiteBlack from '../../../assets/logos/bu1sport-znak-white-on-black.svg';
+import bu1sportZnakBlackWhite from '../../../assets/logos/bu1sport-znak-black-on-white.svg';
+import bu1sportZnakWhitePink from '../../../assets/logos/bu1sport-znak-white-on-hot-rose.svg';
+import bu1ZnakWhiteBlack from '../../../assets/logos/bu1-znak-white-on-black.svg';
+import bu1ZnakBlackWhite from '../../../assets/logos/bu1-znak-black-on-white.svg';
+import bu1ZnakWhitePink from '../../../assets/logos/bu1-znak-white-on-hot-rose.svg';
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Logo System</span>
+  <p>Dvě rodiny loga. Tři barevné varianty každé. Žádné improvizace mimo systém.</p>
+</div>
+
+## Dvě rodiny loga
+
+**BU1SPORT** — horizontální wordmark s bulldog ikonou. Hlavní identita pro plné plochy, header, hero.
+
+**BU1 Znak** — kompaktní čtvercový symbol. Pro malé formáty, favicon, profilové obrázky, výšivky.
+
+## BU1SPORT Long
+
+Hlavní logo — horizontální formát s wordmarkem.
+
+<div class="bu1-logo-grid">
+  <LogoCard src={bu1sportLongWhiteBlack.src} alt="BU1SPORT Long White on Black" label="White on Black" background="#141414" />
+  <LogoCard src={bu1sportLongBlackWhite.src} alt="BU1SPORT Long Black on White" label="Black on White" background="#FFFFFF" />
+  <LogoCard src={bu1sportLongWhitePink.src} alt="BU1SPORT Long White on Hot Rose" label="White on Hot Rose" background="#D2147C" />
+  <LogoCard src={bu1sportLongPinkBlack.src} alt="BU1SPORT Long Hot Rose on Black" label="Hot Rose on Black" background="#141414" />
+</div>
+
+## BU1SPORT Znak
+
+Symbolická verze — bulldog bez wordmarku.
+
+<div class="bu1-logo-grid">
+  <LogoCard src={bu1sportZnakWhiteBlack.src} alt="BU1SPORT Znak White on Black" label="White on Black" background="#141414" symbol={true} />
+  <LogoCard src={bu1sportZnakBlackWhite.src} alt="BU1SPORT Znak Black on White" label="Black on White" background="#FFFFFF" symbol={true} />
+  <LogoCard src={bu1sportZnakWhitePink.src} alt="BU1SPORT Znak White on Hot Rose" label="White on Hot Rose" background="#D2147C" symbol={true} />
+</div>
+
+## BU1 Znak
+
+Kompaktní značka pro malé formáty.
+
+<div class="bu1-logo-grid">
+  <LogoCard src={bu1ZnakWhiteBlack.src} alt="BU1 Znak White on Black" label="White on Black" background="#141414" symbol={true} />
+  <LogoCard src={bu1ZnakBlackWhite.src} alt="BU1 Znak Black on White" label="Black on White" background="#FFFFFF" symbol={true} />
+  <LogoCard src={bu1ZnakWhitePink.src} alt="BU1 Znak White on Hot Rose" label="White on Hot Rose" background="#D2147C" symbol={true} />
+</div>
+
+## Výběr varianty podle pozadí
+
+| Pozadí | Použij variantu |
+|--------|----------------|
+| Bílé nebo světlé | Black on White |
+| Tmavé (Onyx, černá) | White on Black |
+| Hot Rose plocha | White on Hot Rose |
+| Tmavé, kam chceš pink akcent | Hot Rose on Black (střídmě) |
+
+## Minimální velikost a ochranná zóna
+
+- **Minimální výška loga:** `24px` (pro digitální použití)
+- **Ochranná zóna:** kolem každé verze loga zachovej volný prostor rovnající se alespoň výšce písmene „B" ve wordmarku
+- Uvnitř ochranné zóny nesmí být žádný jiný text, grafika ani výrazný vizuální prvek
+
+## Zakázané úpravy
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Nikdy</span>
+    <ul class="bu1-template-list">
+      <li>Deformovat nebo měnit proporce</li>
+      <li>Rotovat nebo šikmit</li>
+      <li>Rekombinovat elementy mimo schválené varianty</li>
+      <li>Přidávat efekty (stín, oříznutí, glow)</li>
+      <li>Použít jinou než schválenou barvu</li>
+      <li>Přidávat text do ochranné zóny</li>
+      <li>Používat logo na rušném nebo nízkokontrastním pozadí</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Kdy použít BU1 Znak místo wordmarku</span>
+    <ul class="bu1-template-list">
+      <li>Favicon a app ikony</li>
+      <li>Profilové fotky na sociálních sítích</li>
+      <li>Výšivky a malé výrobní aplikace</li>
+      <li>Prostor menší než 120px šířky</li>
+    </ul>
+  </section>
+</div>

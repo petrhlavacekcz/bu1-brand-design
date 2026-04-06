@@ -1,0 +1,427 @@
+{
+  "version": "2.1.0",
+  "status": "active",
+  "updatedAt": "2026-04-06",
+  "note": "Persony jsou schváleny a aktivní. Vždy ověř relevanci persony k obsahu nebo produktu — ne každý krok se týká všech person.",
+  "seasonalNote": "Hlavní nákupní okno: srpen (start sezony) a leden (zimní příprava). Kampaně a produktové launche plánuj s ohledem na tato okna.",
+  "personas": [
+    {
+      "id": "adam",
+      "name": "Adam",
+      "role": "Mladý ambiciózní gólman",
+      "segment": "b2c",
+      "demographics": {
+        "age": "14–17",
+        "context": "Chytá za klub, trénuje pravidelně, aktivní na sociálních sítích"
+      },
+      "insight": "Výbava je součást jeho identity — nechce jen chytat dobře, chce vypadat jako správný gólman.",
+      "awarenessLevel": "brand-unaware až brand-aware",
+      "purchaseFrequency": "1–2× ročně (tréninkové + zápasové rukavice), impulzivní nákupy u nových kolekcí",
+      "relatedPersonas": ["lenka (gate keeper nákupu)", "vilem (doporučující autorita)"],
+      "goals": [
+        "Chytat lépe a cítit se jistě",
+        "Mít vybavení, které vypadá dobře a zároveň funguje",
+        "Nosit značku, se kterou se může ztotožnit",
+        "Mít pocit, že používá pořádné rukavice, ne kompromis"
+      ],
+      "fears": [
+        "Že si vybere špatný model",
+        "Že rukavice nevydrží",
+        "Že produkt nebude odpovídat tomu, co viděl online",
+        "Že bude mít horší vybavení než ostatní"
+      ],
+      "purchaseDrivers": [
+        "Vzhled a image produktu",
+        "Grip, pohodlí, ochrana",
+        "Doporučení od trenéra, starších hráčů nebo influencerů",
+        "Cena, akce a speciální nabídky",
+        "Jednoduchost výběru"
+      ],
+      "convincedBy": [
+        "Jasně vysvětlené rozdíly mezi modely",
+        "Video, reel nebo autentická ukázka v praxi",
+        "Obsah typu 'pro koho je tenhle model'",
+        "Silný vizuál a moderní prezentace",
+        "Značka, která působí opravdově a sportovně"
+      ],
+      "deterredBy": [
+        "Příliš technický nebo nudný popis",
+        "Zastaralý vizuál",
+        "Nejasné rozdíly mezi modely",
+        "Pocit, že značka je pro dospělé nebo moc korporátní"
+      ],
+      "channels": ["Instagram", "TikTok", "YouTube Shorts", "web a mobilní e-shop"],
+      "language": {
+        "tone": ["přímo", "energicky", "sebevědomě", "bez zbytečné omáčky", "motivačně, ale ne křečovitě"],
+        "avoid": ["technický jazyk bez kontextu", "korporátní fráze", "přehnaný hype bez substance"]
+      },
+      "content": [
+        "Tréninky a reels s gólmany",
+        "Produkt v akci",
+        "Novinky, dropy, barevné varianty",
+        "Srovnání modelů",
+        "Průvodce 'vyber si správné rukavice'"
+      ],
+      "ctas": [
+        "Vyber si svůj model",
+        "Zjisti, co ti sedne",
+        "Mrkni na novou kolekci",
+        "Připraveno na trénink i zápas"
+      ]
+    },
+    {
+      "id": "lenka",
+      "name": "Lenka",
+      "role": "Rodič, který nechce udělat chybu",
+      "segment": "b2c",
+      "demographics": {
+        "age": "35–50",
+        "context": "Maminka nebo tatínek mladého brankáře (typicky 10–16 let). Fotbalu rozumí jen částečně, ale chce dítě podpořit."
+      },
+      "insight": "Nekupuje produkt — kupuje jistotu, že vybrala správně. Chce klid, ne výběr.",
+      "awarenessLevel": "problem-aware (ví, co potřebuje koupit), brand-unaware",
+      "purchaseFrequency": "1–2× ročně, rozhoduje se pomaleji, hledá před nákupem",
+      "relatedPersonas": ["adam (nakupuje pro něj)", "vilem (důvěřuje jeho doporučení)"],
+      "goals": [
+        "Koupit kvalitní a vhodné vybavení",
+        "Neudělat chybu při výběru",
+        "Rozumný poměr cena / výkon",
+        "Aby produkt vydržel",
+        "Aby dítě bylo spokojené"
+      ],
+      "fears": [
+        "Že koupí špatnou velikost nebo nevhodný model",
+        "Že rukavice dlouho nevydrží",
+        "Že přeplatí něco, čemu nerozumí",
+        "Že dítě bude zklamané"
+      ],
+      "purchaseDrivers": [
+        "Srozumitelnost nabídky",
+        "Doporučení podle úrovně (začátečník / pokročilý)",
+        "Recenze a zkušenosti ostatních",
+        "Jednoduchý výběr velikosti",
+        "Důvěryhodnost značky",
+        "Cena a výdrž"
+      ],
+      "convincedBy": [
+        "Průvodce výběrem",
+        "Jednoduché vysvětlení rozdílů mezi modely",
+        "Označení best seller / doporučujeme",
+        "Reálné recenze",
+        "Obsah pro rodiče: co vybrat, jak pečovat, jak odhadnout velikost"
+      ],
+      "deterredBy": [
+        "Příliš technický jazyk",
+        "Chaos v nabídce, moc modelů bez jasného rozdílu",
+        "Přehnaně agresivní komunikace bez vysvětlení",
+        "Chybějící průvodce nebo nápověda"
+      ],
+      "channels": ["Facebook", "Instagram", "Google / vyhledávání", "e-shop", "e-mail"],
+      "language": {
+        "tone": ["jasně", "lidsky", "srozumitelně", "uklidňujícím, ale ne přehnaně opatrným tónem"],
+        "avoid": ["sportovní slang bez vysvětlení", "příliš stručné popisy bez kontextu", "hype bez důvěryhodnosti"]
+      },
+      "content": [
+        "Průvodce výběrem rukavic",
+        "Jak zvolit velikost",
+        "Jaký model pro začínajícího gólmana",
+        "Péče o rukavice",
+        "Recenze a doporučení",
+        "Zvýhodněné sety"
+      ],
+      "ctas": [
+        "Pomůžeme vám s výběrem",
+        "Vyberte správné rukavice bez složitého rozhodování",
+        "Doporučeno pro mladé brankáře",
+        "Zobrazit ověřené modely"
+      ]
+    },
+    {
+      "id": "petr",
+      "name": "Petr",
+      "role": "Výkonnostní dospělý brankář",
+      "segment": "b2c",
+      "demographics": {
+        "age": "20–40",
+        "context": "Aktivní brankář, chytá pravidelně (amatérská až poloamatérská liga). Má zkušenosti, ví, co hledá, vybírá pragmaticky."
+      },
+      "insight": "Nechce platit za image. Chce vědět, co dostane — a dostat přesně to.",
+      "awarenessLevel": "product-aware až brand-aware",
+      "purchaseFrequency": "2–3× ročně (tréninkové + zápasové, případně náhrada po opotřebení)",
+      "relatedPersonas": ["vilem (může být jeho trenér nebo kolega, kterému důvěřuje)"],
+      "goals": [
+        "Spolehlivé vybavení pro trénink i zápasy",
+        "Vysoký výkon a jistota v ruce",
+        "Produkty, které obstojí v praxi",
+        "Značka, které může věřit dlouhodobě"
+      ],
+      "fears": [
+        "Že produkt nebude odpovídat deklarované kvalitě",
+        "Že rukavice nevydrží běžnou zátěž",
+        "Že zaplatí za image místo výkonu",
+        "Že produkt nebude konzistentní mezi sériemi"
+      ],
+      "purchaseDrivers": [
+        "Grip",
+        "Střih a pocit na ruce",
+        "Výdrž materiálu",
+        "Zkušenost s předchozím modelem",
+        "Technické informace",
+        "Poměr výkon / cena"
+      ],
+      "convincedBy": [
+        "Konkrétní vysvětlení parametrů",
+        "Srovnání modelů",
+        "Reálné zkušenosti hráčů",
+        "Důvěryhodná značka s jasnou identitou",
+        "Produkt bez zbytečného marketingového přikrášlení"
+      ],
+      "deterredBy": [
+        "Prázdné hype fráze",
+        "Příliš teenager komunikace",
+        "Nejasné technické rozdíly",
+        "Moc fashion styl bez výkonového základu"
+      ],
+      "channels": ["Instagram", "Facebook", "YouTube", "e-shop", "newsletter"],
+      "language": {
+        "tone": ["věcně", "sebevědomě", "přímo", "bez přehnaného hype", "s respektem k jeho zkušenosti"],
+        "avoid": ["motivační fráze bez obsahu", "přehnaně mladistvý tón", "vague superlativy"]
+      },
+      "content": [
+        "Detail produktů a parametry",
+        "Srovnání modelů",
+        "Testy a recenze",
+        "Novinky a technologické změny",
+        "Péče a výdrž",
+        "Doporučení podle typu chytání"
+      ],
+      "ctas": [
+        "Porovnat modely",
+        "Vybrat rukavice pro zápasový výkon",
+        "Zobrazit osvědčené modely",
+        "Prohlédnout technické detaily"
+      ]
+    },
+    {
+      "id": "vilem",
+      "name": "Vilém",
+      "role": "Trenér a doporučující autorita",
+      "segment": "influencer",
+      "demographics": {
+        "age": "30–55",
+        "context": "Trenér brankářů nebo zkušený hráč v roli asistenta/mentora. Nemusí sám objednávat, ale má rozhodující vliv na výběr hráčů i rodičů."
+      },
+      "insight": "Doporučuje svou reputací. Nemůže si dovolit doporučit něco, co nesplní očekávání.",
+      "awarenessLevel": "brand-aware, kritický hodnotitel",
+      "purchaseFrequency": "Sám nakupuje méně, ale jeho doporučení generuje nákupy u Adama, Petry a Lenky",
+      "relatedPersonas": ["adam (přímý svěřenec)", "petr (kolega nebo svěřenec)", "lenka (ptá se ho na radu)"],
+      "goals": [
+        "Doporučit hráčům vybavení, které funguje",
+        "Mít přehled o vhodných modelech pro různé úrovně",
+        "Pracovat se značkou, která je spolehlivá a srozumitelná",
+        "Být v obraze ohledně novinek a trendů"
+      ],
+      "fears": [
+        "Že doporučí něco, co neobstojí",
+        "Že produkt nebude odpovídat potřebám hráče",
+        "Že značka nebude konzistentní nebo důvěryhodná",
+        "Že rodiče a hráči budou z výběru zmatení"
+      ],
+      "purchaseDrivers": [
+        "Funkčnost v praxi",
+        "Přehled nabídky",
+        "Rozlišení modelů podle úrovně a typu hráče",
+        "Důvěryhodnost značky",
+        "Zkušenost dalších trenérů"
+      ],
+      "convincedBy": [
+        "Jasný systém produktů — co je pro koho",
+        "Přehledné doporučení podle věku a úrovně",
+        "Edukativní obsah pro trenéry",
+        "Dlouhodobá konzistence značky"
+      ],
+      "deterredBy": [
+        "Chaos v nabídce",
+        "Přehnaně módní nebo povrchní komunikace",
+        "Nejasné technické odlišení produktů",
+        "Značka, která působí jen jako marketing bez substance"
+      ],
+      "channels": ["Facebook", "Instagram", "YouTube", "e-mail", "osobní kontakt / partnerská komunikace"],
+      "language": {
+        "tone": ["věcně", "profesionálně", "lidsky", "s důrazem na praxi a zkušenost"],
+        "avoid": ["přehnaný hype", "teenager komunikace", "vague obecnosti bez konkrétního přínosu"]
+      },
+      "content": [
+        "Doporučení modelů podle věku a úrovně",
+        "Edukativní obsah pro trenéry",
+        "Testování produktů",
+        "Novinky a vylepšení",
+        "Obsah s reálnými hráči a trenéry"
+      ],
+      "ctas": [
+        "Doporučit správný model svým hráčům",
+        "Zobrazit rukavice podle úrovně gólmana",
+        "Prohlédnout trenérská doporučení",
+        "Zjistit, co funguje v praxi"
+      ]
+    },
+    {
+      "id": "antonin",
+      "name": "Antonín",
+      "role": "Klubový objednavatel",
+      "segment": "b2b",
+      "demographics": {
+        "age": "35–60",
+        "context": "Předseda, sekretář nebo vedoucí sportovního úseku v klubu. Řeší objednávky, rozpočet a komunikaci s dodavateli pro celý tým nebo oddíl."
+      },
+      "insight": "Nechce řešit vybavení — chce mít vyřešené vybavení. Každá komplikace je zbytečná práce navíc.",
+      "awarenessLevel": "problem-aware, hledá dodavatele",
+      "purchaseFrequency": "Sezónně (1–2× ročně), větší objednávky, někdy s delším schvalovacím procesem",
+      "relatedPersonas": ["adam a petr (nakupuje pro ně nebo jejich vrstevníky v klubu)"],
+      "goals": [
+        "Vyřešit objednávku rychle a bez komplikací",
+        "Mít spolehlivého partnera",
+        "Dostat rozumnou cenu a jasné podmínky",
+        "Objednat vybavení, které dává smysl pro klub",
+        "Mít jednoduchou komunikaci a jistotu dodání"
+      ],
+      "fears": [
+        "Zbytečné komplikace a průtahy",
+        "Nejasné ceny a podmínky",
+        "Zpoždění nebo nedorozumění",
+        "Složitý objednávkový proces",
+        "Dodavatel, na kterého není spoleh"
+      ],
+      "purchaseDrivers": [
+        "Cena a zvýhodnění pro klub",
+        "Rychlost a kvalita komunikace",
+        "Jednoduchost procesu",
+        "Možnost větších nebo opakovaných objednávek",
+        "Personalizace a klubové řešení",
+        "Dlouhodobá důvěra"
+      ],
+      "convincedBy": [
+        "Jasná B2B nabídka",
+        "Jednoduchý onboarding",
+        "Přímý kontakt a rychlá odpověď",
+        "Přehledné podmínky a klubové možnosti",
+        "Důvěryhodná značka, která působí profesionálně"
+      ],
+      "deterredBy": [
+        "Nejasná nabídka",
+        "Pomalá komunikace",
+        "Složitý objednávkový proces",
+        "Chaos v produktech nebo cenách",
+        "Příliš lifestyle komunikace bez obchodní jistoty"
+      ],
+      "channels": ["e-mail", "telefon", "web / B2B sekce", "LinkedIn", "Facebook"],
+      "language": {
+        "tone": ["stručně", "profesionálně", "jasně", "bez zbytečných emocí", "s důrazem na spolehlivost"],
+        "avoid": ["lifestyle tón bez obchodního obsahu", "nejasné nebo podmíněné formulace", "přehnaný brand storytelling"]
+      },
+      "content": [
+        "Klubové nabídky a podmínky",
+        "Informace o spolupráci",
+        "Reference klubů",
+        "Výhody pro hromadné objednávky",
+        "Přizpůsobení produktů pro klub"
+      ],
+      "ctas": [
+        "Nezávazně poptat spolupráci",
+        "Zobrazit klubovou nabídku",
+        "Kontaktovat obchodní tým",
+        "Zjistit podmínky pro kluby"
+      ]
+    },
+    {
+      "id": "b2b-partner",
+      "name": "B2B partner / reseller",
+      "role": "Obchodní partner prodávající BU1 dál",
+      "segment": "b2b",
+      "demographics": {
+        "age": "N/A — firemní role",
+        "context": "Typicky majitel nebo nákupčí sportovní prodejny (kamenné nebo online), případně regionální distributor. Zajímá ho obchodní potenciál, dostupnost a spolehlivost dodavatele. Pozn.: Lokální prodejna, e-shop a distributor mají odlišné potřeby — přizpůsob komunikaci dle kontextu."
+      },
+      "insight": "Vybírá, čím naplní svůj sortiment. BU1 musí být snadno prodejná a dobře prezentovaná — jeho zákazníci jsou ti naši.",
+      "awarenessLevel": "brand-aware nebo brand-evaluating",
+      "purchaseFrequency": "Opakované objednávky, sezónní zásoby, příležitostné doplnění",
+      "relatedPersonas": ["adam, lenka, petr (jeho koncoví zákazníci)"],
+      "goals": [
+        "Mít v nabídce silnou a důvěryhodnou značku",
+        "Dobře prodávat s přiměřenou marží",
+        "Mít jasné obchodní podmínky",
+        "Spolehlivého partnera pro dlouhodobou spolupráci",
+        "Jednoduchý přístup k produktům, materiálům a komunikaci"
+      ],
+      "fears": [
+        "Výpadky skladovosti",
+        "Nejasné obchodní podmínky",
+        "Slabá nebo nestabilní podpora značky",
+        "Nekonzistence produktů nebo komunikace",
+        "Značka, která nepůsobí dostatečně profesionálně"
+      ],
+      "purchaseDrivers": [
+        "Marže a obchodní model",
+        "Spolehlivost dodávek",
+        "Síla a viditelnost značky",
+        "Kvalita produktů",
+        "B2B servis a podpora",
+        "Marketingová podpora pro prodej",
+        "Jednoduchost objednávání"
+      ],
+      "convincedBy": [
+        "Jasná nabídka spolupráce",
+        "Profesionální B2B materiály",
+        "Silná značka s komunitou a viditelností",
+        "Stabilní a konzistentní komunikace",
+        "Přehledný produktový systém",
+        "Pocit partnerství, ne jen transakce"
+      ],
+      "deterredBy": [
+        "Chaos v brandu nebo produktové nabídce",
+        "Slabá nebo nekonzistentní prezentace značky",
+        "Nejasná cenotvorba nebo podmínky",
+        "Pomalá odezva",
+        "Neprofesionální obchodní komunikace"
+      ],
+      "channels": ["e-mail", "LinkedIn", "osobní obchodní kontakt", "B2B sekce webu", "obchodní materiály"],
+      "language": {
+        "tone": ["profesionálně", "sebevědomě", "stručně", "věcně", "partnersky"],
+        "avoid": ["consumer lifestyle tón", "přehnaný sportovní hype", "nejasné nebo soft formulace"]
+      },
+      "content": [
+        "B2B nabídka a ceník",
+        "Argumenty pro prodej značky (sell-through support)",
+        "Reference partnerů",
+        "Přehled sortimentu a dostupnosti",
+        "Marketingová podpora — co dostane k produktům"
+      ],
+      "ctas": [
+        "Navázat spolupráci",
+        "Požádat o B2B podmínky",
+        "Kontaktovat obchodní oddělení",
+        "Zjistit více o partnerském programu"
+      ]
+    }
+  ],
+  "usageGuidelines": {
+    "forContent": {
+      "adam": "Reels, dropy, vizuálně silný obsah, komunita, výkon",
+      "lenka": "Průvodci, jistota, výběr, recenze, jednoduchost",
+      "petr": "Srovnání, parametry, výkon, výdrž",
+      "vilem": "Doporučení, edukace, praxe, důvěryhodnost",
+      "antonin": "Spolupráce, jednoduchost, klubové podmínky",
+      "b2b-partner": "Obchod, silná značka, podpora, spolehlivost"
+    },
+    "forEshop": {
+      "adam": "Potřebuje inspiraci a image",
+      "lenka": "Potřebuje vedení a jistotu",
+      "petr": "Potřebuje srovnání a důvěryhodné informace"
+    },
+    "personaRelationships": [
+      "Lenka nakupuje pro Adama — propojené rozhodnutí: Adam si vybere, Lenka zaplatí",
+      "Vilém ovlivňuje Adama a Petra — doporučení od trenéra má váhu",
+      "B2B partner prodává Adamům, Lenkám a Petrům — jeho zákazníci jsou naši zákazníci"
+    ]
+  }
+}

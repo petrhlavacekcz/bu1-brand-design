@@ -1,0 +1,73 @@
+---
+title: Product Card
+description: Jak má vypadat produktová karta — pořadí, metriky a co na kartě nesmí být.
+sidebar:
+  order: 3
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Product Card</span>
+  <p>Karta má prodávat. Ne dělat editorial showreel.</p>
+</div>
+
+## Preview
+
+<div class="bu1-ui-grid">
+  <div class="bu1-product-card">
+    <div class="bu1-product-media">🥅</div>
+    <span class="bu1-badge">Novinka</span>
+    <p class="bu1-product-title">BU1 Match Pro</p>
+    <p class="bu1-price">1 290 Kč</p>
+    <div class="bu1-variant-row" style="margin-bottom:0.75rem;">
+      <span class="bu1-variant" style="min-height:36px;font-size:0.8rem;">8</span>
+      <span class="bu1-variant bu1-variant--active" style="min-height:36px;font-size:0.8rem;">9</span>
+      <span class="bu1-variant" style="min-height:36px;font-size:0.8rem;">10</span>
+    </div>
+    <span class="bu1-button-demo bu1-button-demo--primary" style="width:100%;justify-content:center;font-size:0.875rem;">Přidat do košíku</span>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Pořadí elementů</p>
+    <ol class="bu1-card-list">
+      <li>Obrázek produktu</li>
+      <li>Badge (max 2, volitelný)</li>
+      <li>Název produktu</li>
+      <li>Cena</li>
+      <li>Varianty (size chips)</li>
+      <li>Add to Cart CTA</li>
+    </ol>
+  </div>
+</div>
+
+## Metriky
+
+| Vlastnost | Hodnota |
+|-----------|---------|
+| Min. šířka karty | `200px` |
+| Oblast obrázku | `160px` výška |
+| Padding těla | `16px` |
+| Border | `1px solid Neutral 300` |
+| Border radius | `2px` |
+| Title font | Oswald, uppercase |
+| Title velikost | `0.9rem – 1.25rem` |
+| Cena font | Nunito Sans 800 |
+| Cena velikost | `1.1rem – 1.375rem` |
+
+## Pravidla
+
+<ul class="bu1-template-list">
+  <li>Cena je vidět okamžitě — bez hoveru, bez kliknutí</li>
+  <li>Název a cena jsou první dvě věci, které oko zachytí</li>
+  <li>Max 2 badge na produkt — badge je signál, ne dekorace</li>
+  <li>Žádný dekorativní overlay nebo gradient přes obrázek produktu</li>
+  <li>Varianty zobrazuj jako chips, ne jako dropdown pokud je místo</li>
+</ul>
+
+## Nedělej
+
+<ul class="bu1-template-list">
+  <li>Fashion editorial styl — karta slouží prodeji, ne inspiraci</li>
+  <li>Slabá nebo malá cena (nesmí být menší než popis)</li>
+  <li>Dekorativní overlay přes produktovou fotografii</li>
+  <li>Více než 2 badge — působí chaoticky</li>
+  <li>Cena skrytá za hover nebo accordion</li>
+</ul>

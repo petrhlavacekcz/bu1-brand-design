@@ -1,0 +1,99 @@
+---
+title: UI Rules
+description: Provozní ecommerce pravidla pro BU1SPORT napříč card, PDP, hero a CTA vrstvou.
+sidebar:
+  order: 1
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">UI Rules</span>
+  <p>Produkt je první. Commerce musí být čitelná. Kampaň může být výrazná, ale nesmí rozbít tok.</p>
+</div>
+
+## Vizuální priorita
+
+Toto pořadí je pevné — oko zákazníka musí zachytit elementy v tomto pořadí:
+
+<ol class="bu1-template-list">
+  <li><strong>Název produktu</strong> — největší a nejsilnější text v buy boxu</li>
+  <li><strong>Cena</strong> — viditelná okamžitě, bez hoveru nebo kliknutí</li>
+  <li><strong>Hlavní CTA</strong> — Add to Cart, Hot Rose Primary button</li>
+  <li><strong>Varianty</strong> — velikost, barva, provedení jako chips</li>
+</ol>
+
+:::note[DOM pořadí vs vizuální pořadí]
+Skutečné pořadí HTML elementů se může z technických důvodů (SEO, přístupnost) lišit. Vizuální priorita pomocí CSS je neměnná.
+:::
+
+## Product listing
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Standardní karta</span>
+    <ol class="bu1-template-list">
+      <li>Obrázek produktu</li>
+      <li>Badge (max 2, volitelný)</li>
+      <li>Název</li>
+      <li>Cena</li>
+      <li>Doplňkový signál (výprodej, dostupnost)</li>
+    </ol>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">PDP (Product Detail Page)</span>
+    <ol class="bu1-template-list">
+      <li>Hero detail fotky (often dark mode)</li>
+      <li>Název — Oswald Heading Lg</li>
+      <li>Cena — Nunito Sans 800, viditelná bez scrollu</li>
+      <li>Varianty — size chips pod názvem nebo cenou</li>
+      <li>Add to Cart — Primary button, dominantní</li>
+      <li>Badge maximálně 2, ne dominantní</li>
+    </ol>
+  </section>
+</div>
+
+## Praktická pravidla
+
+<ul class="bu1-template-list">
+  <li>Cena musí být vidět bez hoveru nebo jakékoliv interakce</li>
+  <li>Add to Cart musí být vizuálně silnější než všechny ostatní akce</li>
+  <li>Shop Pay a express checkout jsou oddělené a slabší</li>
+  <li>Badge je doplněk, ne hlavní vizuální fokus</li>
+  <li>Maximálně 2 badge na produkt</li>
+  <li>Žádné dva Primary buttony vedle sebe</li>
+</ul>
+
+## Light mode a Dark mode
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Light mode — výchozí pro commerce</span>
+    <ul class="bu1-template-list">
+      <li>Bílé pozadí (#FFFFFF)</li>
+      <li>Onyx text (#141414)</li>
+      <li>Neutral 300 bordery</li>
+      <li>Hot Rose Primary CTA</li>
+      <li>Použití: vše — product listing, PDP, cart, checkout</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Dark mode — hero a kampaň</span>
+    <ul class="bu1-template-list">
+      <li>Onyx pozadí (#141414)</li>
+      <li>Bílý text (#FFFFFF)</li>
+      <li>Hot Rose akcent</li>
+      <li>Inverse button (průhledný, bílý border)</li>
+      <li>Použití: hero sekce, kampaňové bannery, feature blok</li>
+    </ul>
+    <p class="bu1-template-example">Dark mode nepatří do product card, product listing, cart nebo checkout.</p>
+  </section>
+</div>
+
+## Žádné gradienty v commerce
+
+Gradienty nejsou povoleny v žádném commerce kontextu:
+
+<ul class="bu1-template-list">
+  <li>Žádný gradient přes produktovou fotografii</li>
+  <li>Žádný gradient jako pozadí karty nebo sekce</li>
+  <li>Místo gradientu použij plnou barvu nebo čistý přechod kontextu přes layout</li>
+</ul>

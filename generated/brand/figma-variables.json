@@ -1,0 +1,139 @@
+{
+  "$description": "BU1SPORT design tokens exported from brand-tokens.json",
+  "color": {
+    "brand": {
+      "primary": {
+        "$value": "#D2147C",
+        "$type": "color"
+      },
+      "black": {
+        "$value": "#141414",
+        "$type": "color"
+      },
+      "white": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      }
+    },
+    "neutral": {
+      "100": {
+        "$value": "#F8F8F8",
+        "$type": "color"
+      },
+      "200": {
+        "$value": "#F1F1F1",
+        "$type": "color"
+      },
+      "300": {
+        "$value": "#E2E2E2",
+        "$type": "color"
+      },
+      "600": {
+        "$value": "#858585",
+        "$type": "color"
+      },
+      "700": {
+        "$value": "#575757",
+        "$type": "color"
+      },
+      "800": {
+        "$value": "#282828",
+        "$type": "color"
+      }
+    },
+    "fluorescent": {
+      "yellow": {
+        "$value": "#FFE600",
+        "$type": "color"
+      },
+      "orange": {
+        "$value": "#FF6B00",
+        "$type": "color"
+      },
+      "pink": {
+        "$value": "#FF3399",
+        "$type": "color"
+      },
+      "green": {
+        "$value": "#00FF88",
+        "$type": "color"
+      },
+      "blue": {
+        "$value": "#00CFFF",
+        "$type": "color"
+      },
+      "purple": {
+        "$value": "#CC00FF",
+        "$type": "color"
+      }
+    }
+  },
+  "spacing": {
+    "1": {
+      "$value": "0.25rem",
+      "$type": "dimension"
+    },
+    "2": {
+      "$value": "0.5rem",
+      "$type": "dimension"
+    },
+    "3": {
+      "$value": "0.75rem",
+      "$type": "dimension"
+    },
+    "4": {
+      "$value": "1rem",
+      "$type": "dimension"
+    },
+    "5": {
+      "$value": "1.25rem",
+      "$type": "dimension"
+    },
+    "6": {
+      "$value": "1.5rem",
+      "$type": "dimension"
+    },
+    "8": {
+      "$value": "2rem",
+      "$type": "dimension"
+    },
+    "10": {
+      "$value": "2.5rem",
+      "$type": "dimension"
+    },
+    "12": {
+      "$value": "3rem",
+      "$type": "dimension"
+    }
+  },
+  "radius": {
+    "sm": {
+      "$value": "2px",
+      "$type": "dimension"
+    },
+    "md": {
+      "$value": "8px",
+      "$type": "dimension"
+    }
+  },
+  "shadow": {
+    "card": {
+      "$value": "0 8px 24px rgba(20, 20, 20, 0.08)",
+      "$type": "shadow"
+    },
+    "cta": {
+      "$value": "0 10px 24px rgba(210, 20, 124, 0.22)",
+      "$type": "shadow"
+    }
+  },
+  "typography": {
+    "headingFont": {
+      "$value": "Oswald",
+      "$type": "fontFamily"
+    },
+    "bodyFont": {
+      "$value": "Nunito Sans",
+      "$type": "fontFamily"
+    }
+  }
+}

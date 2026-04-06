@@ -1,0 +1,184 @@
+---
+title: Components
+description: Canonical UI komponenty BU1SPORT — tlačítka, variant chips, badge a metriky.
+sidebar:
+  order: 5
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Components</span>
+  <p>Tři typy tlačítek. Jeden styl chipů. Jeden styl badge. Žádné improvizace.</p>
+</div>
+
+## Tlačítka (Buttons)
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Primary</p>
+    <div class="bu1-button-row" style="margin:0.75rem 0;">
+      <span class="bu1-button-demo bu1-button-demo--primary">Přidat do košíku</span>
+    </div>
+    <ul class="bu1-card-list">
+      <li>Hot Rose bg · bílý text · 2px HR border</li>
+      <li>Použití: Add to Cart, hlavní konverzní akce</li>
+      <li>Na stránce max <strong>1×</strong></li>
+    </ul>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Secondary</p>
+    <div class="bu1-button-row" style="margin:0.75rem 0;">
+      <span class="bu1-button-demo bu1-button-demo--secondary">Více informací</span>
+    </div>
+    <ul class="bu1-card-list">
+      <li>Bílý bg · Onyx text · 2px Onyx border</li>
+      <li>Použití: vedlejší akce, doplněk k Primary</li>
+    </ul>
+  </div>
+  <div class="bu1-demo-box" style="background:#141414;">
+    <p class="bu1-card-title" style="color:#fff;">Inverse</p>
+    <div class="bu1-button-row" style="margin:0.75rem 0;">
+      <span class="bu1-button-demo bu1-button-demo--inverse">Zobrazit kolekci</span>
+    </div>
+    <ul class="bu1-card-list" style="color:#e2e2e2;">
+      <li>Průhledný bg · bílý text · 2px bílý border</li>
+      <li>Použití: hero, dark mode, CTA na tmavé fotce</li>
+    </ul>
+  </div>
+</div>
+
+### Metriky tlačítek
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Vlastnost</th><th>Primary</th><th>Secondary</th><th>Inverse</th></tr></thead>
+  <tbody>
+    <tr><td>Min. výška</td><td colspan="3" style="text-align:center;"><code>52px</code></td></tr>
+    <tr><td>Padding X</td><td colspan="3" style="text-align:center;"><code>24px</code></td></tr>
+    <tr><td>Border</td><td colspan="3" style="text-align:center;"><code>2px solid</code></td></tr>
+    <tr><td>Radius</td><td colspan="3" style="text-align:center;"><code>2px</code></td></tr>
+    <tr><td>Font</td><td colspan="3" style="text-align:center;">Oswald 700 · uppercase</td></tr>
+    <tr><td>Background</td><td>#D2147C</td><td>#FFFFFF</td><td>transparent</td></tr>
+    <tr><td>Text</td><td>#FFFFFF</td><td>#141414</td><td>#FFFFFF</td></tr>
+    <tr><td>Kontrast</td><td>5.08:1 AA</td><td>18.42:1 AAA</td><td>na tmavém bg</td></tr>
+  </tbody>
+</table>
+
+## Variant Chips
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Výchozí stav</p>
+    <div class="bu1-variant-row" style="margin:0.75rem 0;">
+      <span class="bu1-variant">7</span>
+      <span class="bu1-variant">8</span>
+      <span class="bu1-variant">9</span>
+      <span class="bu1-variant">10</span>
+      <span class="bu1-variant">11</span>
+    </div>
+    <p style="font-size:0.875rem;color:#858585;">Bílý bg · Onyx 2px border · Oswald uppercase</p>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Aktivní stav</p>
+    <div class="bu1-variant-row" style="margin:0.75rem 0;">
+      <span class="bu1-variant">7</span>
+      <span class="bu1-variant bu1-variant--active">8</span>
+      <span class="bu1-variant">9</span>
+      <span class="bu1-variant">10</span>
+    </div>
+    <p style="font-size:0.875rem;color:#858585;">Onyx bg · bílý text — inverzní stav</p>
+  </div>
+</div>
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Vlastnost</th><th>Hodnota</th></tr></thead>
+  <tbody>
+    <tr><td>Min. výška</td><td><code>48px</code></td></tr>
+    <tr><td>Padding X</td><td><code>14px</code></td></tr>
+    <tr><td>Border</td><td><code>2px solid #141414</code></td></tr>
+    <tr><td>Radius</td><td><code>2px</code></td></tr>
+    <tr><td>Font</td><td>Oswald · uppercase</td></tr>
+    <tr><td>Aktivní bg</td><td>#141414 · bílý text</td></tr>
+  </tbody>
+</table>
+
+## Badge
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Varianty</p>
+    <div style="display:flex;gap:0.5rem;flex-wrap:wrap;margin:0.75rem 0;">
+      <span class="bu1-badge">Novinka</span>
+      <span class="bu1-badge">Bestseller</span>
+      <span class="bu1-badge">Limitovaná edice</span>
+      <span class="bu1-badge" style="background:#D2147C;color:#fff;border-color:#D2147C;">Výprodej</span>
+    </div>
+    <p style="font-size:0.875rem;color:#858585;">Výchozí: Onyx border/text. Promo: Hot Rose bg.</p>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Pravidla</p>
+    <ul class="bu1-card-list">
+      <li>Max <strong>2 badge</strong> na jeden produkt</li>
+      <li>Badge je doplněk, ne hlavní fokus</li>
+      <li>Hot Rose varianta pouze pro promo/sale</li>
+      <li>Radius: <strong>3px</strong> (ne pill shape)</li>
+    </ul>
+  </div>
+</div>
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Vlastnost</th><th>Hodnota</th></tr></thead>
+  <tbody>
+    <tr><td>Padding</td><td><code>0.2rem 0.6rem</code></td></tr>
+    <tr><td>Border</td><td><code>1px solid #141414</code></td></tr>
+    <tr><td>Radius</td><td><code>3px</code></td></tr>
+    <tr><td>Font size</td><td><code>0.75rem / 12px</code></td></tr>
+    <tr><td>Font weight</td><td>Nunito Sans 700 · uppercase</td></tr>
+    <tr><td>Letter spacing</td><td><code>0.04em</code></td></tr>
+  </tbody>
+</table>
+
+## Product Card — živý příklad
+
+<div class="bu1-ui-grid">
+  <div class="bu1-product-card">
+    <div class="bu1-product-media">🥅</div>
+    <span class="bu1-badge">Novinka</span>
+    <p class="bu1-product-title">BU1 Match Pro</p>
+    <p class="bu1-price">1 290 Kč</p>
+    <div class="bu1-variant-row" style="margin-bottom:0.75rem;">
+      <span class="bu1-variant" style="min-height:36px;font-size:0.8rem;">8</span>
+      <span class="bu1-variant bu1-variant--active" style="min-height:36px;font-size:0.8rem;">9</span>
+      <span class="bu1-variant" style="min-height:36px;font-size:0.8rem;">10</span>
+    </div>
+    <span class="bu1-button-demo bu1-button-demo--primary" style="width:100%;justify-content:center;font-size:0.875rem;">Přidat do košíku</span>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Metriky karty</p>
+    <table class="bu1-spec-table" style="margin:0.5rem 0 0;">
+      <tbody>
+        <tr><td>Min. šířka</td><td><code>200px</code></td></tr>
+        <tr><td>Obraz výška</td><td><code>160px</code></td></tr>
+        <tr><td>Padding těla</td><td><code>16px</code></td></tr>
+        <tr><td>Border</td><td><code>1px solid Neutral 300</code></td></tr>
+        <tr><td>Radius</td><td><code>2px</code></td></tr>
+        <tr><td>Max badge</td><td><code>2</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+## CSS reference
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Komponenta</th><th>CSS token / třída</th></tr></thead>
+  <tbody>
+    <tr><td>Primary button</td><td><code>.bu1-button.bu1-button--primary</code></td></tr>
+    <tr><td>Secondary button</td><td><code>.bu1-button.bu1-button--secondary</code></td></tr>
+    <tr><td>Heading</td><td><code>.bu1-heading</code></td></tr>
+    <tr><td>Price</td><td><code>.bu1-price</code></td></tr>
+    <tr><td>Card</td><td><code>.bu1-card</code></td></tr>
+    <tr><td>Variant chip</td><td><code>.bu1-variant-option</code></td></tr>
+    <tr><td>Primary color</td><td><code>--bu1-color-primary</code></td></tr>
+    <tr><td>Black</td><td><code>--bu1-color-black</code></td></tr>
+    <tr><td>White</td><td><code>--bu1-color-white</code></td></tr>
+  </tbody>
+</table>

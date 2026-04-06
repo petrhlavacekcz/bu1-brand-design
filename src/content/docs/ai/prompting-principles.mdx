@@ -1,0 +1,98 @@
+---
+title: Prompting Principles
+description: Jak zadávat AI úkoly tak, aby držely BU1SPORT systém a nevytvářely drift.
+sidebar:
+  order: 1
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">AI Guardrails</span>
+  <p>Než začneš psát prompt, zkontroluj canonical vrstvy. Kontext rozhoduje o kvalitě výstupu.</p>
+</div>
+
+## Čtení zdrojů před promptováním
+
+Vždy načti relevantní canonical zdroje před zadáním úkolu:
+
+1. `src/content/data/brand-tokens.json` — barvy, typografie, metriky
+2. `src/content/data/personas.json` — persony a jejich kontext
+3. `src/content/docs/brand/tone-of-voice.mdx` — jak psát
+4. Relevantní task-specific soubor (product-description, instagram-post apod.)
+5. Šablona z `src/content/docs/templates/`
+
+## Guardrails — vždy platí
+
+<ul class="bu1-template-list">
+  <li>Krátké věty — maximálně 15–20 slov na větu</li>
+  <li>Konkrétní jazyk — žádné vague obecnosti</li>
+  <li>Žádný marketingový bullshit (revoluční, prémiový, jedinečný)</li>
+  <li>Produkt a akce mají přednost před dekorací a atmosférou</li>
+  <li>Neinventovat claims, slevy ani fakta bez podkladu</li>
+  <li>Neinventovat persony — použij schválené z personas.json</li>
+</ul>
+
+## Práce s personami
+
+Persony jsou aktivní a schválené. Při psaní obsahu vždy specifikuj, pro koho je výstup určený.
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Adam (14–17 let, mladý gólman)</span>
+    <ul class="bu1-template-list">
+      <li>Přímý, energický tón</li>
+      <li>Vizuální jazyk — „vypadá dobře a funguje"</li>
+      <li>Krátké věty, žádné technické výlevy</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Lenka (rodič, 35–50 let)</span>
+    <ul class="bu1-template-list">
+      <li>Jasný, klidný tón bez sporťáckého slangu</li>
+      <li>Průvodce, jistota, jednoduchý výběr</li>
+      <li>Vysvětluj rozdíly, nedávej jen výčet</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Petr (dospělý brankář, 20–40 let)</span>
+    <ul class="bu1-template-list">
+      <li>Věcný, přímý, bez hype</li>
+      <li>Konkrétní parametry a srovnání</li>
+      <li>Respektuj jeho zkušenost — nepodceňuj ho</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Vilém (trenér, 30–55 let)</span>
+    <ul class="bu1-template-list">
+      <li>Věcný a profesionální</li>
+      <li>Systém „pro koho co vhodné"</li>
+      <li>Edukativní, ne marketingový tón</li>
+    </ul>
+  </section>
+</div>
+
+## Zakázané vzory
+
+<ul class="bu1-template-list">
+  <li>Luxury-without-proof: „prémiový zážitek", „to nejlepší na trhu"</li>
+  <li>Soft lifestyle tón: „objev harmonii pohybu a stylu"</li>
+  <li>Více CTA v jednom sdělení</li>
+  <li>Vymyšlené slevy nebo limitované nabídky bez reálného podkladu</li>
+  <li>Vymyšlené sociální důkazy nebo recenze</li>
+  <li>Persony mimo schválený seznam</li>
+</ul>
+
+## Povinné vstupy pro každý prompt
+
+Každý task prompt musí obsahovat:
+
+<ul class="bu1-template-list">
+  <li><strong>Cíl</strong> — co má výstup dosáhnout</li>
+  <li><strong>Persona</strong> — pro koho píšeš</li>
+  <li><strong>Kanál</strong> — e-shop, Instagram, e-mail, ad…</li>
+  <li><strong>Fakta</strong> — název produktu, benefity, materiál</li>
+  <li><strong>Formát výstupu</strong> — délka, struktura, jazyk</li>
+</ul>
+
+## Jazyk
+
+Výchozí jazyk výstupů: **čeština (cs-CZ)**. Tykání pro B2C (Adam, Lenka, Petr), vykání pro B2B (Antonín, B2B partner).

@@ -1,0 +1,98 @@
+---
+title: Spacing
+description: Kanonická 9-kroková škála mezer s vizuálními ukázkami a jasnou rolí každého kroku.
+sidebar:
+  order: 4
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Spacing</span>
+  <p>Každá mezera má svou roli. Žádné arbitrární hodnoty.</p>
+</div>
+
+## Vizuální škála
+
+<div style="margin: 1rem 0 2rem;">
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 1</span>
+    <div class="bu1-space-bar__block" style="width: 4px;"></div>
+    <span class="bu1-space-bar__meta">4px · 0.25rem — micro, separátor, icon gap</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 2</span>
+    <div class="bu1-space-bar__block" style="width: 8px;"></div>
+    <span class="bu1-space-bar__meta">8px · 0.5rem — badge padding, compact gap</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 3</span>
+    <div class="bu1-space-bar__block" style="width: 12px;"></div>
+    <span class="bu1-space-bar__meta">12px · 0.75rem — tight UI gap</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 4</span>
+    <div class="bu1-space-bar__block" style="width: 16px;"></div>
+    <span class="bu1-space-bar__meta">16px · 1rem — <strong>base</strong> — card padding, line spacing</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 5</span>
+    <div class="bu1-space-bar__block" style="width: 20px;"></div>
+    <span class="bu1-space-bar__meta">20px · 1.25rem — gap mezi skupinami v buy boxu</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 6</span>
+    <div class="bu1-space-bar__block" style="width: 24px;"></div>
+    <span class="bu1-space-bar__meta">24px · 1.5rem — button padding X</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 8</span>
+    <div class="bu1-space-bar__block" style="width: 32px;"></div>
+    <span class="bu1-space-bar__meta">32px · 2rem — <strong>loose</strong> — gap mezi sekcemi</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 10</span>
+    <div class="bu1-space-bar__block" style="width: 40px;"></div>
+    <span class="bu1-space-bar__meta">40px · 2.5rem — velký blok gap, CTA grid</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Space 12</span>
+    <div class="bu1-space-bar__block" style="width: 48px;"></div>
+    <span class="bu1-space-bar__meta">48px · 3rem — maximální gap, oddělení sekcí</span>
+  </div>
+</div>
+
+## Kdy použít co
+
+<table class="bu1-spec-table">
+  <thead>
+    <tr>
+      <th>Token</th>
+      <th>Hodnota</th>
+      <th>Použití</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><code>space-1</code></td><td>4px</td><td>Gap ikonka–text, separátor v tight listech</td></tr>
+    <tr><td><code>space-2</code></td><td>8px</td><td>Badge padding, compact gap, tag vnitřní padding</td></tr>
+    <tr><td><code>space-3</code></td><td>12px</td><td>Mezera mezi elementy v chipset / badge stacku</td></tr>
+    <tr><td><code>space-4</code></td><td>16px</td><td>Card body padding, text block, base line spacing</td></tr>
+    <tr><td><code>space-5</code></td><td>20px</td><td>Skupinový gap v buy boxu, form block</td></tr>
+    <tr><td><code>space-6</code></td><td>24px</td><td>Button padding X, header padding</td></tr>
+    <tr><td><code>space-8</code></td><td>32px</td><td>Sekční gap, hero spacing</td></tr>
+    <tr><td><code>space-10</code></td><td>40px</td><td>Velký blok, CTA grid</td></tr>
+    <tr><td><code>space-12</code></td><td>48px</td><td>Maximální oddělení, stránkové sekce</td></tr>
+  </tbody>
+</table>
+
+## CSS proměnné
+
+```css
+--bu1-space-1: 0.25rem;
+--bu1-space-2: 0.5rem;
+--bu1-space-3: 0.75rem;
+--bu1-space-4: 1rem;
+--bu1-space-5: 1.25rem;
+--bu1-space-6: 1.5rem;
+--bu1-space-8: 2rem;
+--bu1-space-10: 2.5rem;
+--bu1-space-12: 3rem;
+```

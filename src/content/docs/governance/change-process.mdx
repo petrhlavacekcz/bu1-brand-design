@@ -1,0 +1,36 @@
+---
+title: Change Process
+description: Jak měnit systém tak, aby zůstal čistý, synchronní a rozšiřovatelný.
+sidebar:
+  order: 3
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Change</span>
+  <p>Každá změna má jasný workflow: canonical soubor, generace exportů, dokumentace.</p>
+</div>
+
+## Když měníš pravidlo
+
+<ul class="bu1-template-list">
+  <li>upravit canonical docs soubor</li>
+  <li>pokud jde o token, upravit `src/content/data/brand-tokens.json`</li>
+  <li>zkontrolovat související docs</li>
+  <li>zapis změnu do `CHANGELOG.md`</li>
+</ul>
+
+## Když měníš tokeny
+
+<div class="bu1-template-section">
+  <span class="bu1-template-label">Po změně spusť</span>
+  <p class="bu1-template-placeholder">npm run generate:brand</p>
+  <p class="bu1-template-example">Generuje exporty do `generated/brand/`.</p>
+</div>
+
+## Když něco není jisté
+
+<ul class="bu1-template-list">
+  <li>nehádej</li>
+  <li>neinventuj novou pravdu</li>
+  <li>nech stav explicitně jako pending</li>
+</ul>

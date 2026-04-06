@@ -1,0 +1,18 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  label: string;
+  background: string;
+  symbol?: boolean;
+}
+const { src, alt, label, background, symbol = false } = Astro.props;
+---
+<div class="bu1-card">
+  <div class={`bu1-logo-stage${symbol ? ' bu1-logo-stage--symbol' : ''}`} style={`background:${background};`}>
+    <img src={src} alt={alt} />
+  </div>
+  <div class="bu1-card-body">
+    <p class="bu1-card-title">{label}</p>
+  </div>
+</div>

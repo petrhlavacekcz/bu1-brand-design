@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap');
+@import '../../generated/brand/tokens.css';
+
+:root {
+  --sl-font: 'Nunito Sans', Arial, sans-serif;
+  --sl-font-system: 'Nunito Sans', Arial, sans-serif;
+  --sl-text-h1: 'Oswald', 'Arial Narrow', sans-serif;
+  --sl-text-h2: 'Oswald', 'Arial Narrow', sans-serif;
+  --sl-text-h3: 'Oswald', 'Arial Narrow', sans-serif;
+  --sl-text-h4: 'Oswald', 'Arial Narrow', sans-serif;
+  --sl-content-width: 62rem;
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #f8f8f8;
+  --sl-color-gray-2: #e2e2e2;
+  --sl-color-gray-3: #858585;
+  --sl-color-gray-4: #575757;
+  --sl-color-gray-5: #282828;
+  --sl-color-gray-6: #141414;
+  --sl-color-black: #0f0f10;
+  --sl-color-accent-low: #341221;
+  --sl-color-accent: #ff4ea8;
+  --sl-color-accent-high: #ffd3ea;
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--sl-color-black);
+  --sl-color-bg: #141414;
+  --sl-color-bg-nav: rgba(20, 20, 20, 0.94);
+  --sl-color-bg-sidebar: #141414;
+  --sl-color-bg-inline-code: #282828;
+  --sl-color-bg-accent: var(--sl-color-accent-high);
+  --sl-color-hairline-light: rgba(255, 255, 255, 0.1);
+  --sl-color-hairline: rgba(255, 255, 255, 0.12);
+  --sl-color-hairline-shade: #0f0f10;
+  --sl-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme='light'] {
+  --sl-color-white: #141414;
+  --sl-color-gray-1: #141414;
+  --sl-color-gray-2: #282828;
+  --sl-color-gray-3: #575757;
+  --sl-color-gray-4: #858585;
+  --sl-color-gray-5: #e2e2e2;
+  --sl-color-gray-6: #f1f1f1;
+  --sl-color-gray-7: #f8f8f8;
+  --sl-color-black: #ffffff;
+  --sl-color-accent-low: #fde4f1;
+  --sl-color-accent: #d2147c;
+  --sl-color-accent-high: #8f0d54;
+  --sl-color-text: var(--sl-color-gray-2);
+  --sl-color-text-accent: var(--sl-color-accent);
+  --sl-color-text-invert: var(--sl-color-black);
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: rgba(255, 255, 255, 0.94);
+  --sl-color-bg-sidebar: #ffffff;
+  --sl-color-bg-inline-code: #f1f1f1;
+  --sl-color-bg-accent: var(--sl-color-accent);
+  --sl-color-hairline-light: rgba(20, 20, 20, 0.08);
+  --sl-color-hairline: rgba(20, 20, 20, 0.12);
+  --sl-color-hairline-shade: #f1f1f1;
+  --sl-shadow-sm: 0 8px 24px rgba(20, 20, 20, 0.08);
+}
+
+.site-title {
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.hero h1,
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.header, .sidebar-pane {
+  backdrop-filter: blur(14px);
+}
+
+.sidebar-content summary,
+.sidebar-content a,
+.right-sidebar a,
+.pagination-links a,
+starlight-theme-select label {
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+:root[data-theme='light'] .sidebar-content summary,
+:root[data-theme='light'] .sidebar-content a,
+:root[data-theme='light'] .right-sidebar a,
+:root[data-theme='light'] .pagination-links a,
+:root[data-theme='light'] starlight-theme-select label {
+  color: var(--sl-color-gray-3);
+}
+
+:root[data-theme='light'] .sidebar-content .large,
+:root[data-theme='light'] .pagination-links .link-title,
+:root[data-theme='light'] .sidebar-content a:hover,
+:root[data-theme='light'] .sidebar-content a:focus,
+:root[data-theme='light'] .sidebar-content summary:hover,
+:root[data-theme='light'] .sidebar-content summary:focus,
+:root[data-theme='light'] .right-sidebar a:hover,
+:root[data-theme='light'] .right-sidebar a:focus,
+:root[data-theme='light'] starlight-theme-select label:hover {
+  color: var(--sl-color-gray-1);
+}
+
+:root[data-theme='light'] .pagination-links a {
+  border-color: var(--sl-color-gray-5);
+  background: #ffffff;
+}
+
+:root[data-theme='light'] .right-sidebar {
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.hero {
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  border-radius: 0.5rem;
+  box-shadow: 0 8px 24px rgba(20, 20, 20, 0.06);
+}
+
+:root[data-theme='dark'] .hero {
+  border-color: rgba(255,255,255,0.08);
+  box-shadow: none;
+}
+
+.bu1-section-intro {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(210, 20, 124, 0.18);
+  border-left: 3px solid #D2147C;
+  border-radius: 0.5rem;
+  background: rgba(210, 20, 124, 0.04);
+}
+
+:root[data-theme='dark'] .bu1-section-intro {
+  border-color: rgba(210, 20, 124, 0.25);
+  border-left-color: #D2147C;
+  background: rgba(210, 20, 124, 0.07);
+}
+
+.bu1-kicker {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--bu1-text-accent);
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* Swatch grid: fixed card widths so every row has the same card size */
+.bu1-swatch-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 14rem));
+  justify-content: start;
+  margin: 1rem 0 2rem;
+}
+
+/* Logo grid: constrained card widths so last row doesn't stretch */
+.bu1-logo-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 15rem));
+  justify-content: start;
+  margin: 1rem 0 2rem;
+}
+
+.bu1-metric-grid,
+.bu1-ui-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.bu1-type-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  margin: 1rem 0 2rem;
+}
+
+.bu1-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(20, 20, 20, 0.06);
+}
+
+:root[data-theme='dark'] .bu1-card {
+  border-color: rgba(255,255,255,0.08);
+  background: #141414;
+  box-shadow: none;
+}
+
+.bu1-swatch {
+  height: 7rem;
+  flex-shrink: 0;
+  box-shadow: inset 0 0 0 1px rgba(20, 20, 20, 0.08);
+}
+
+.bu1-card-body {
+  flex: 1;
+  padding: 0.9rem 1rem 1rem;
+}
+
+.bu1-card-title {
+  margin: 0 0 0.35rem;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.bu1-card-meta,
+.bu1-card-body code,
+.bu1-card-body small {
+  font-size: 0.9rem;
+}
+
+.bu1-card-list {
+  margin: 0.6rem 0 0;
+  padding-left: 1rem;
+}
+
+.bu1-card-list li + li {
+  margin-top: 0.25rem;
+}
+
+.bu1-contrast-row {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.bu1-logo-stage {
+  display: grid;
+  place-items: center;
+  height: 9rem;
+  padding: 1.5rem;
+  flex-shrink: 0;
+}
+
+.bu1-logo-stage img {
+  display: block;
+  width: 78%;
+  height: auto;
+  max-height: 2.75rem;
+  object-fit: contain;
+}
+
+.bu1-logo-stage--symbol img {
+  width: auto;
+  max-height: 4rem;
+  max-width: 4rem;
+}
+
+.bu1-type-sample {
+  padding: 1rem;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  border-radius: 0.5rem;
+  background: rgba(248,248,248,0.75);
+}
+
+:root[data-theme='dark'] .bu1-type-sample {
+  border-color: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+}
+
+.bu1-type-heading {
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.bu1-type-body {
+  font-family: 'Nunito Sans', Arial, sans-serif;
+}
+
+.bu1-demo-box {
+  padding: 1.25rem;
+  border: 1px solid rgba(20,20,20,0.08);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+:root[data-theme='dark'] .bu1-demo-box {
+  border-color: rgba(255,255,255,0.08);
+  background: #141414;
+}
+
+.bu1-button-row,
+.bu1-variant-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.bu1-button-demo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0.875rem 24px;
+  border: 2px solid #141414;
+  border-radius: 2px;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.bu1-button-demo--primary {
+  background: #d2147c;
+  border-color: #d2147c;
+  box-shadow: 0 10px 24px rgba(210,20,124,0.22);
+  color: #fff;
+}
+
+.bu1-button-demo--secondary {
+  background: #fff;
+  color: #141414;
+}
+
+.bu1-button-demo--inverse {
+  background: transparent;
+  border-color: #fff;
+  color: #fff;
+}
+
+.bu1-product-card {
+  max-width: 18rem;
+  padding: 16px;
+  border: 1px solid rgba(20,20,20,0.14);
+  border-radius: 2px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(20,20,20,0.08);
+}
+
+.bu1-product-media {
+  display: grid;
+  place-items: center;
+  min-height: 9rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background: #f8f8f8;
+  font-size: 3rem;
+}
+
+.bu1-product-title {
+  margin: 0 0 0.25rem;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.bu1-price {
+  margin: 0 0 0.75rem;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 1.375rem;
+  font-weight: 800;
+}
+
+.bu1-badge {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid #141414;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bu1-variant {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding-inline: 14px;
+  border: 2px solid #141414;
+  border-radius: 2px;
+  background: #fff;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  text-transform: uppercase;
+}
+
+.bu1-variant--active {
+  background: #141414;
+  color: #fff;
+}
+
+.bu1-spec-table td,
+.bu1-spec-table th {
+  white-space: nowrap;
+}
+
+.bu1-template-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.bu1-template-section {
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  border-radius: 0.5rem;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(20, 20, 20, 0.04);
+}
+
+:root[data-theme='dark'] .bu1-template-section {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #141414;
+  box-shadow: none;
+}
+
+.bu1-template-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: var(--sl-color-text-accent);
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.bu1-template-placeholder {
+  display: block;
+  margin-top: 0.35rem;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.35rem;
+  background: var(--sl-color-bg-inline-code);
+  color: var(--sl-color-text);
+  font-family: var(--__sl-font-mono);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.bu1-template-example {
+  margin-top: 0.75rem;
+  color: var(--sl-color-gray-3);
+  font-size: 0.95rem;
+}
+
+.bu1-template-example strong {
+  color: var(--sl-color-text);
+}
+
+.bu1-template-list {
+  margin: 0.75rem 0 0;
+  padding-left: 1rem;
+}
+
+.bu1-template-list li + li {
+  margin-top: 0.35rem;
+}
+
+
+/* Spacing visualizer */
+.bu1-space-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.06);
+}
+
+:root[data-theme='dark'] .bu1-space-bar {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.bu1-space-bar__block {
+  flex-shrink: 0;
+  background: #D2147C;
+  height: 1.25rem;
+  border-radius: 2px;
+}
+
+.bu1-space-bar__label {
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  min-width: 6rem;
+}
+
+.bu1-space-bar__meta {
+  font-size: 0.875rem;
+  color: var(--sl-color-gray-3);
+}
+
+/* Type scale table */
+.bu1-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.06);
+}
+
+:root[data-theme='dark'] .bu1-type-row {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
+
+.bu1-type-row__meta {
+  font-size: 0.8rem;
+  color: var(--sl-color-gray-3);
+  white-space: nowrap;
+  min-width: 9rem;
+  padding-top: 0.25rem;
+}
+
+/* Color combination preview */
+.bu1-color-combo {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  border-radius: 0.5rem;
+}
+
+.bu1-color-combo__swatch {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  min-height: 5rem;
+  padding: 1rem;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Spec table */
+.bu1-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 0.75rem 0 1.5rem;
+}
+
+.bu1-spec-table th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid rgba(20, 20, 20, 0.12);
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.bu1-spec-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid rgba(20, 20, 20, 0.06);
+  vertical-align: middle;
+}
+
+:root[data-theme='dark'] .bu1-spec-table th {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+:root[data-theme='dark'] .bu1-spec-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.06);
+}
