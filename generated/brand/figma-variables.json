@@ -66,6 +66,80 @@
         "$value": "#CC00FF",
         "$type": "color"
       }
+    },
+    "semantic": {
+      "error": {
+        "text": {
+          "$value": "#B91C1C",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#FEF2F2",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "#FECACA",
+          "$type": "color"
+        },
+        "icon": {
+          "$value": "#DC2626",
+          "$type": "color"
+        }
+      },
+      "success": {
+        "text": {
+          "$value": "#15803D",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#F0FDF4",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "#BBF7D0",
+          "$type": "color"
+        },
+        "icon": {
+          "$value": "#22C55E",
+          "$type": "color"
+        }
+      },
+      "warning": {
+        "text": {
+          "$value": "#92400E",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#FFFBEB",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "#FDE68A",
+          "$type": "color"
+        },
+        "icon": {
+          "$value": "#D97706",
+          "$type": "color"
+        }
+      },
+      "info": {
+        "text": {
+          "$value": "#1D4ED8",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#EFF6FF",
+          "$type": "color"
+        },
+        "border": {
+          "$value": "#BFDBFE",
+          "$type": "color"
+        },
+        "icon": {
+          "$value": "#3B82F6",
+          "$type": "color"
+        }
+      }
     }
   },
   "spacing": {

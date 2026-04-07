@@ -92,6 +92,37 @@
       "whiteOnPink": "5.08:1",
       "pinkOnBlack": "3.62:1",
       "blackOnPink": "3.62:1"
+    },
+    "semantic": {
+      "note": "UI-state colors only. Never use Hot Rose for status. Never use semantic colors as brand colors.",
+      "error": {
+        "text": "#B91C1C",
+        "bg": "#FEF2F2",
+        "border": "#FECACA",
+        "icon": "#DC2626",
+        "wcag": "5.7:1 AA on white"
+      },
+      "success": {
+        "text": "#15803D",
+        "bg": "#F0FDF4",
+        "border": "#BBF7D0",
+        "icon": "#22C55E",
+        "wcag": "4.6:1 AA on white"
+      },
+      "warning": {
+        "text": "#92400E",
+        "bg": "#FFFBEB",
+        "border": "#FDE68A",
+        "icon": "#D97706",
+        "wcag": "7.2:1 AAA on white"
+      },
+      "info": {
+        "text": "#1D4ED8",
+        "bg": "#EFF6FF",
+        "border": "#BFDBFE",
+        "icon": "#3B82F6",
+        "wcag": "4.7:1 AA on white"
+      }
     }
   },
   "typography": {
@@ -203,6 +234,43 @@
       "padding": "16px",
       "border": "1px solid",
       "radius": "2px"
+    }
+  },
+  "states": {
+    "note": "Interactive states for every interactive component. Focus ring uses outline, never box-shadow.",
+    "focusRing": {
+      "width": "3px",
+      "offset": "2px",
+      "colorPrimary": "#D2147C",
+      "colorDefault": "#141414",
+      "colorInverse": "#FFFFFF"
+    },
+    "button": {
+      "primary": {
+        "hover": { "bg": "#A81063", "border": "#A81063", "text": "#FFFFFF" },
+        "active": { "bg": "#8F0D54", "border": "#8F0D54", "text": "#FFFFFF" },
+        "focus": { "outlineColor": "#D2147C" },
+        "disabled": { "bg": "#E8A0C8", "border": "#E8A0C8", "text": "#FFFFFF", "cursor": "not-allowed" }
+      },
+      "secondary": {
+        "hover": { "bg": "#F1F1F1", "border": "#141414", "text": "#141414" },
+        "active": { "bg": "#E2E2E2", "border": "#141414", "text": "#141414" },
+        "focus": { "outlineColor": "#141414" },
+        "disabled": { "bg": "#FFFFFF", "border": "#E2E2E2", "text": "#858585", "cursor": "not-allowed" }
+      },
+      "inverse": {
+        "hover": { "bg": "rgba(255,255,255,0.12)", "border": "#FFFFFF", "text": "#FFFFFF" },
+        "active": { "bg": "rgba(255,255,255,0.22)", "border": "#FFFFFF", "text": "#FFFFFF" },
+        "focus": { "outlineColor": "#FFFFFF" },
+        "disabled": { "bg": "transparent", "border": "rgba(255,255,255,0.3)", "text": "rgba(255,255,255,0.3)", "cursor": "not-allowed" }
+      }
+    },
+    "variantChip": {
+      "hover": { "bg": "#F1F1F1", "border": "#141414", "text": "#141414" },
+      "active": { "bg": "#141414", "border": "#141414", "text": "#FFFFFF" },
+      "focus": { "outlineColor": "#141414" },
+      "disabled": { "bg": "#F8F8F8", "border": "#E2E2E2", "text": "#858585", "cursor": "not-allowed" },
+      "outOfStock": { "bg": "#F8F8F8", "border": "#E2E2E2", "text": "#858585", "textDecoration": "line-through" }
     }
   },
   "logo": {

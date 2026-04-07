@@ -8,6 +8,8 @@ fs.mkdirSync(outDir, { recursive: true });
 
 const tokens = JSON.parse(fs.readFileSync(tokensPath, 'utf8'));
 const core = tokens.colors;
+const semantic = core.semantic;
+const states = tokens.states;
 const typo = tokens.typography;
 const spacing = tokens.spacing;
 const radius = tokens.radius;
@@ -44,7 +46,37 @@ const cssVars = [
   `--bu1-radius-sm: ${radius.sm};`,
   `--bu1-radius-md: ${radius.md};`,
   `--bu1-shadow-card: ${shadow.card};`,
-  `--bu1-shadow-cta: ${shadow.cta};`
+  `--bu1-shadow-cta: ${shadow.cta};`,
+  // Semantic colors (UI states only — not brand)
+  `--bu1-semantic-error-text: ${semantic.error.text};`,
+  `--bu1-semantic-error-bg: ${semantic.error.bg};`,
+  `--bu1-semantic-error-border: ${semantic.error.border};`,
+  `--bu1-semantic-error-icon: ${semantic.error.icon};`,
+  `--bu1-semantic-success-text: ${semantic.success.text};`,
+  `--bu1-semantic-success-bg: ${semantic.success.bg};`,
+  `--bu1-semantic-success-border: ${semantic.success.border};`,
+  `--bu1-semantic-success-icon: ${semantic.success.icon};`,
+  `--bu1-semantic-warning-text: ${semantic.warning.text};`,
+  `--bu1-semantic-warning-bg: ${semantic.warning.bg};`,
+  `--bu1-semantic-warning-border: ${semantic.warning.border};`,
+  `--bu1-semantic-warning-icon: ${semantic.warning.icon};`,
+  `--bu1-semantic-info-text: ${semantic.info.text};`,
+  `--bu1-semantic-info-bg: ${semantic.info.bg};`,
+  `--bu1-semantic-info-border: ${semantic.info.border};`,
+  `--bu1-semantic-info-icon: ${semantic.info.icon};`,
+  // Component state tokens
+  `--bu1-state-primary-hover-bg: ${states.button.primary.hover.bg};`,
+  `--bu1-state-primary-active-bg: ${states.button.primary.active.bg};`,
+  `--bu1-state-primary-disabled-bg: ${states.button.primary.disabled.bg};`,
+  `--bu1-state-secondary-hover-bg: ${states.button.secondary.hover.bg};`,
+  `--bu1-state-secondary-active-bg: ${states.button.secondary.active.bg};`,
+  `--bu1-state-secondary-disabled-border: ${states.button.secondary.disabled.border};`,
+  `--bu1-state-secondary-disabled-text: ${states.button.secondary.disabled.text};`,
+  `--bu1-focus-ring-width: ${states.focusRing.width};`,
+  `--bu1-focus-ring-offset: ${states.focusRing.offset};`,
+  `--bu1-focus-ring-color-primary: ${states.focusRing.colorPrimary};`,
+  `--bu1-focus-ring-color-default: ${states.focusRing.colorDefault};`,
+  `--bu1-focus-ring-color-inverse: ${states.focusRing.colorInverse};`
 ];
 
 const tokensCss = `:root {\n  ${cssVars.join('\n  ')}\n}\n`;
@@ -188,6 +220,32 @@ const figmaVariables = {
       green: { $value: core.fluorescent.neonGreen.value, $type: 'color' },
       blue: { $value: core.fluorescent.acidBlue.value, $type: 'color' },
       purple: { $value: core.fluorescent.electricPurple.value, $type: 'color' }
+    },
+    semantic: {
+      error: {
+        text: { $value: semantic.error.text, $type: 'color' },
+        bg: { $value: semantic.error.bg, $type: 'color' },
+        border: { $value: semantic.error.border, $type: 'color' },
+        icon: { $value: semantic.error.icon, $type: 'color' }
+      },
+      success: {
+        text: { $value: semantic.success.text, $type: 'color' },
+        bg: { $value: semantic.success.bg, $type: 'color' },
+        border: { $value: semantic.success.border, $type: 'color' },
+        icon: { $value: semantic.success.icon, $type: 'color' }
+      },
+      warning: {
+        text: { $value: semantic.warning.text, $type: 'color' },
+        bg: { $value: semantic.warning.bg, $type: 'color' },
+        border: { $value: semantic.warning.border, $type: 'color' },
+        icon: { $value: semantic.warning.icon, $type: 'color' }
+      },
+      info: {
+        text: { $value: semantic.info.text, $type: 'color' },
+        bg: { $value: semantic.info.bg, $type: 'color' },
+        border: { $value: semantic.info.border, $type: 'color' },
+        icon: { $value: semantic.info.icon, $type: 'color' }
+      }
     }
   },
   spacing: Object.fromEntries(Object.entries(spacing).map(([k, v]) => [k, { $value: v, $type: 'dimension' }])),
