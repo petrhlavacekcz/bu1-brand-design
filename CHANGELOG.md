@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [2026-04-07]
+
+### Fixed
+- `.github/workflows/deploy.yml` - GitHub Pages workflow srovnán s aktuální doporučenou konfigurací: přidáno `actions/configure-pages@v5`, update na `actions/checkout@v5`, `actions/upload-pages-artifact@v4` a `actions/deploy-pages@v5`, build sjednocen na `npm run build`, aby se před deployem vždy spustil i canonical export brand tokenů.
+
 ## [2026-04-06]
 
 ### Added
