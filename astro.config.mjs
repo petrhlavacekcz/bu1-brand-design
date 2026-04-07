@@ -4,8 +4,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://petrhlavacekcz.github.io/bu1-brand-design/',
-	base: '/bu1-brand-design/',
+	site: 'https://petrhlavacekcz.github.io',
+	base: '/bu1-brand-design',
 	integrations: [
 		starlight({
 			logo: {
