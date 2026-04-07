@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "prebuild": "npm run generate:brand",
-    "build": "astro build",
+    "build": "astro build && node scripts/fix-llms-base.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "generate:brand": "node scripts/generate-brand-exports.mjs"
@@ -15,6 +15,8 @@
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",
     "astro": "^6.0.1",
-    "sharp": "^0.34.2"
+    "sharp": "^0.34.2",
+    "starlight-codeblock-fullscreen": "^0.1.4",
+    "starlight-page-actions": "^0.5.0"
   }
 }

@@ -2,38 +2,139 @@
 title: BU1 Brand & Content System
 description: Jeden zdroj pravdy pro brand, design, AI a obsah BU1SPORT.
 template: splash
+tableOfContents: false
 hero:
-  title: BU1 Brand & Content System
-  tagline: Jeden zdroj pravdy pro brand, design, AI a obsah. Bez driftu, bez chaosu.
+  title: Brand &amp; Content System
+  tagline: Canonical vrstva pro brand, design, AI a obsah BU1SPORT. Jedno pravidlo. Jeden zdroj. Žádný drift.
   actions:
-    - text: Brand
-      link: /bu1-brand-design/brand/mission/
+    - text: Začít jazykem
+      link: /bu1-brand-design/brand/language/
       icon: open-book
       variant: primary
-    - text: Design
-      link: /bu1-brand-design/design/colors/
+    - text: Otevřít kanály
+      link: /bu1-brand-design/brand/communication-channels/
       icon: pencil
+      variant: secondary
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+<div class="home-shell">
+  <section class="home-summary-grid">
+    <div class="home-panel">
+      <span class="home-eyebrow">Jedna provozní pravda</span>
+      <h2>Pravidla značky, designu a AI držíte na jednom místě.</h2>
+      <p>Web je prezentační vrstva. Canonical pravidla žijí v <code>src/content/docs/</code> a <code>src/content/data/</code>.</p>
+      <p>Když se mění pravidlo, mění se tady. Ne v exportu. Ne v náhodném briefu. Ne ve starém vlákně.</p>
+    </div>
+    <div class="home-panel home-panel--accent">
+      <span class="home-mini-label">Pracovní princip</span>
+      <h3>Nejdřív pravidlo. Potom výstup.</h3>
+      <ul class="home-checklist">
+        <li>Nejdřív ověřte trh, jazyk a kanál.</li>
+        <li>Pak sáhněte na text, design nebo AI workflow.</li>
+        <li>Všechno ostatní je jen odvozený výstup.</li>
+      </ul>
+    </div>
+  </section>
 
-<CardGrid>
-  <Card title="Brand" icon="open-book">
-    Persony, mise, tone of voice a foto styl. Základ, ze kterého vychází vše ostatní.
-  </Card>
-  <Card title="Design" icon="pencil">
-    Barvy, typografie, spacing, komponenty a logo. Přesné metriky, žádné odhady.
-  </Card>
-  <Card title="Ecommerce" icon="rocket">
-    Pravidla pro CTA, product card a UI hierarchii. Čitelnost a konverze na prvním místě.
-  </Card>
-  <Card title="AI" icon="setting">
-    Prompting principy a šablony pro generování obsahu v souladu s brandingem.
-  </Card>
-  <Card title="Governance" icon="approve-check">
-    Proces změn, verzování a zdroj pravdy. Jak systém udržovat konzistentní.
-  </Card>
-  <Card title="Templates" icon="document">
-    Hotové šablony pro produktové popisy, emaily a reklamy. Připraveno k použití.
-  </Card>
-</CardGrid>
+  <div class="home-stats" aria-label="Rychlý přehled systému">
+    <div class="home-stat">
+      <strong>6</strong>
+      <span>hlavních sekcí systému</span>
+    </div>
+    <div class="home-stat">
+      <strong>1</strong>
+      <span>canonical token JSON</span>
+    </div>
+    <div class="home-stat">
+      <strong>0</strong>
+      <span>prostoru pro drift</span>
+    </div>
+  </div>
+
+  <section class="home-section">
+    <div class="home-section-head">
+      <span class="home-eyebrow">Kde začít</span>
+      <h2>Nejrychlejší vstupy pro každodenní práci.</h2>
+    </div>
+    <div class="home-grid">
+      <a class="home-link-card" href="/bu1-brand-design/brand/tone-of-voice/">
+        <span class="home-link-kicker">Voice</span>
+        <h3>Tone of Voice</h3>
+        <p>Přátelský a profesionální tón. Krátké věty. Přímé formulace. Žádná prázdná omáčka.</p>
+      </a>
+      <a class="home-link-card" href="/bu1-brand-design/brand/language/">
+        <span class="home-link-kicker">Brand</span>
+        <h3>Brand Language</h3>
+        <p>Pozitivní a podpůrný jazyk. Konzistentní terminologie. Vždy vykání a jasná akce.</p>
+      </a>
+      <a class="home-link-card" href="/bu1-brand-design/brand/communication-channels/">
+        <span class="home-link-kicker">Channels</span>
+        <h3>Komunikační kanály</h3>
+        <p>Kde BU1 mluví česky, kde anglicky, co patří na který účet a co se naopak neudržuje.</p>
+      </a>
+      <a class="home-link-card" href="/bu1-brand-design/ai/prompting-principles/">
+        <span class="home-link-kicker">AI</span>
+        <h3>Prompting bez zmatku</h3>
+        <p>Jasné vstupy, práce s trhem a kanálem, žádné vymyšlené persony a žádné neověřené sliby.</p>
+      </a>
+      <a class="home-link-card" href="/bu1-brand-design/design/colors/">
+        <span class="home-link-kicker">Design</span>
+        <h3>Barvy a tokeny</h3>
+        <p>Hot Rose jako akce. Onyx jako základ. White jako prostor. Role jsou pevné a čitelné.</p>
+      </a>
+    </div>
+  </section>
+
+  <section class="home-section home-section--alt">
+    <div class="home-section-head">
+      <span class="home-eyebrow">Jak to používat</span>
+      <h2>Začněte vždy od pravidla. Až potom sahajte na export nebo výstup.</h2>
+    </div>
+    <div class="home-steps">
+      <div class="home-step">
+        <span>01</span>
+        <h3>Najděte canonical zdroj</h3>
+        <p>Brand a copy pravidla v docs. Tokeny a metadata v data layer. Nic mimo to není source of truth.</p>
+      </div>
+      <div class="home-step">
+        <span>02</span>
+        <h3>Ověřte kontext</h3>
+        <p>Trh, jazyk, kanál, cílový uživatel a jedna hlavní akce. Bez toho vzniká neurčitý výstup.</p>
+      </div>
+      <div class="home-step">
+        <span>03</span>
+        <h3>Generujte až potom</h3>
+        <p>Text musí být čitelný rychle. Design musí respektovat tokeny. AI nesmí vymýšlet fakta ani persony.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="home-section-head">
+      <span class="home-eyebrow">Co hlídat</span>
+      <h2>Pravidla, která drží systém čistý a použitelný.</h2>
+    </div>
+    <div class="home-dual-grid">
+      <div class="home-panel">
+        <span class="home-mini-label">Držte</span>
+        <h3>Jednu informaci na jednom místě.</h3>
+        <ul class="home-checklist">
+          <li>Textová pravidla patří do docs vrstvy.</li>
+          <li>Design tokeny patří do canonical JSON.</li>
+          <li>Změna pravidla se dělá ve zdroji, ne v exportu.</li>
+          <li>Každý výstup musí odpovídat trhu, jazyku a kanálu.</li>
+        </ul>
+      </div>
+      <div class="home-panel">
+        <span class="home-mini-label">Nedělejte</span>
+        <h3>Nevytvářejte paralelní pravdu.</h3>
+        <ul class="home-checklist">
+          <li>Nevymýšlejte persony, které nejsou dodané.</li>
+          <li>Nepřepisujte pravidla podle pocitu.</li>
+          <li>Nedržte odlišné verze stejné informace v různých souborech.</li>
+          <li>Nepoužívejte Hot Rose jen jako dekoraci bez role.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>

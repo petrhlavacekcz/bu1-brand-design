@@ -1,7 +1,7 @@
 {
-  "version": "2.1.0",
+  "version": "2.1.2",
   "brand": "BU1SPORT",
-  "updatedAt": "2026-04-06",
+  "updatedAt": "2026-04-07",
   "guidelines": {
     "version": "1.0",
     "publishedAt": "2026-03-28",
@@ -177,8 +177,8 @@
     "md": "8px"
   },
   "shadow": {
-    "card": "0 8px 24px rgba(20, 20, 20, 0.08)",
-    "cta": "0 10px 24px rgba(210, 20, 124, 0.22)"
+    "card": "none",
+    "cta": "none"
   },
   "metrics": {
     "primaryButton": {
@@ -245,12 +245,68 @@
       "use unapproved colors"
     ]
   },
+  "semantic": {
+    "error": {
+      "value": "#C0392B",
+      "light": "#FDECEA",
+      "dark": "#7B241C",
+      "text": "#FFFFFF",
+      "usage": ["form validation", "destructive actions", "system errors"],
+      "wcag": "4.5:1 on white"
+    },
+    "success": {
+      "value": "#1E7E34",
+      "light": "#E8F5E9",
+      "dark": "#145523",
+      "text": "#FFFFFF",
+      "usage": ["confirmations", "completed states", "positive feedback"],
+      "wcag": "5.1:1 on white"
+    },
+    "warning": {
+      "value": "#B7590A",
+      "light": "#FFF3E0",
+      "dark": "#7D3C07",
+      "text": "#FFFFFF",
+      "usage": ["cautions", "non-blocking alerts", "degraded states"],
+      "wcag": "4.6:1 on white"
+    },
+    "info": {
+      "value": "#0369A1",
+      "light": "#E0F2FE",
+      "dark": "#024671",
+      "text": "#FFFFFF",
+      "usage": ["informational messages", "help text", "neutral system status"],
+      "wcag": "5.9:1 on white"
+    }
+  },
+  "motion": {
+    "duration": {
+      "instant": "80ms",
+      "fast": "150ms",
+      "base": "200ms",
+      "slow": "300ms",
+      "slower": "500ms"
+    },
+    "easing": {
+      "standard": "cubic-bezier(0.2, 0, 0, 1)",
+      "enter": "cubic-bezier(0, 0, 0.2, 1)",
+      "exit": "cubic-bezier(0.4, 0, 1, 1)",
+      "emphasized": "cubic-bezier(0.2, 0, 0, 1.4)"
+    },
+    "principles": [
+      "Motion supports hierarchy, not decoration.",
+      "Enter animations use ease-out — content arrives calmly.",
+      "Exit animations use ease-in — content leaves decisively.",
+      "Interactive feedback must complete within 200ms.",
+      "Always respect prefers-reduced-motion."
+    ]
+  },
   "usageRules": {
     "productFirst": true,
     "primaryCtaDominant": true,
     "expressCheckoutSecondary": true,
     "maxBadgesPerProduct": 2,
     "gradients": "forbidden",
-    "personasStatus": "active"
+    "personasStatus": "pending-input"
   }
 }

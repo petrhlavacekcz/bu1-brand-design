@@ -1,6 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap');
 @import '../../generated/brand/tokens.css';
 
+/* ─── Semantic color tokens ─────────────────────────────────── */
+:root {
+  --bu1-color-error: #C0392B;
+  --bu1-color-error-light: #FDECEA;
+  --bu1-color-error-dark: #7B241C;
+  --bu1-color-success: #1E7E34;
+  --bu1-color-success-light: #E8F5E9;
+  --bu1-color-success-dark: #145523;
+  --bu1-color-warning: #B7590A;
+  --bu1-color-warning-light: #FFF3E0;
+  --bu1-color-warning-dark: #7D3C07;
+  --bu1-color-info: #0369A1;
+  --bu1-color-info-light: #E0F2FE;
+  --bu1-color-info-dark: #024671;
+}
+
+/* ─── Motion tokens ─────────────────────────────────────────── */
+:root {
+  --bu1-duration-instant: 80ms;
+  --bu1-duration-fast: 150ms;
+  --bu1-duration-base: 200ms;
+  --bu1-duration-slow: 300ms;
+  --bu1-duration-slower: 500ms;
+  --bu1-ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --bu1-ease-enter: cubic-bezier(0, 0, 0.2, 1);
+  --bu1-ease-exit: cubic-bezier(0.4, 0, 1, 1);
+  --bu1-ease-emphasized: cubic-bezier(0.2, 0, 0, 1.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --bu1-duration-instant: 0ms;
+    --bu1-duration-fast: 0ms;
+    --bu1-duration-base: 0ms;
+    --bu1-duration-slow: 0ms;
+    --bu1-duration-slower: 0ms;
+  }
+}
+
 :root {
   --sl-font: 'Nunito Sans', Arial, sans-serif;
   --sl-font-system: 'Nunito Sans', Arial, sans-serif;
@@ -233,6 +272,17 @@ starlight-theme-select label {
   gap: 1rem;
   align-items: stretch;
   grid-auto-rows: 1fr;
+}
+
+/* Starlight's adjacent-sibling rule (.sl-markdown-content X + X { margin-top: 1rem })
+   adds margin-top to every grid item that has a preceding sibling, breaking card
+   alignment — 1st card has no margin, 2nd+ cards do. Reset on all home grid children. */
+.home-summary-grid > *,
+.home-stats > *,
+.home-grid > *,
+.home-steps > *,
+.home-dual-grid > * {
+  margin-top: 0;
 }
 
 .home-summary-grid {
@@ -501,14 +551,17 @@ starlight-theme-select label {
   align-items: stretch;
 }
 
-/* All grid direct children stretch to fill row height */
+/* All grid direct children: stretch to fill row height + reset Starlight's
+   adjacent-sibling margin-top that breaks first-card alignment. */
 .bu1-swatch-grid > *,
 .bu1-logo-grid > *,
 .bu1-metric-grid > *,
 .bu1-ui-grid > *,
 .bu1-type-grid > *,
-.bu1-template-grid > * {
+.bu1-template-grid > *,
+.bu1-semantic-grid > * {
   height: 100%;
+  margin-top: 0;
 }
 
 /* Card body minimum height ensures consistent card sizing
@@ -674,6 +727,103 @@ starlight-theme-select label {
   background: transparent;
   border-color: #fff;
   color: #fff;
+}
+
+/* Button state demos */
+.bu1-button-demo--hover {
+  background: #a80f62;
+  border-color: #a80f62;
+  color: #fff;
+}
+
+.bu1-button-demo--focus {
+  background: #d2147c;
+  border-color: #d2147c;
+  color: #fff;
+  outline: 3px solid #141414;
+  outline-offset: 2px;
+}
+
+.bu1-button-demo--active {
+  background: #8a0b50;
+  border-color: #8a0b50;
+  color: #fff;
+  transform: translateY(1px);
+}
+
+.bu1-button-demo--disabled {
+  background: #e2e2e2;
+  border-color: #e2e2e2;
+  color: #858585;
+  cursor: not-allowed;
+  opacity: 1;
+}
+
+.bu1-button-demo--loading {
+  background: #d2147c;
+  border-color: #d2147c;
+  color: transparent;
+  position: relative;
+  pointer-events: none;
+}
+
+.bu1-button-demo--loading::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: bu1-spin 0.7s linear infinite;
+}
+
+@keyframes bu1-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Semantic state indicators */
+.bu1-state-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.bu1-state-indicator--error {
+  background: #FDECEA;
+  color: #C0392B;
+  border: 1px solid rgba(192, 57, 43, 0.25);
+}
+
+.bu1-state-indicator--success {
+  background: #E8F5E9;
+  color: #1E7E34;
+  border: 1px solid rgba(30, 126, 52, 0.25);
+}
+
+.bu1-state-indicator--warning {
+  background: #FFF3E0;
+  color: #B7590A;
+  border: 1px solid rgba(183, 89, 10, 0.25);
+}
+
+.bu1-state-indicator--info {
+  background: #E0F2FE;
+  color: #0369A1;
+  border: 1px solid rgba(3, 105, 161, 0.25);
+}
+
+/* Focus ring spec */
+.bu1-focus-demo {
+  outline: 3px solid #141414;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .bu1-product-card {

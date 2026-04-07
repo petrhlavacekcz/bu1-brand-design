@@ -179,6 +179,31 @@ Každá barva má jasný kontext. Překračovat tyto role znamená narušit syst
   </section>
 </div>
 
+## Sémantické barvy
+
+Sémantické barvy komunikují **systémové stavy** — validaci, potvrzení, varování, informaci. Jsou odděleny od brand palety a nikdy se nesmí míchat s Hot Rose nebo fluorescentními barvami.
+
+<div class="bu1-swatch-grid">
+  <ColorCard name="Error" value="#C0392B" subtitle="Světlá: #FDECEA · Tmavá: #7B241C" role="Form validace · Destruktivní akce · Systémové chyby" text="light" />
+  <ColorCard name="Success" value="#1E7E34" subtitle="Světlá: #E8F5E9 · Tmavá: #145523" role="Potvrzení · Dokončené stavy · Pozitivní feedback" text="light" />
+  <ColorCard name="Warning" value="#B7590A" subtitle="Světlá: #FFF3E0 · Tmavá: #7D3C07" role="Varování · Neblokující alert · Degradovaný stav" text="light" />
+  <ColorCard name="Info" value="#0369A1" subtitle="Světlá: #E0F2FE · Tmavá: #024671" role="Informace · Help text · Neutrální systémový status" text="light" />
+</div>
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Token</th><th>Hex</th><th>Kontrast na bílé</th><th>WCAG</th></tr></thead>
+  <tbody>
+    <tr><td><code>--bu1-color-error</code></td><td>#C0392B</td><td>4.5:1</td><td>AA</td></tr>
+    <tr><td><code>--bu1-color-success</code></td><td>#1E7E34</td><td>5.1:1</td><td>AA</td></tr>
+    <tr><td><code>--bu1-color-warning</code></td><td>#B7590A</td><td>4.6:1</td><td>AA</td></tr>
+    <tr><td><code>--bu1-color-info</code></td><td>#0369A1</td><td>5.9:1</td><td>AA</td></tr>
+  </tbody>
+</table>
+
+:::caution[Sémantické barvy nejsou brand barvy]
+Error červená, Success zelená, Warning oranžová a Info modrá nereprezentují BU1SPORT brand. Jsou to UI-state signály. Nikdy je nepoužívej v kampani, na produktové karty nebo jako dekoraci.
+:::
+
 ## Žádné gradienty
 
 Gradienty nejsou součástí BU1SPORT design systému. Nepoužívej je nikde — ani v commerce, ani v kampani, ani jako overlay.

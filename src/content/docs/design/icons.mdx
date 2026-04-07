@@ -1,0 +1,135 @@
+---
+title: Iconografie
+description: Pravidla pro výběr, použití a konzistenci ikon v BU1SPORT systému.
+sidebar:
+  order: 7
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Icons</span>
+  <p>Ikony jsou funkční prvky. Nedekorují — orientují, identifikují a potvrzují akci.</p>
+</div>
+
+## Icon systém
+
+BU1SPORT používá **Phosphor Icons** jako primární icon set. Důvody:
+- Konzistentní geometrie a vizuální váha
+- Dostupné ve více stylech — Regular, Bold, Fill
+- Plná pokrytí běžných e-commerce potřeb
+- Open source (MIT licence)
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Preferované styly</span>
+    <ul class="bu1-template-list">
+      <li><strong>Regular</strong> — výchozí pro UI (navigation, metadata, labels)</li>
+      <li><strong>Bold</strong> — pro zdůraznění nebo na tmavém pozadí</li>
+      <li><strong>Fill</strong> — pro aktivní a selected stavy</li>
+    </ul>
+    <p class="bu1-template-example">Nikdy nemíchej Regular a Thin v jedné komponentě.</p>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Zakázané styly</span>
+    <ul class="bu1-template-list">
+      <li><strong>Thin / Light</strong> — příliš slabé, nečitelné na malých velikostech</li>
+      <li>Míchání různých icon setů na stejné stránce</li>
+      <li>Custom ikony bez schválení brand týmem</li>
+      <li>Emoji jako funkční ikony v UI</li>
+    </ul>
+  </section>
+</div>
+
+## Velikostní grid
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Velikost</th><th>px</th><th>Použití</th><th>Kontext</th></tr></thead>
+  <tbody>
+    <tr><td><code>xs</code></td><td>12px</td><td>Inline text ikony</td><td>Badge, meta, footnote</td></tr>
+    <tr><td><code>sm</code></td><td>16px</td><td>UI ikony v textu</td><td>Form labels, table cells</td></tr>
+    <tr><td><code>md</code></td><td>20px</td><td>Výchozí UI ikona</td><td>Buttons, navigation, inputs</td></tr>
+    <tr><td><code>lg</code></td><td>24px</td><td>Primární akční ikona</td><td>CTA doplněk, header actions</td></tr>
+    <tr><td><code>xl</code></td><td>32px</td><td>Feature ikona</td><td>Empty states, feature callouts</td></tr>
+    <tr><td><code>2xl</code></td><td>48px</td><td>Hero / ilustrační ikona</td><td>Landing sekce, velké prázdné stavy</td></tr>
+  </tbody>
+</table>
+
+:::note[Touch target]
+Klikatelná ikona musí mít touch target minimálně **48×48px** bez ohledu na vizuální velikost ikony. Použij padding nebo neviditelnou hit area.
+:::
+
+## Ikona + text
+
+Ikony se téměř vždy zobrazují spolu s textem — **ikona bez textu vyžaduje `aria-label`**.
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Situace</th><th>Pravidlo</th></tr></thead>
+  <tbody>
+    <tr><td>Ikona + viditelný text</td><td>Ikona je <code>aria-hidden="true"</code></td></tr>
+    <tr><td>Ikona bez textu (icon button)</td><td>Musí mít <code>aria-label="Popis akce"</code></td></tr>
+    <tr><td>Ikona jako dekorace</td><td><code>aria-hidden="true"</code>, žádný alt</td></tr>
+    <tr><td>Ikona komunikuje stav</td><td>Textová alternativa musí existovat (tooltip, sr-only text)</td></tr>
+  </tbody>
+</table>
+
+## Barva ikon
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Kontext</th><th>Barva</th><th>Token</th></tr></thead>
+  <tbody>
+    <tr><td>Výchozí UI ikona</td><td>Onyx #141414</td><td><code>--bu1-color-black</code></td></tr>
+    <tr><td>Sekundární / metadata</td><td>Neutral 600 #858585</td><td><code>--bu1-color-neutral-600</code></td></tr>
+    <tr><td>Akční ikona / CTA doplněk</td><td>Hot Rose #D2147C</td><td><code>--bu1-color-primary</code></td></tr>
+    <tr><td>Ikona na tmavém bg</td><td>White #FFFFFF</td><td><code>--bu1-color-white</code></td></tr>
+    <tr><td>Disabled ikona</td><td>Neutral 300 #E2E2E2</td><td><code>--bu1-color-neutral-300</code></td></tr>
+    <tr><td>Error stav</td><td>Error #C0392B</td><td><code>--bu1-color-error</code></td></tr>
+    <tr><td>Success stav</td><td>Success #1E7E34</td><td><code>--bu1-color-success</code></td></tr>
+  </tbody>
+</table>
+
+:::caution[Nikdy barva samotná]
+Stav nesmí být komunikován pouze barvou ikony. Vždy doplň text nebo shape (outlined vs. filled ikona pro selected stav).
+:::
+
+## Nejčastěji používané ikony
+
+| Kontext | Doporučená ikona | Phosphor název |
+|---|---|---|
+| Košík | nákupní košík | `ShoppingCart` |
+| Vyhledávání | lupa | `MagnifyingGlass` |
+| Uživatel / účet | silueta osoby | `User` |
+| Filtr | tři linie/vrstvy | `Faders` |
+| Oblíbené | srdce | `Heart` / `HeartFill` (active) |
+| Zavřít / dismiss | ×  | `X` |
+| Zpět | šipka vlevo | `ArrowLeft` |
+| Doručení | box / dodávka | `Package` |
+| Vrácení zboží | šipka kruhem | `ArrowCounterClockwise` |
+| Velikost | pravítko | `Ruler` |
+| Sdílení | tři body spojené | `ShareNetwork` |
+| Upozornění / varování | trojúhelník | `Warning` |
+| Potvrzení / OK | fajfka | `CheckCircle` |
+| Info | písmeno i v kruhu | `Info` |
+
+## Do / Don't
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Dělej</span>
+    <ul class="bu1-template-list">
+      <li>Konzistentní styl (Regular nebo Bold) v celé komponentě</li>
+      <li>Velikost ikony odpovídá vizuální váze textu vedle ní</li>
+      <li>Ikona + text = ikona je aria-hidden</li>
+      <li>Standalone ikona = povinný aria-label</li>
+      <li>Fill varianta pro aktivní/selected stav</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Nedělej</span>
+    <ul class="bu1-template-list">
+      <li>Nemíchej Phosphor s jinými icon sety (FontAwesome, Material)</li>
+      <li>Nepoužívej ikony pod 12px — použij text nebo vynech</li>
+      <li>Nepoužívej ikonu místo textu pokud je text jasnější</li>
+      <li>Nepoužívej Hot Rose na ikony bez akčního kontextu</li>
+      <li>Nepoužívej Thin styl — příliš slabý pro sport brand</li>
+    </ul>
+  </section>
+</div>
