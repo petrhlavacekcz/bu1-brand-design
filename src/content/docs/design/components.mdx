@@ -166,6 +166,110 @@ sidebar:
   </div>
 </div>
 
+## Stavy komponent (Component States)
+
+Každý interaktivní element musí mít definované všechny stavy. Žádný stav nesmí chybět.
+
+### Stavy tlačítek
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Primary — všechny stavy</p>
+    <div class="bu1-button-row" style="margin:0.75rem 0;flex-wrap:wrap;">
+      <span class="bu1-button-demo bu1-button-demo--primary">Default</span>
+      <span class="bu1-button-demo bu1-button-demo--primary" style="background:#a81063;border-color:#a81063;">Hover</span>
+      <span class="bu1-button-demo bu1-button-demo--primary" style="background:#8f0d54;border-color:#8f0d54;">Active</span>
+      <span class="bu1-button-demo bu1-button-demo--primary" style="outline:3px solid #d2147c;outline-offset:2px;">Focus</span>
+      <span class="bu1-button-demo bu1-button-demo--primary is-disabled" style="background:#e8a0c8;border-color:#e8a0c8;">Disabled</span>
+    </div>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Secondary — všechny stavy</p>
+    <div class="bu1-button-row" style="margin:0.75rem 0;flex-wrap:wrap;">
+      <span class="bu1-button-demo bu1-button-demo--secondary">Default</span>
+      <span class="bu1-button-demo bu1-button-demo--secondary" style="background:#f1f1f1;">Hover</span>
+      <span class="bu1-button-demo bu1-button-demo--secondary" style="background:#e2e2e2;">Active</span>
+      <span class="bu1-button-demo bu1-button-demo--secondary" style="outline:3px solid #141414;outline-offset:2px;">Focus</span>
+      <span class="bu1-button-demo bu1-button-demo--secondary is-disabled" style="border-color:#e2e2e2;color:#858585;">Disabled</span>
+    </div>
+  </div>
+</div>
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Stav</th><th>Primary bg</th><th>Secondary bg</th><th>Focus ring</th></tr></thead>
+  <tbody>
+    <tr><td>Default</td><td>#D2147C</td><td>#FFFFFF</td><td>—</td></tr>
+    <tr><td>Hover</td><td>#A81063</td><td>#F1F1F1</td><td>—</td></tr>
+    <tr><td>Active</td><td>#8F0D54</td><td>#E2E2E2</td><td>—</td></tr>
+    <tr><td>Focus</td><td>#D2147C</td><td>#FFFFFF</td><td><code>3px solid, offset 2px</code></td></tr>
+    <tr><td>Disabled</td><td>#E8A0C8</td><td>border #E2E2E2, text #858585</td><td>—</td></tr>
+  </tbody>
+</table>
+
+### Focus ring
+
+Focus ring je vždy `outline` — nikdy `box-shadow`. Musí být viditelný na jakémkoliv pozadí.
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Focus Ring Spec</p>
+    <div class="bu1-button-row" style="margin:0.75rem 0;gap:1rem;">
+      <span class="bu1-button-demo bu1-button-demo--primary" style="outline:3px solid #d2147c;outline-offset:2px;">Primary focus</span>
+      <span class="bu1-button-demo bu1-button-demo--secondary" style="outline:3px solid #141414;outline-offset:2px;">Secondary focus</span>
+    </div>
+    <ul class="bu1-card-list">
+      <li><code>outline: 3px solid</code></li>
+      <li><code>outline-offset: 2px</code></li>
+      <li>Primary: <code>#D2147C</code></li>
+      <li>Secondary/Chip: <code>#141414</code></li>
+      <li>Inverse (na tmavém): <code>#FFFFFF</code></li>
+    </ul>
+  </div>
+  <div class="bu1-demo-box" style="background:#141414;">
+    <p class="bu1-card-title" style="color:#fff;">Inverse na tmavém bg</p>
+    <div class="bu1-button-row" style="margin:0.75rem 0;">
+      <span class="bu1-button-demo bu1-button-demo--inverse">Default</span>
+      <span class="bu1-button-demo bu1-button-demo--inverse" style="background:rgba(255,255,255,0.12);">Hover</span>
+      <span class="bu1-button-demo bu1-button-demo--inverse" style="outline:3px solid #fff;outline-offset:2px;">Focus</span>
+      <span class="bu1-button-demo bu1-button-demo--inverse" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.3);">Disabled</span>
+    </div>
+  </div>
+</div>
+
+### Stavy variant chips
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Všechny stavy chipů</p>
+    <div class="bu1-variant-row" style="margin:0.75rem 0;flex-wrap:wrap;">
+      <span class="bu1-variant">Default</span>
+      <span class="bu1-variant" style="background:#f1f1f1;">Hover</span>
+      <span class="bu1-variant bu1-variant--active">Active</span>
+      <span class="bu1-variant" style="outline:3px solid #141414;outline-offset:2px;">Focus</span>
+      <span class="bu1-variant bu1-variant--disabled">Disabled</span>
+      <span class="bu1-variant bu1-variant--oos">Vyprodáno</span>
+    </div>
+    <ul class="bu1-card-list" style="margin-top:0.5rem;">
+      <li><strong>Active:</strong> Onyx bg, bílý text</li>
+      <li><strong>Disabled:</strong> šedý border, šedý text</li>
+      <li><strong>Vyprodáno (OOS):</strong> přeškrtnutý text</li>
+    </ul>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Metriky stavů</p>
+    <table class="bu1-spec-table" style="margin:0.5rem 0 0;">
+      <tbody>
+        <tr><td>Hover bg</td><td><code>#F1F1F1</code></td></tr>
+        <tr><td>Active bg</td><td><code>#141414</code></td></tr>
+        <tr><td>Focus ring</td><td><code>3px solid #141414</code></td></tr>
+        <tr><td>Disabled border</td><td><code>#E2E2E2</code></td></tr>
+        <tr><td>Disabled text</td><td><code>#858585</code></td></tr>
+        <tr><td>OOS decoration</td><td><code>line-through</code></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
 ## CSS reference
 
 <table class="bu1-spec-table">
@@ -180,5 +284,10 @@ sidebar:
     <tr><td>Primary color</td><td><code>--bu1-color-primary</code></td></tr>
     <tr><td>Black</td><td><code>--bu1-color-black</code></td></tr>
     <tr><td>White</td><td><code>--bu1-color-white</code></td></tr>
+    <tr><td>Disabled chip</td><td><code>.bu1-variant--disabled</code></td></tr>
+    <tr><td>Out-of-stock chip</td><td><code>.bu1-variant--oos</code></td></tr>
+    <tr><td>Primary hover bg</td><td><code>--bu1-state-primary-hover-bg</code></td></tr>
+    <tr><td>Primary active bg</td><td><code>--bu1-state-primary-active-bg</code></td></tr>
+    <tr><td>Focus ring color</td><td><code>--bu1-focus-ring-color-primary</code></td></tr>
   </tbody>
 </table>

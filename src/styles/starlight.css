@@ -235,6 +235,17 @@ starlight-theme-select label {
   grid-auto-rows: 1fr;
 }
 
+/* Starlight's adjacent-sibling rule (.sl-markdown-content X + X { margin-top: 1rem })
+   adds margin-top to every grid item that has a preceding sibling, breaking card
+   alignment — 1st card has no margin, 2nd+ cards do. Reset on all home grid children. */
+.home-summary-grid > *,
+.home-stats > *,
+.home-grid > *,
+.home-steps > *,
+.home-dual-grid > * {
+  margin-top: 0;
+}
+
 .home-summary-grid {
   grid-template-columns: minmax(0, 1.5fr) minmax(18rem, 0.9fr);
 }
@@ -501,14 +512,17 @@ starlight-theme-select label {
   align-items: stretch;
 }
 
-/* All grid direct children stretch to fill row height */
+/* All grid direct children: stretch to fill row height + reset Starlight's
+   adjacent-sibling margin-top that breaks first-card alignment. */
 .bu1-swatch-grid > *,
 .bu1-logo-grid > *,
 .bu1-metric-grid > *,
 .bu1-ui-grid > *,
 .bu1-type-grid > *,
-.bu1-template-grid > * {
+.bu1-template-grid > *,
+.bu1-semantic-grid > * {
   height: 100%;
+  margin-top: 0;
 }
 
 /* Card body minimum height ensures consistent card sizing
@@ -902,6 +916,341 @@ starlight-theme-select label {
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+/* ─────────────────────────────────────────────────────────
+   COMPONENT STATES
+   hover / focus / active / disabled for all interactive UI
+   ───────────────────────────────────────────────────────── */
+
+.bu1-button-demo {
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+/* Primary — hover / active */
+.bu1-button-demo--primary:hover {
+  background: #a81063;
+  border-color: #a81063;
+}
+.bu1-button-demo--primary:active {
+  background: #8f0d54;
+  border-color: #8f0d54;
+}
+
+/* Primary — focus (keyboard) */
+.bu1-button-demo--primary:focus-visible {
+  outline: 3px solid #d2147c;
+  outline-offset: 2px;
+}
+
+/* Primary — disabled */
+.bu1-button-demo--primary[disabled],
+.bu1-button-demo--primary.is-disabled {
+  background: #e8a0c8;
+  border-color: #e8a0c8;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Secondary — hover / active */
+.bu1-button-demo--secondary:hover {
+  background: #f1f1f1;
+}
+.bu1-button-demo--secondary:active {
+  background: #e2e2e2;
+}
+
+/* Secondary — focus */
+.bu1-button-demo--secondary:focus-visible {
+  outline: 3px solid #141414;
+  outline-offset: 2px;
+}
+
+/* Secondary — disabled */
+.bu1-button-demo--secondary[disabled],
+.bu1-button-demo--secondary.is-disabled {
+  border-color: #e2e2e2;
+  color: #858585;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Inverse — hover / active */
+.bu1-button-demo--inverse:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+.bu1-button-demo--inverse:active {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+/* Inverse — focus */
+.bu1-button-demo--inverse:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Inverse — disabled */
+.bu1-button-demo--inverse[disabled],
+.bu1-button-demo--inverse.is-disabled {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.3);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Variant chips — hover / focus / disabled / out-of-stock */
+.bu1-variant {
+  cursor: pointer;
+  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.bu1-variant:hover:not(.bu1-variant--active):not(.bu1-variant--disabled):not(.bu1-variant--oos) {
+  background: #f1f1f1;
+}
+
+.bu1-variant:focus-visible {
+  outline: 3px solid #141414;
+  outline-offset: 2px;
+}
+
+.bu1-variant--disabled {
+  background: #f8f8f8;
+  border-color: #e2e2e2;
+  color: #858585;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.bu1-variant--oos {
+  background: #f8f8f8;
+  border-color: #e2e2e2;
+  color: #858585;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SEMANTIC ALERT COMPONENT
+   error / success / warning / info — inline alerts & toasts
+   ───────────────────────────────────────────────────────── */
+
+.bu1-alert {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  padding: 0.875rem 1rem;
+  border-radius: 4px;
+  border: 1px solid;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.bu1-alert__icon {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+.bu1-alert__body {
+  flex: 1;
+}
+
+.bu1-alert__title {
+  display: block;
+  margin-bottom: 0.2rem;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.bu1-alert--error {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.bu1-alert--success {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #15803d;
+}
+
+.bu1-alert--warning {
+  background: #fffbeb;
+  border-color: #fde68a;
+  color: #92400e;
+}
+
+.bu1-alert--info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+/* Dark mode — semantic alerts keep light bg (status must be legible) */
+:root[data-theme='dark'] .bu1-alert--error {
+  background: rgba(185, 28, 28, 0.1);
+  border-color: rgba(185, 28, 28, 0.3);
+  color: #fca5a5;
+}
+
+:root[data-theme='dark'] .bu1-alert--success {
+  background: rgba(21, 128, 61, 0.1);
+  border-color: rgba(21, 128, 61, 0.3);
+  color: #86efac;
+}
+
+:root[data-theme='dark'] .bu1-alert--warning {
+  background: rgba(146, 64, 14, 0.1);
+  border-color: rgba(146, 64, 14, 0.3);
+  color: #fcd34d;
+}
+
+:root[data-theme='dark'] .bu1-alert--info {
+  background: rgba(29, 78, 216, 0.1);
+  border-color: rgba(29, 78, 216, 0.3);
+  color: #93c5fd;
+}
+
+/* Input validation states */
+.bu1-input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.bu1-input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 0.875rem;
+  border: 2px solid #e2e2e2;
+  border-radius: 2px;
+  background: #ffffff;
+  color: #141414;
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: border-color 0.15s ease;
+  box-sizing: border-box;
+}
+
+.bu1-input:focus {
+  outline: none;
+  border-color: #141414;
+}
+
+.bu1-input:focus-visible {
+  outline: 3px solid #141414;
+  outline-offset: 2px;
+}
+
+.bu1-input--error {
+  border-color: #fecaca;
+}
+
+.bu1-input--error:focus,
+.bu1-input--error:focus-visible {
+  border-color: #b91c1c;
+  outline-color: #b91c1c;
+}
+
+.bu1-input--success {
+  border-color: #bbf7d0;
+}
+
+.bu1-input--success:focus,
+.bu1-input--success:focus-visible {
+  border-color: #15803d;
+  outline-color: #15803d;
+}
+
+.bu1-field-msg {
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.bu1-field-msg--error { color: #b91c1c; }
+.bu1-field-msg--success { color: #15803d; }
+.bu1-field-msg--hint { color: #858585; }
+
+:root[data-theme='dark'] .bu1-input {
+  background: #1e1e1e;
+  color: #e2e2e2;
+  border-color: #575757;
+}
+
+:root[data-theme='dark'] .bu1-input:focus {
+  border-color: #ffffff;
+}
+
+:root[data-theme='dark'] .bu1-input--error { border-color: rgba(220, 38, 38, 0.5); }
+:root[data-theme='dark'] .bu1-input--success { border-color: rgba(34, 197, 94, 0.4); }
+:root[data-theme='dark'] .bu1-field-msg--error { color: #fca5a5; }
+:root[data-theme='dark'] .bu1-field-msg--success { color: #86efac; }
+:root[data-theme='dark'] .bu1-field-msg--hint { color: #858585; }
+
+/* ─────────────────────────────────────────────────────────
+   SEMANTIC COLOR SWATCHES (for documentation page)
+   ───────────────────────────────────────────────────────── */
+
+.bu1-semantic-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  margin: 1rem 0 2rem;
+  align-items: stretch;
+}
+
+.bu1-semantic-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(20, 20, 20, 0.1);
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+:root[data-theme='dark'] .bu1-semantic-card {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #141414;
+}
+
+.bu1-semantic-swatch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 6rem;
+  padding: 0.75rem;
+}
+
+.bu1-semantic-swatch__label {
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.bu1-semantic-body {
+  padding: 0.75rem 1rem 1rem;
+}
+
+.bu1-semantic-title {
+  margin: 0 0 0.25rem;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.bu1-semantic-meta {
+  font-size: 0.8125rem;
+  color: #858585;
 }
 
 /* Spec table */

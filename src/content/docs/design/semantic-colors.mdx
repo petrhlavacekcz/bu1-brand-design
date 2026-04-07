@@ -1,0 +1,180 @@
+---
+title: Semantic Colors
+description: UI-state barvy pro error, success, warning a info — základ pro form validation, alerty a toasty.
+sidebar:
+  order: 3
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Semantic Colors</span>
+  <p>Čtyři stavové barvy. Nikdy Hot Rose pro status. Každá barva = konkrétní stav.</p>
+</div>
+
+## Proč sémantické barvy?
+
+Brand barvy (Hot Rose, Onyx, White) jsou identity systém — nesou roli akce a prostoru.
+Sémantické barvy jsou **utilita** — nesou informaci o stavu UI.
+
+:::caution[Pravidlo]
+Hot Rose NIKDY neslouží jako error, success nebo info barva. Červená = chyba. Zelená = úspěch. Tyto role jsou globálně srozumitelné — neměň je.
+:::
+
+## Paleta
+
+<div class="bu1-semantic-grid">
+  <div class="bu1-semantic-card">
+    <div class="bu1-semantic-swatch" style="background:#fef2f2;">
+      <span class="bu1-semantic-swatch__label" style="color:#b91c1c;">Error</span>
+    </div>
+    <div class="bu1-semantic-body">
+      <p class="bu1-semantic-title">Error</p>
+      <p class="bu1-semantic-meta">Text: <code>#B91C1C</code><br/>Bg: <code>#FEF2F2</code><br/>Border: <code>#FECACA</code><br/>Icon: <code>#DC2626</code><br/>WCAG: 5.7:1 AA</p>
+    </div>
+  </div>
+  <div class="bu1-semantic-card">
+    <div class="bu1-semantic-swatch" style="background:#f0fdf4;">
+      <span class="bu1-semantic-swatch__label" style="color:#15803d;">Success</span>
+    </div>
+    <div class="bu1-semantic-body">
+      <p class="bu1-semantic-title">Success</p>
+      <p class="bu1-semantic-meta">Text: <code>#15803D</code><br/>Bg: <code>#F0FDF4</code><br/>Border: <code>#BBF7D0</code><br/>Icon: <code>#22C55E</code><br/>WCAG: 4.6:1 AA</p>
+    </div>
+  </div>
+  <div class="bu1-semantic-card">
+    <div class="bu1-semantic-swatch" style="background:#fffbeb;">
+      <span class="bu1-semantic-swatch__label" style="color:#92400e;">Warning</span>
+    </div>
+    <div class="bu1-semantic-body">
+      <p class="bu1-semantic-title">Warning</p>
+      <p class="bu1-semantic-meta">Text: <code>#92400E</code><br/>Bg: <code>#FFFBEB</code><br/>Border: <code>#FDE68A</code><br/>Icon: <code>#D97706</code><br/>WCAG: 7.2:1 AAA</p>
+    </div>
+  </div>
+  <div class="bu1-semantic-card">
+    <div class="bu1-semantic-swatch" style="background:#eff6ff;">
+      <span class="bu1-semantic-swatch__label" style="color:#1d4ed8;">Info</span>
+    </div>
+    <div class="bu1-semantic-body">
+      <p class="bu1-semantic-title">Info</p>
+      <p class="bu1-semantic-meta">Text: <code>#1D4ED8</code><br/>Bg: <code>#EFF6FF</code><br/>Border: <code>#BFDBFE</code><br/>Icon: <code>#3B82F6</code><br/>WCAG: 4.7:1 AA</p>
+    </div>
+  </div>
+</div>
+
+## Alert komponenta
+
+Použij pro inline zprávy na stránce — form errors, potvrzení, varování, systémové info.
+
+<div style="display:flex;flex-direction:column;gap:0.75rem;margin:1rem 0 2rem;">
+  <div class="bu1-alert bu1-alert--error">
+    <span class="bu1-alert__icon">⚠</span>
+    <div class="bu1-alert__body">
+      <span class="bu1-alert__title">Chyba při odeslání objednávky</span>
+      Platba nebyla přijata. Zkontroluj údaje karty a zkus to znovu.
+    </div>
+  </div>
+  <div class="bu1-alert bu1-alert--success">
+    <span class="bu1-alert__icon">✓</span>
+    <div class="bu1-alert__body">
+      <span class="bu1-alert__title">Objednávka přijata</span>
+      Potvrzení bylo odesláno na tvůj e-mail.
+    </div>
+  </div>
+  <div class="bu1-alert bu1-alert--warning">
+    <span class="bu1-alert__icon">!</span>
+    <div class="bu1-alert__body">
+      <span class="bu1-alert__title">Poslední kus na skladě</span>
+      Tento produkt je téměř vyprodaný. Objednej rychle.
+    </div>
+  </div>
+  <div class="bu1-alert bu1-alert--info">
+    <span class="bu1-alert__icon">i</span>
+    <div class="bu1-alert__body">
+      <span class="bu1-alert__title">Doprava zdarma od 1 500 Kč</span>
+      Do bezplatné dopravy ti chybí ještě 210 Kč.
+    </div>
+  </div>
+</div>
+
+## Form validation
+
+Stavové barvy se uplatní u polí formuláře — chybové, úspěšné i nápovědní.
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Chyba (Error)</p>
+    <div class="bu1-input-wrap" style="margin:0.75rem 0;">
+      <input class="bu1-input bu1-input--error" type="email" value="neplatny-email" aria-describedby="email-err" />
+      <span class="bu1-field-msg bu1-field-msg--error" id="email-err">Zadej platnou e-mailovou adresu.</span>
+    </div>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Úspěch (Success)</p>
+    <div class="bu1-input-wrap" style="margin:0.75rem 0;">
+      <input class="bu1-input bu1-input--success" type="email" value="jan@bu1sport.cz" aria-describedby="email-ok" />
+      <span class="bu1-field-msg bu1-field-msg--success" id="email-ok">E-mail je platný.</span>
+    </div>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Nápověda (Hint)</p>
+    <div class="bu1-input-wrap" style="margin:0.75rem 0;">
+      <input class="bu1-input" type="text" placeholder="Jméno příjmení" aria-describedby="name-hint" />
+      <span class="bu1-field-msg bu1-field-msg--hint" id="name-hint">Zadej jméno tak, jak má být na faktuře.</span>
+    </div>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Pravidla validace</p>
+    <ul class="bu1-card-list">
+      <li>Chyba: <strong>inline</strong> pod polem, nikdy jen toast</li>
+      <li>Success: zobrazit po blur, ne při psaní</li>
+      <li>Hint: viditelný vždy, ne jen při chybě</li>
+      <li>Každé pole musí mít <code>aria-describedby</code></li>
+    </ul>
+  </div>
+</div>
+
+## Pravidla použití
+
+<div class="bu1-ui-grid">
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Kdy použít co</p>
+    <table class="bu1-spec-table" style="margin:0.5rem 0 0;">
+      <thead><tr><th>Stav</th><th>Kdy</th></tr></thead>
+      <tbody>
+        <tr><td>Error</td><td>Chyba formuláře, selhání API, neplatný vstup</td></tr>
+        <tr><td>Success</td><td>Úspěšná akce, potvrzení, platný vstup</td></tr>
+        <tr><td>Warning</td><td>Poslední kus, brzy vyprší, nereverzibilní akce</td></tr>
+        <tr><td>Info</td><td>Neutrální info: doručení, doprava, pravidla</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="bu1-demo-box">
+    <p class="bu1-card-title">Co NIKDY nedělat</p>
+    <ul class="bu1-card-list">
+      <li>Hot Rose jako error barva</li>
+      <li>Červená jako brand nebo akcent</li>
+      <li>Zelená jako dekorativní prvek</li>
+      <li>Semantic barva v logu nebo nadpisu</li>
+      <li>Kombinovat více alertů vedle sebe bez rozestupu</li>
+    </ul>
+  </div>
+</div>
+
+## CSS tokeny
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Token</th><th>Hodnota</th><th>Použití</th></tr></thead>
+  <tbody>
+    <tr><td><code>--bu1-semantic-error-text</code></td><td>#B91C1C</td><td>Text, ikona</td></tr>
+    <tr><td><code>--bu1-semantic-error-bg</code></td><td>#FEF2F2</td><td>Pozadí alertu</td></tr>
+    <tr><td><code>--bu1-semantic-error-border</code></td><td>#FECACA</td><td>Border alertu/inputu</td></tr>
+    <tr><td><code>--bu1-semantic-success-text</code></td><td>#15803D</td><td>Text, ikona</td></tr>
+    <tr><td><code>--bu1-semantic-success-bg</code></td><td>#F0FDF4</td><td>Pozadí alertu</td></tr>
+    <tr><td><code>--bu1-semantic-success-border</code></td><td>#BBF7D0</td><td>Border alertu/inputu</td></tr>
+    <tr><td><code>--bu1-semantic-warning-text</code></td><td>#92400E</td><td>Text, ikona</td></tr>
+    <tr><td><code>--bu1-semantic-warning-bg</code></td><td>#FFFBEB</td><td>Pozadí alertu</td></tr>
+    <tr><td><code>--bu1-semantic-warning-border</code></td><td>#FDE68A</td><td>Border alertu/inputu</td></tr>
+    <tr><td><code>--bu1-semantic-info-text</code></td><td>#1D4ED8</td><td>Text, ikona</td></tr>
+    <tr><td><code>--bu1-semantic-info-bg</code></td><td>#EFF6FF</td><td>Pozadí alertu</td></tr>
+    <tr><td><code>--bu1-semantic-info-border</code></td><td>#BFDBFE</td><td>Border alertu/inputu</td></tr>
+  </tbody>
+</table>
