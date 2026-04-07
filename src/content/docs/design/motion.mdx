@@ -1,0 +1,183 @@
+---
+title: Motion
+description: Animační systém BU1SPORT — duration škála, easing funkce a principy pohybu.
+sidebar:
+  order: 6
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Motion</span>
+  <p>Pohyb podporuje hierarchii a feedback. Není dekorace — je funkce.</p>
+</div>
+
+## Principy
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Pohyb má účel</span>
+    <ul class="bu1-template-list">
+      <li>Každá animace sděluje něco konkrétního — stav, vztah, odezvu</li>
+      <li>Pokud animace nesděluje nic nového, nepoužívej ji</li>
+      <li>Motion nesmí zpomalit uživatele při dokončení úkolu</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Respektuj preference</span>
+    <ul class="bu1-template-list">
+      <li>Vždy implementuj <code>prefers-reduced-motion: reduce</code></li>
+      <li>Při reduced-motion: duration 0ms, bez translateZ/scale efektů</li>
+      <li>Fade-in (opacity) je bezpečný i při reduced-motion</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Konzistence</span>
+    <ul class="bu1-template-list">
+      <li>Stejný typ přechodu pro stejný typ akce</li>
+      <li>Nikdy nemíchej různé easing funkce pro stejný komponent</li>
+      <li>Hover a focus přechody: vždy <code>base</code> (200ms)</li>
+    </ul>
+  </section>
+</div>
+
+## Duration škála
+
+<div style="margin: 1rem 0 2rem;">
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Instant</span>
+    <div class="bu1-space-bar__block" style="width: 8px;"></div>
+    <span class="bu1-space-bar__meta"><code>--bu1-duration-instant</code> · 80ms — přímá odezva na klik, toggle</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Fast</span>
+    <div class="bu1-space-bar__block" style="width: 15px;"></div>
+    <span class="bu1-space-bar__meta"><code>--bu1-duration-fast</code> · 150ms — tooltip, badge, inline stav</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Base</span>
+    <div class="bu1-space-bar__block" style="width: 20px;"></div>
+    <span class="bu1-space-bar__meta"><code>--bu1-duration-base</code> · 200ms — <strong>výchozí</strong> · hover, focus, color přechody</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Slow</span>
+    <div class="bu1-space-bar__block" style="width: 30px;"></div>
+    <span class="bu1-space-bar__meta"><code>--bu1-duration-slow</code> · 300ms — drawer, modal, dropdown</span>
+  </div>
+  <div class="bu1-space-bar">
+    <span class="bu1-space-bar__label">Slower</span>
+    <div class="bu1-space-bar__block" style="width: 50px;"></div>
+    <span class="bu1-space-bar__meta"><code>--bu1-duration-slower</code> · 500ms — page transition, hero entrance</span>
+  </div>
+</div>
+
+## Easing funkce
+
+<table class="bu1-spec-table">
+  <thead>
+    <tr><th>Token</th><th>Hodnota</th><th>Použití</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>--bu1-ease-standard</code></td>
+      <td><code>cubic-bezier(0.2, 0, 0, 1)</code></td>
+      <td>Výchozí — hover, focus, barvy, velikosti</td>
+    </tr>
+    <tr>
+      <td><code>--bu1-ease-enter</code></td>
+      <td><code>cubic-bezier(0, 0, 0.2, 1)</code></td>
+      <td>Elementy vstupující do scény (dropdown, toast, modal)</td>
+    </tr>
+    <tr>
+      <td><code>--bu1-ease-exit</code></td>
+      <td><code>cubic-bezier(0.4, 0, 1, 1)</code></td>
+      <td>Elementy odcházející (zavírání, dismiss, hide)</td>
+    </tr>
+    <tr>
+      <td><code>--bu1-ease-emphasized</code></td>
+      <td><code>cubic-bezier(0.2, 0, 0, 1.4)</code></td>
+      <td>Speciální akcent (bounce efekt, CTA potvrzení)</td>
+    </tr>
+  </tbody>
+</table>
+
+:::note[Pravidlo enter/exit]
+Elementy **vstupují** pomalu (ease-out = decelerace) — dávají uživateli čas je zaregistrovat.
+Elementy **odcházejí** rychle (ease-in = akcelerace) — nezdržují uživatele.
+:::
+
+## Kdy co použít
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Akce</th><th>Duration</th><th>Easing</th></tr></thead>
+  <tbody>
+    <tr><td>Button hover / color přechod</td><td><code>base</code> 200ms</td><td>standard</td></tr>
+    <tr><td>Button active / pressed</td><td><code>instant</code> 80ms</td><td>standard</td></tr>
+    <tr><td>Focus ring appearance</td><td><code>fast</code> 150ms</td><td>standard</td></tr>
+    <tr><td>Tooltip zobrazení</td><td><code>fast</code> 150ms</td><td>enter</td></tr>
+    <tr><td>Dropdown otevření</td><td><code>slow</code> 300ms</td><td>enter</td></tr>
+    <tr><td>Dropdown zavření</td><td><code>fast</code> 150ms</td><td>exit</td></tr>
+    <tr><td>Modal otevření</td><td><code>slow</code> 300ms</td><td>enter</td></tr>
+    <tr><td>Modal zavření</td><td><code>base</code> 200ms</td><td>exit</td></tr>
+    <tr><td>Toast / notification in</td><td><code>slow</code> 300ms</td><td>enter</td></tr>
+    <tr><td>Skeleton loader fade</td><td><code>slower</code> 500ms</td><td>standard</td></tr>
+    <tr><td>Page transition</td><td><code>slower</code> 500ms</td><td>enter</td></tr>
+  </tbody>
+</table>
+
+## CSS implementace
+
+```css
+/* Výchozí hover přechod pro interaktivní elementy */
+.bu1-button,
+.bu1-variant-option,
+.bu1-link-card {
+  transition:
+    background-color var(--bu1-duration-base) var(--bu1-ease-standard),
+    border-color var(--bu1-duration-base) var(--bu1-ease-standard),
+    color var(--bu1-duration-base) var(--bu1-ease-standard),
+    outline-color var(--bu1-duration-fast) var(--bu1-ease-standard);
+}
+
+/* Active / pressed feedback */
+.bu1-button:active {
+  transform: translateY(1px);
+  transition-duration: var(--bu1-duration-instant);
+}
+
+/* Dropdown entrada */
+.bu1-dropdown {
+  transition: opacity var(--bu1-duration-slow) var(--bu1-ease-enter),
+              transform var(--bu1-duration-slow) var(--bu1-ease-enter);
+}
+
+/* Respektuj reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}
+```
+
+## Zakázané animace
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Nikdy</span>
+    <ul class="bu1-template-list">
+      <li>Animace bez účelu — čistě dekorativní spin, bounce, pulse</li>
+      <li>Trvání delší než 500ms pro UI feedback</li>
+      <li>Infinite animace na statickém obsahu (loader se spouští pouze při čekání)</li>
+      <li>Parallax efekty na mobilním webu</li>
+      <li>Překrývání více animací na stejném elementu</li>
+    </ul>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Opatrně</span>
+    <ul class="bu1-template-list">
+      <li><code>emphasized</code> easing jen pro speciální momenty — ne výchozí interakce</li>
+      <li>Scale/rotate transformace — pouze s jasným UI důvodem</li>
+      <li>Skeleton loading — jen pokud čekání &gt; 1 vteřinu</li>
+      <li>Page transitions — musí být kratší než 500ms aby neruily flow</li>
+    </ul>
+  </section>
+</div>

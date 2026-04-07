@@ -192,11 +192,11 @@
   },
   "shadow": {
     "card": {
-      "$value": "0 8px 24px rgba(20, 20, 20, 0.08)",
+      "$value": "none",
       "$type": "shadow"
     },
     "cta": {
-      "$value": "0 10px 24px rgba(210, 20, 124, 0.22)",
+      "$value": "none",
       "$type": "shadow"
     }
   },

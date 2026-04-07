@@ -9,7 +9,10 @@
     "product_first": true,
     "single_primary_cta": true,
     "no_unverified_claims": true,
-    "respect_brand_tokens": true
+    "respect_brand_tokens": true,
+    "positive_supportive_language": true,
+    "respectful_second_person": true,
+    "purposeful_emoji": true
   },
   "required_context": [
     "goal",
@@ -21,6 +24,8 @@
   "canonical_sources": [
     "src/content/data/brand-tokens.json",
     "src/content/docs/brand/tone-of-voice.mdx",
+    "src/content/docs/brand/language.mdx",
+    "src/content/docs/brand/communication-channels.mdx",
     "src/content/docs/design/",
     "src/content/docs/ecommerce/",
     "src/content/docs/ai/"

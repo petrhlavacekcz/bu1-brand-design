@@ -15,10 +15,12 @@ sidebar:
 Vždy načti relevantní canonical zdroje před zadáním úkolu:
 
 1. `src/content/data/brand-tokens.json` — barvy, typografie, metriky
-2. `src/content/data/personas.json` — persony a jejich kontext
+2. `src/content/data/prompt-meta.json` — vstupy, guardrails, zakázané vzory
 3. `src/content/docs/brand/tone-of-voice.mdx` — jak psát
-4. Relevantní task-specific soubor (product-description, instagram-post apod.)
-5. Šablona z `src/content/docs/templates/`
+4. `src/content/docs/brand/language.mdx` — oslovování, emoji, terminologie
+5. `src/content/docs/brand/communication-channels.mdx` — jazyk a účel kanálu
+6. Relevantní task-specific soubor (product-description, instagram-post apod.)
+7. Šablona z `src/content/docs/templates/`
 
 ## Guardrails — vždy platí
 
@@ -27,45 +29,42 @@ Vždy načti relevantní canonical zdroje před zadáním úkolu:
   <li>Konkrétní jazyk — žádné vague obecnosti</li>
   <li>Žádný marketingový bullshit (revoluční, prémiový, jedinečný)</li>
   <li>Produkt a akce mají přednost před dekorací a atmosférou</li>
+  <li>Používej přátelský a profesionální tón</li>
+  <li>Používej vykání: `vy`, `vám`, `vaše`</li>
+  <li>Emoji používej jen tam, kde dávají smysl pro daný kanál</li>
   <li>Neinventovat claims, slevy ani fakta bez podkladu</li>
-  <li>Neinventovat persony — použij schválené z personas.json</li>
+  <li>Neinventovat persony — tato vrstva je zatím pending</li>
 </ul>
 
-## Práce s personami
+## Práce s publikem
 
-Persony jsou aktivní a schválené. Při psaní obsahu vždy specifikuj, pro koho je výstup určený.
+Persony zatím nejsou dodané. Při psaní obsahu vždy specifikuj publikum provozně:
 
 <div class="bu1-template-grid">
   <section class="bu1-template-section">
-    <span class="bu1-template-label">Adam (14–17 let, mladý gólman)</span>
+    <span class="bu1-template-label">Trh a jazyk</span>
     <ul class="bu1-template-list">
-      <li>Přímý, energický tón</li>
-      <li>Vizuální jazyk — „vypadá dobře a funguje"</li>
-      <li>Krátké věty, žádné technické výlevy</li>
+      <li>CZ a SK kontext řeš česky, pokud není zadáno jinak</li>
+      <li>Globální účty a web defaultně anglicky</li>
+      <li>Nepleť lokální a globální komunikaci</li>
     </ul>
   </section>
   <section class="bu1-template-section">
-    <span class="bu1-template-label">Lenka (rodič, 35–50 let)</span>
+    <span class="bu1-template-label">Role příjemce</span>
     <ul class="bu1-template-list">
-      <li>Jasný, klidný tón bez sporťáckého slangu</li>
-      <li>Průvodce, jistota, jednoduchý výběr</li>
-      <li>Vysvětluj rozdíly, nedávej jen výčet</li>
+      <li>hráč</li>
+      <li>rodič</li>
+      <li>trenér</li>
+      <li>klub nebo partner</li>
     </ul>
   </section>
   <section class="bu1-template-section">
-    <span class="bu1-template-label">Petr (dospělý brankář, 20–40 let)</span>
+    <span class="bu1-template-label">Cíl výstupu</span>
     <ul class="bu1-template-list">
-      <li>Věcný, přímý, bez hype</li>
-      <li>Konkrétní parametry a srovnání</li>
-      <li>Respektuj jeho zkušenost — nepodceňuj ho</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Vilém (trenér, 30–55 let)</span>
-    <ul class="bu1-template-list">
-      <li>Věcný a profesionální</li>
-      <li>Systém „pro koho co vhodné"</li>
-      <li>Edukativní, ne marketingový tón</li>
+      <li>prodej</li>
+      <li>edukace</li>
+      <li>novinka</li>
+      <li>reference nebo servis</li>
     </ul>
   </section>
 </div>
@@ -78,7 +77,7 @@ Persony jsou aktivní a schválené. Při psaní obsahu vždy specifikuj, pro ko
   <li>Více CTA v jednom sdělení</li>
   <li>Vymyšlené slevy nebo limitované nabídky bez reálného podkladu</li>
   <li>Vymyšlené sociální důkazy nebo recenze</li>
-  <li>Persony mimo schválený seznam</li>
+  <li>Vymyšlené persony, jména nebo psychologické profily</li>
 </ul>
 
 ## Povinné vstupy pro každý prompt
@@ -87,7 +86,8 @@ Každý task prompt musí obsahovat:
 
 <ul class="bu1-template-list">
   <li><strong>Cíl</strong> — co má výstup dosáhnout</li>
-  <li><strong>Persona</strong> — pro koho píšeš</li>
+  <li><strong>Publikum</strong> — pro koho píšeš</li>
+  <li><strong>Trh a jazyk</strong> — kde a v jakém jazyce výstup poběží</li>
   <li><strong>Kanál</strong> — e-shop, Instagram, e-mail, ad…</li>
   <li><strong>Fakta</strong> — název produktu, benefity, materiál</li>
   <li><strong>Formát výstupu</strong> — délka, struktura, jazyk</li>
@@ -95,4 +95,4 @@ Každý task prompt musí obsahovat:
 
 ## Jazyk
 
-Výchozí jazyk výstupů: **čeština (cs-CZ)**. Tykání pro B2C (Adam, Lenka, Petr), vykání pro B2B (Antonín, B2B partner).
+Výchozí jazyk výstupů: **čeština (cs-CZ)**. Výchozí oslovení: **vykání**. U sociálních sítí jsou emoji povolené, ale musí být funkční a střídmé.

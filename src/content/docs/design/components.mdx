@@ -7,7 +7,7 @@ sidebar:
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">Components</span>
-  <p>Tři typy tlačítek. Jeden styl chipů. Jeden styl badge. Žádné improvizace.</p>
+  <p>Tři typy tlačítek. Jeden styl chipů. Jeden styl badge. Ploché plochy. Žádné stíny. Žádné improvizace.</p>
 </div>
 
 ## Tlačítka (Buttons)
@@ -61,6 +61,60 @@ sidebar:
     <tr><td>Kontrast</td><td>5.08:1 AA</td><td>18.42:1 AAA</td><td>na tmavém bg</td></tr>
   </tbody>
 </table>
+
+### Stavy tlačítka (Primary)
+
+<div class="bu1-ui-grid" style={{gap:"0.75rem"}}>
+  <div class="bu1-demo-box">
+    <p style={{fontSize:"0.75rem",color:"var(--sl-color-gray-3)",marginBottom:"0.5rem",textTransform:"uppercase",letterSpacing:"0.05em",fontWeight:700}}>Default</p>
+    <span class="bu1-button-demo bu1-button-demo--primary">Přidat do košíku</span>
+  </div>
+  <div class="bu1-demo-box">
+    <p style={{fontSize:"0.75rem",color:"var(--sl-color-gray-3)",marginBottom:"0.5rem",textTransform:"uppercase",letterSpacing:"0.05em",fontWeight:700}}>Hover</p>
+    <span class="bu1-button-demo bu1-button-demo--hover">Přidat do košíku</span>
+    <p style={{fontSize:"0.8rem",color:"var(--sl-color-gray-3)",marginTop:"0.5rem"}}>#A80F62 — 15 % tmavší</p>
+  </div>
+  <div class="bu1-demo-box">
+    <p style={{fontSize:"0.75rem",color:"var(--sl-color-gray-3)",marginBottom:"0.5rem",textTransform:"uppercase",letterSpacing:"0.05em",fontWeight:700}}>Focus</p>
+    <span class="bu1-button-demo bu1-button-demo--focus">Přidat do košíku</span>
+    <p style={{fontSize:"0.8rem",color:"var(--sl-color-gray-3)",marginTop:"0.5rem"}}>3px Onyx outline · offset 2px</p>
+  </div>
+  <div class="bu1-demo-box">
+    <p style={{fontSize:"0.75rem",color:"var(--sl-color-gray-3)",marginBottom:"0.5rem",textTransform:"uppercase",letterSpacing:"0.05em",fontWeight:700}}>Active / Pressed</p>
+    <span class="bu1-button-demo bu1-button-demo--active">Přidat do košíku</span>
+    <p style={{fontSize:"0.8rem",color:"var(--sl-color-gray-3)",marginTop:"0.5rem"}}>#8A0B50 · translateY(1px)</p>
+  </div>
+  <div class="bu1-demo-box">
+    <p style={{fontSize:"0.75rem",color:"var(--sl-color-gray-3)",marginBottom:"0.5rem",textTransform:"uppercase",letterSpacing:"0.05em",fontWeight:700}}>Disabled</p>
+    <span class="bu1-button-demo bu1-button-demo--disabled">Přidat do košíku</span>
+    <p style={{fontSize:"0.8rem",color:"var(--sl-color-gray-3)",marginTop:"0.5rem"}}>Neutral 300 bg · Neutral 600 text</p>
+  </div>
+  <div class="bu1-demo-box">
+    <p style={{fontSize:"0.75rem",color:"var(--sl-color-gray-3)",marginBottom:"0.5rem",textTransform:"uppercase",letterSpacing:"0.05em",fontWeight:700}}>Loading</p>
+    <span class="bu1-button-demo bu1-button-demo--loading" style={{minWidth:"180px"}}>Přidat do košíku</span>
+    <p style={{fontSize:"0.8rem",color:"var(--sl-color-gray-3)",marginTop:"0.5rem"}}>Spinner · text skrytý · pointer-events none</p>
+  </div>
+</div>
+
+<table class="bu1-spec-table">
+  <thead><tr><th>Stav</th><th>Background</th><th>Border</th><th>Text</th><th>Přechod</th></tr></thead>
+  <tbody>
+    <tr><td>Default</td><td>#D2147C</td><td>#D2147C</td><td>#FFFFFF</td><td>—</td></tr>
+    <tr><td>Hover</td><td>#A80F62</td><td>#A80F62</td><td>#FFFFFF</td><td>200ms ease</td></tr>
+    <tr><td>Focus</td><td>#D2147C</td><td>#D2147C</td><td>#FFFFFF</td><td>outline 3px #141414</td></tr>
+    <tr><td>Active</td><td>#8A0B50</td><td>#8A0B50</td><td>#FFFFFF</td><td>translateY(1px) 80ms</td></tr>
+    <tr><td>Disabled</td><td>#E2E2E2</td><td>#E2E2E2</td><td>#858585</td><td>—</td></tr>
+    <tr><td>Loading</td><td>#D2147C</td><td>#D2147C</td><td>skrytý</td><td>spinner 0.7s</td></tr>
+  </tbody>
+</table>
+
+### Přístupnost tlačítek
+
+- **Keyboard:** `Tab` fokusuje, `Enter` / `Space` aktivuje
+- **ARIA:** Pokud není `<button>`, přidej `role="button"` a `tabindex="0"`
+- **Disabled:** Použij `disabled` atribut (ne jen vizuální styl) — screen reader přeskočí
+- **Loading:** Přidej `aria-busy="true"` a `aria-label="Načítání..."` při loading stavu
+- **Focus ring:** 3px solid #141414 s offset 2px — nikdy neodstraňuj `:focus-visible` outline
 
 ## Variant Chips
 
@@ -160,6 +214,7 @@ sidebar:
         <tr><td>Padding těla</td><td><code>16px</code></td></tr>
         <tr><td>Border</td><td><code>1px solid Neutral 300</code></td></tr>
         <tr><td>Radius</td><td><code>2px</code></td></tr>
+        <tr><td>Stín</td><td><code>none</code></td></tr>
         <tr><td>Max badge</td><td><code>2</code></td></tr>
       </tbody>
     </table>

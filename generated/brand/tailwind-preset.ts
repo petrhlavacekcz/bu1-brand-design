@@ -55,7 +55,7 @@ const preset = {
         "12": "3rem"
 },
       borderRadius: { sm: '2px', md: '8px' },
-      boxShadow: { card: '0 8px 24px rgba(20, 20, 20, 0.08)', cta: '0 10px 24px rgba(210, 20, 124, 0.22)' }
+      boxShadow: { card: 'none', cta: 'none' }
     }
   }
 };
