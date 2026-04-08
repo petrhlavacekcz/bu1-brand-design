@@ -37,6 +37,18 @@
   --bu1-radius-md: 8px;
   --bu1-shadow-card: none;
   --bu1-shadow-cta: none;
+  --bu1-color-error: #C0392B;
+  --bu1-color-error-light: #FDECEA;
+  --bu1-color-error-dark: #7B241C;
+  --bu1-color-success: #1E7E34;
+  --bu1-color-success-light: #E8F5E9;
+  --bu1-color-success-dark: #145523;
+  --bu1-color-warning: #B7590A;
+  --bu1-color-warning-light: #FFF3E0;
+  --bu1-color-warning-dark: #7D3C07;
+  --bu1-color-info: #0369A1;
+  --bu1-color-info-light: #E0F2FE;
+  --bu1-color-info-dark: #024671;
 }
 
 body {

@@ -107,6 +107,7 @@
 }
 
 .hero h1,
+.content-panel h1,
 .sl-markdown-content h1,
 .sl-markdown-content h2,
 .sl-markdown-content h3 {
@@ -160,33 +161,29 @@ starlight-theme-select label {
 .sidebar-content a[aria-current='page']:hover,
 .sidebar-content a[aria-current='page']:focus {
   font-weight: 700;
-  background: rgba(210, 20, 124, 0.12);
-  color: #141414;
-  border-inline-start: 3px solid #d2147c;
-  padding-inline-start: calc(var(--sl-sidebar-item-padding-inline) - 3px);
+  background: rgba(210, 20, 124, 0.10);
+  color: #D2147C;
 }
 
 :root[data-theme='dark'] .sidebar-content a[aria-current='page'],
 :root[data-theme='dark'] .sidebar-content a[aria-current='page']:hover,
 :root[data-theme='dark'] .sidebar-content a[aria-current='page']:focus {
-  background: rgba(210, 20, 124, 0.18);
-  color: #ffffff;
+  background: rgba(210, 20, 124, 0.14);
+  color: #ff4ea8;
 }
 
 .hero {
   border: 1px solid rgba(20, 20, 20, 0.08);
-  border-inline-start: 6px solid #d2147c;
-  border-radius: 1rem;
+  border-radius: var(--bu1-radius-md);
   box-shadow: none;
   overflow: hidden;
   background: #ffffff;
-  gap: 1.25rem;
-  padding: 1rem 1.25rem;
+  gap: var(--bu1-space-5);
+  padding: var(--bu1-space-4) var(--bu1-space-5);
 }
 
 :root[data-theme='dark'] .hero {
   border-color: rgba(255,255,255,0.08);
-  border-inline-start-color: #d2147c;
   box-shadow: none;
   background: #141414;
 }
@@ -217,8 +214,8 @@ starlight-theme-select label {
 
 .hero .sl-link-button {
   min-height: 3rem;
-  padding: 0.7rem 1rem;
-  border-radius: 0.65rem;
+  padding: 0.7rem var(--bu1-space-4);
+  border-radius: var(--bu1-radius-sm);
 }
 
 .hero .sl-link-button.secondary {
@@ -243,7 +240,7 @@ starlight-theme-select label {
 .home-step,
 .home-stat {
   border: 1px solid rgba(20, 20, 20, 0.08);
-  border-radius: 1rem;
+  border-radius: var(--bu1-radius-md);
   background: rgba(255, 255, 255, 0.98);
   box-shadow: none;
 }
@@ -260,7 +257,7 @@ starlight-theme-select label {
 
 .home-panel,
 .home-section {
-  padding: 1.25rem;
+  padding: var(--bu1-space-5);
 }
 
 .home-summary-grid,
@@ -357,7 +354,7 @@ starlight-theme-select label {
 }
 
 .home-stat {
-  padding: 1rem;
+  padding: var(--bu1-space-4);
 }
 
 .home-stat strong {
@@ -374,7 +371,7 @@ starlight-theme-select label {
 }
 
 .home-link-card {
-  padding: 1rem;
+  padding: var(--bu1-space-4);
   color: inherit;
   text-decoration: none;
   transition: border-color 0.18s ease, background-color 0.18s ease, color 0.18s ease;
@@ -420,7 +417,7 @@ starlight-theme-select label {
 }
 
 .home-step {
-  padding: 1rem;
+  padding: var(--bu1-space-4);
 }
 
 .home-step > span {
@@ -463,24 +460,22 @@ starlight-theme-select label {
 @media (min-width: 50rem) {
   .hero {
     grid-template-columns: minmax(0, 1fr);
-    gap: 1rem;
-    padding: 1.25rem 1.25rem 1rem;
+    gap: var(--bu1-space-4);
+    padding: var(--bu1-space-5) var(--bu1-space-5) var(--bu1-space-4);
   }
 }
 
 .bu1-section-intro {
-  margin-bottom: 1.5rem;
-  padding: 1rem 1.25rem;
-  border: 1px solid rgba(210, 20, 124, 0.18);
-  border-left: 3px solid #D2147C;
-  border-radius: 0.5rem;
-  background: rgba(210, 20, 124, 0.04);
+  margin-bottom: var(--bu1-space-6);
+  padding: var(--bu1-space-4) var(--bu1-space-5);
+  border: 1px solid rgba(210, 20, 124, 0.14);
+  border-radius: var(--bu1-radius-md);
+  background: rgba(210, 20, 124, 0.03);
 }
 
 :root[data-theme='dark'] .bu1-section-intro {
-  border-color: rgba(210, 20, 124, 0.25);
-  border-left-color: #D2147C;
-  background: rgba(210, 20, 124, 0.07);
+  border-color: rgba(210, 20, 124, 0.20);
+  background: rgba(210, 20, 124, 0.05);
 }
 
 .bu1-kicker {
@@ -494,14 +489,83 @@ starlight-theme-select label {
   text-transform: uppercase;
 }
 
-/* Swatch grid: fixed card widths so every row has the same card size */
+/* ─────────────────────────────────────────────────────────
+   COLOR CARD — compact square chip format
+   ───────────────────────────────────────────────────────── */
+
+.bu1-color-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  border-radius: var(--bu1-radius-sm);
+  background: #fff;
+}
+
+:root[data-theme='dark'] .bu1-color-card {
+  border-color: rgba(255, 255, 255, 0.08);
+  background: #1e1e1e;
+}
+
+.bu1-color-chip {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.3rem 0.4rem;
+}
+
+.bu1-color-chip__hex {
+  font-family: 'Nunito Sans', Arial, sans-serif;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  opacity: 0.9;
+  line-height: 1;
+}
+
+.bu1-color-card__body {
+  padding: 0.45rem 0.5rem 0.5rem;
+  flex: 1;
+}
+
+.bu1-color-card__name {
+  margin: 0 0 0.2rem;
+  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+.bu1-color-card__meta {
+  margin: 0 0 0.15rem;
+  font-size: 0.6875rem;
+  color: #858585;
+  line-height: 1.4;
+}
+
+.bu1-color-card__role {
+  margin: 0.15rem 0 0;
+  font-size: 0.6875rem;
+  color: #575757;
+  line-height: 1.4;
+}
+
+:root[data-theme='dark'] .bu1-color-card__role {
+  color: #9a9a9a;
+}
+
+/* Swatch grid: compact columns for square color chips */
 .bu1-swatch-grid {
   display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 14rem));
+  gap: 0.625rem;
+  grid-template-columns: repeat(auto-fill, minmax(6rem, 7.5rem));
   justify-content: start;
   margin: 1rem 0 2rem;
-  align-items: stretch;
+  align-items: start;
 }
 
 /* Logo grid: fixed 4-column layout so all cards sit in 1–2 consistent rows */
@@ -553,7 +617,10 @@ starlight-theme-select label {
 
 /* All grid direct children: stretch to fill row height + reset Starlight's
    adjacent-sibling margin-top that breaks first-card alignment. */
-.bu1-swatch-grid > *,
+.bu1-swatch-grid > * {
+  margin-top: 0;
+}
+
 .bu1-logo-grid > *,
 .bu1-metric-grid > *,
 .bu1-ui-grid > *,
@@ -576,7 +643,7 @@ starlight-theme-select label {
   height: 100%;
   overflow: hidden;
   border: 1px solid rgba(20, 20, 20, 0.1);
-  border-radius: 0.5rem;
+  border-radius: var(--bu1-radius-md);
   background: #fff;
   box-shadow: none;
 }
@@ -595,7 +662,7 @@ starlight-theme-select label {
 
 .bu1-card-body {
   flex: 1;
-  padding: 0.9rem 1rem 1rem;
+  padding: var(--bu1-space-4);
 }
 
 .bu1-card-title {
@@ -654,9 +721,9 @@ starlight-theme-select label {
 }
 
 .bu1-type-sample {
-  padding: 1rem;
+  padding: var(--bu1-space-4);
   border: 1px solid rgba(20, 20, 20, 0.08);
-  border-radius: 0.5rem;
+  border-radius: var(--bu1-radius-md);
   background: rgba(248,248,248,0.75);
 }
 
@@ -679,10 +746,10 @@ starlight-theme-select label {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 0.75rem;
-  padding: 1.25rem;
+  gap: var(--bu1-space-3);
+  padding: var(--bu1-space-5);
   border: 1px solid rgba(20,20,20,0.08);
-  border-radius: 0.5rem;
+  border-radius: var(--bu1-radius-md);
   background: #fff;
 }
 
@@ -703,9 +770,9 @@ starlight-theme-select label {
   align-items: center;
   justify-content: center;
   min-height: 52px;
-  padding: 0.875rem 24px;
+  padding: 0.875rem var(--bu1-space-6);
   border: 2px solid #141414;
-  border-radius: 2px;
+  border-radius: var(--bu1-radius-sm);
   font-family: 'Oswald', 'Arial Narrow', sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -788,9 +855,9 @@ starlight-theme-select label {
 .bu1-state-indicator {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.25rem;
+  gap: var(--bu1-space-2);
+  padding: var(--bu1-space-2) var(--bu1-space-3);
+  border-radius: var(--bu1-radius-sm);
   font-size: 0.875rem;
   font-weight: 700;
 }
@@ -823,19 +890,19 @@ starlight-theme-select label {
 .bu1-focus-demo {
   outline: 3px solid #141414;
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: var(--bu1-radius-sm);
 }
 
 .bu1-product-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--bu1-space-3);
   height: 100%;
   max-width: none;
   width: 100%;
-  padding: 16px;
+  padding: var(--bu1-space-4);
   border: 1px solid rgba(20,20,20,0.14);
-  border-radius: 2px;
+  border-radius: var(--bu1-radius-sm);
   background: #fff;
   box-shadow: none;
 }
@@ -849,7 +916,7 @@ starlight-theme-select label {
   display: grid;
   place-items: center;
   min-height: 9rem;
-  border-radius: 0.25rem;
+  border-radius: var(--bu1-radius-sm);
   background: #f8f8f8;
   font-size: 3rem;
 }
@@ -874,10 +941,10 @@ starlight-theme-select label {
 
 .bu1-badge {
   display: inline-flex;
-  margin-bottom: 0.75rem;
+  margin-bottom: var(--bu1-space-3);
   padding: 0.2rem 0.6rem;
   border: 1px solid #141414;
-  border-radius: 3px;
+  border-radius: var(--bu1-radius-sm);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -891,7 +958,7 @@ starlight-theme-select label {
   min-height: 48px;
   padding-inline: 14px;
   border: 2px solid #141414;
-  border-radius: 2px;
+  border-radius: var(--bu1-radius-sm);
   background: #fff;
   font-family: 'Oswald', 'Arial Narrow', sans-serif;
   text-transform: uppercase;
@@ -902,7 +969,8 @@ starlight-theme-select label {
   color: #fff;
 }
 
-.bu1-spec-table td,
+/* Only code cells are nowrap; text cells can wrap on narrow viewports */
+.bu1-spec-table td code,
 .bu1-spec-table th {
   white-space: nowrap;
 }
@@ -920,10 +988,10 @@ starlight-theme-select label {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 0.75rem;
-  padding: 1rem 1.25rem;
+  gap: var(--bu1-space-3);
+  padding: var(--bu1-space-4) var(--bu1-space-5);
   border: 1px solid rgba(20, 20, 20, 0.08);
-  border-radius: 0.5rem;
+  border-radius: var(--bu1-radius-md);
   background: #ffffff;
   box-shadow: none;
 }
@@ -948,8 +1016,8 @@ starlight-theme-select label {
 .bu1-template-placeholder {
   display: block;
   margin-top: 0.35rem;
-  padding: 0.7rem 0.85rem;
-  border-radius: 0.35rem;
+  padding: var(--bu1-space-3) var(--bu1-space-4);
+  border-radius: var(--bu1-radius-sm);
   background: var(--sl-color-bg-inline-code);
   color: var(--sl-color-text);
   font-family: var(--__sl-font-mono);
@@ -996,7 +1064,7 @@ starlight-theme-select label {
   flex-shrink: 0;
   background: #D2147C;
   height: 1.25rem;
-  border-radius: 2px;
+  border-radius: var(--bu1-radius-sm);
 }
 
 .bu1-space-bar__label {
@@ -1039,7 +1107,7 @@ starlight-theme-select label {
   display: flex;
   overflow: hidden;
   border: 1px solid rgba(20, 20, 20, 0.08);
-  border-radius: 0.5rem;
+  border-radius: var(--bu1-radius-md);
 }
 
 .bu1-color-combo__swatch {
@@ -1058,18 +1126,23 @@ starlight-theme-select label {
 .bu1-spec-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin: 0.75rem 0 1.5rem;
+}
+
+.bu1-spec-table thead tr {
+  border-bottom: 2px solid #D2147C;
 }
 
 .bu1-spec-table th {
   text-align: left;
   padding: 0.5rem 0.75rem;
-  border-bottom: 2px solid rgba(20, 20, 20, 0.12);
   font-family: 'Oswald', 'Arial Narrow', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  color: #D2147C;
 }
 
 .bu1-spec-table td {
@@ -1078,8 +1151,16 @@ starlight-theme-select label {
   vertical-align: middle;
 }
 
+.bu1-spec-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+:root[data-theme='dark'] .bu1-spec-table thead tr {
+  border-bottom-color: rgba(210, 20, 124, 0.5);
+}
+
 :root[data-theme='dark'] .bu1-spec-table th {
-  border-bottom-color: rgba(255, 255, 255, 0.12);
+  color: #ff4ea8;
 }
 
 :root[data-theme='dark'] .bu1-spec-table td {

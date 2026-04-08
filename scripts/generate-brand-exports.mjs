@@ -8,6 +8,7 @@ fs.mkdirSync(outDir, { recursive: true });
 
 const tokens = JSON.parse(fs.readFileSync(tokensPath, 'utf8'));
 const core = tokens.colors;
+const sem = tokens.semantic;
 const typo = tokens.typography;
 const spacing = tokens.spacing;
 const radius = tokens.radius;
@@ -44,7 +45,20 @@ const cssVars = [
   `--bu1-radius-sm: ${radius.sm};`,
   `--bu1-radius-md: ${radius.md};`,
   `--bu1-shadow-card: ${shadow.card};`,
-  `--bu1-shadow-cta: ${shadow.cta};`
+  `--bu1-shadow-cta: ${shadow.cta};`,
+  // Semantic UI-state colors (not brand colors — error/success/warning/info only)
+  `--bu1-color-error: ${sem.error.value};`,
+  `--bu1-color-error-light: ${sem.error.light};`,
+  `--bu1-color-error-dark: ${sem.error.dark};`,
+  `--bu1-color-success: ${sem.success.value};`,
+  `--bu1-color-success-light: ${sem.success.light};`,
+  `--bu1-color-success-dark: ${sem.success.dark};`,
+  `--bu1-color-warning: ${sem.warning.value};`,
+  `--bu1-color-warning-light: ${sem.warning.light};`,
+  `--bu1-color-warning-dark: ${sem.warning.dark};`,
+  `--bu1-color-info: ${sem.info.value};`,
+  `--bu1-color-info-light: ${sem.info.light};`,
+  `--bu1-color-info-dark: ${sem.info.dark};`
 ];
 
 const tokensCss = `:root {\n  ${cssVars.join('\n  ')}\n}\n`;
@@ -188,6 +202,16 @@ const figmaVariables = {
       green: { $value: core.fluorescent.neonGreen.value, $type: 'color' },
       blue: { $value: core.fluorescent.acidBlue.value, $type: 'color' },
       purple: { $value: core.fluorescent.electricPurple.value, $type: 'color' }
+    },
+    semantic: {
+      error: { $value: sem.error.value, $type: 'color' },
+      'error-light': { $value: sem.error.light, $type: 'color' },
+      success: { $value: sem.success.value, $type: 'color' },
+      'success-light': { $value: sem.success.light, $type: 'color' },
+      warning: { $value: sem.warning.value, $type: 'color' },
+      'warning-light': { $value: sem.warning.light, $type: 'color' },
+      info: { $value: sem.info.value, $type: 'color' },
+      'info-light': { $value: sem.info.light, $type: 'color' }
     }
   },
   spacing: Object.fromEntries(Object.entries(spacing).map(([k, v]) => [k, { $value: v, $type: 'dimension' }])),

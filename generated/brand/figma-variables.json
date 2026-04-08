@@ -66,6 +66,40 @@
         "$value": "#CC00FF",
         "$type": "color"
       }
+    },
+    "semantic": {
+      "error": {
+        "$value": "#C0392B",
+        "$type": "color"
+      },
+      "error-light": {
+        "$value": "#FDECEA",
+        "$type": "color"
+      },
+      "success": {
+        "$value": "#1E7E34",
+        "$type": "color"
+      },
+      "success-light": {
+        "$value": "#E8F5E9",
+        "$type": "color"
+      },
+      "warning": {
+        "$value": "#B7590A",
+        "$type": "color"
+      },
+      "warning-light": {
+        "$value": "#FFF3E0",
+        "$type": "color"
+      },
+      "info": {
+        "$value": "#0369A1",
+        "$type": "color"
+      },
+      "info-light": {
+        "$value": "#E0F2FE",
+        "$type": "color"
+      }
     }
   },
   "spacing": {

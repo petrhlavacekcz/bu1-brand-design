@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightCodeblockFullscreen from 'starlight-codeblock-fullscreen';
 import starlightPageActions from 'starlight-page-actions';
+import cleanMarkdown from './src/plugins/clean-markdown.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -65,5 +66,6 @@ export default defineConfig({
 				},
 			],
 		}),
+		cleanMarkdown(),
 	],
 });
