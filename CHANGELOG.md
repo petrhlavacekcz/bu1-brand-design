@@ -5,13 +5,14 @@
 ### Added
 - `src/content/docs/brand/communication-channels.mdx` a `src/content/docs/ai/prompting-principles.mdx` - doplněny sitemap indexy pro CZ/SK a globální jazykové mutace včetně pravidla, že sitemap slouží pro URL strukturu, ne pro produktová fakta.
 - `src/content/data/goalkeeper-glossary.json` - přidán canonical brankářský slovník do repozitáře, aby dokumentace neodkazovala na lokální soubory mimo content layer.
-- `src/content/docs/brand/language.mdx` - doplněna brankářská terminologie, pravidla údržby slovníku ve všech jazycích a reálné příklady na modelech BU1 Light HG 2.0, Junior BU1 Light HG 2.0 a BU1 Gator.
+- `src/content/docs/brand/language.mdx` - doplněna brankářská terminologie, pravidla údržby slovníku ve všech jazycích a reálné příklady na modelech BU1 Light HG 2.0, Junior BU1 Light HG 2.0 a BU1 FloW.
 
 ### Changed
 - `src/content/docs/design/icons.mdx` - primární icon set změněn z Phosphor Icons na Tabler Icons včetně pravidel pro vlastní ikony, stroke-width 2px a doporučených názvů ikon.
 - `src/content/docs/ai/product-description.mdx`, `src/content/docs/ai/prompting-principles.mdx`, `src/content/docs/ai/instagram-post.mdx`, `src/content/docs/templates/product-description-template.mdx`, `src/content/docs/templates/ad-template.mdx`, `src/content/docs/templates/email-template.mdx`, `src/content/docs/ecommerce/product-card.mdx`, `src/content/docs/design/components.mdx` a `src/content/docs/design/typography.mdx` - nahrazeny hypotetické produktové příklady reálnými modely a ověřitelnými produktovými fakty.
 - `src/content/docs/brand/communication-channels.mdx` - zpřesněno, že Facebook BU1 CZ/SK komunikuje česky i u společných CZ/SK postů.
 - `src/content/docs/brand/photo-style.mdx` - sjednocen technický výraz z `latex` na `pěna` podle schválené brankářské terminologie.
+- `src/content/docs/brand/language.mdx`, `src/content/docs/ai/product-description.mdx`, `src/content/docs/ai/instagram-post.mdx`, `src/content/docs/templates/product-description-template.mdx`, `src/content/docs/templates/ad-template.mdx`, `src/content/docs/templates/email-template.mdx` a `src/content/data/goalkeeper-glossary.json` - nahrazeny aktuální reference na doprodávaný BU1 Gator novými modely BU1 FloW a Junior BU1 FloW; Gator už není používán jako budoucí/current referenční produkt.
 
 ## [2026-04-07]
 
