@@ -2,6 +2,9 @@
 
 ## [2026-04-30]
 
+### Added
+- `src/content/docs/brand/communication-channels.mdx` a `src/content/docs/ai/prompting-principles.mdx` - doplněny sitemap indexy pro CZ/SK a globální jazykové mutace včetně pravidla, že sitemap slouží pro URL strukturu, ne pro produktová fakta.
+
 ### Changed
 - `src/content/docs/design/icons.mdx` - primární icon set změněn z Phosphor Icons na Tabler Icons včetně pravidel pro vlastní ikony, stroke-width 2px a doporučených názvů ikon.
 

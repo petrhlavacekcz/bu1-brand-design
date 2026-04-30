@@ -71,6 +71,25 @@ sidebar:
 
 <p class="bu1-template-example"><strong>Poznámka:</strong> Samostatné <code>/at</code> neexistuje — AT používá německou mutaci <code>/de</code>.</p>
 
+## Sitemapy
+
+Sitemapy slouží pro orientaci v aktuální URL struktuře podle trhu a jazyka. Jsou generované Shopify automaticky a neupravují se ručně.
+
+| Web | Trh / jazyk | Sitemap index | Obsah |
+|-----|-------------|---------------|-------|
+| <a href="https://bu1.cz/sitemap.xml" target="_blank" rel="noreferrer">bu1.cz/sitemap.xml</a> | CZ, SK | CZ/SK sitemap index | products, pages, collections, blogs |
+| <a href="https://bu1sport.com/sitemap.xml" target="_blank" rel="noreferrer">bu1sport.com/sitemap.xml</a> | EN, ES, DE/AT, PL, FR, IT, HU, RO, BG, HR | globální sitemap index | products, pages, collections, blogs |
+
+Před SEO, blogovou, interní-linking nebo webovou obsahovou prací nejdřív ověř správný trh a jazyk. Potom načti odpovídající sitemap index a z něj aktuální pod-sitemapy.
+
+:::caution[Sitemap není produktový source of truth]
+Sitemap neověřuje cenu, skladovost, aktuální produktové claimy ani komerční prioritu produktu. Tato fakta ověřuj v Shopify nebo jiném schváleném live zdroji.
+:::
+
+:::note[Pod-sitemapy]
+Neopisuj ručně pod-sitemap URL s parametry `from` a `to`. Shopify je může změnit. Stabilní vstup je root sitemap index.
+:::
+
 ## Provozní pravidla
 
 <ul class="bu1-template-list">
