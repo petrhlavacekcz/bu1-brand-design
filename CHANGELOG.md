@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [2026-04-30]
+
+### Changed
+- `src/content/docs/design/icons.mdx` - primární icon set změněn z Phosphor Icons na Tabler Icons včetně pravidel pro vlastní ikony, stroke-width 2px a doporučených názvů ikon.
+
 ## [2026-04-07]
 
 ### Added

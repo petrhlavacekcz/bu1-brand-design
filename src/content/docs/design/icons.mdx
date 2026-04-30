@@ -12,27 +12,41 @@ sidebar:
 
 ## Icon systém
 
-BU1SPORT používá **Phosphor Icons** jako primární icon set. Důvody:
-- Konzistentní geometrie a vizuální váha
-- Dostupné ve více stylech — Regular, Bold, Fill
-- Plná pokrytí běžných e-commerce potřeb
+BU1SPORT používá **Tabler Icons** jako primární icon set. Prohlížeč a reference: <a href="https://icon-sets.iconify.design/tabler/" target="_blank" rel="noreferrer">icon-sets.iconify.design/tabler</a>
+
+Důvody výběru:
+- Konzistentní stroke-based geometrie (stroke-width 2px) a vizuální váha
+- Rozsáhlá knihovna — 5 400+ ikon pokrývající e-commerce, sport i obecné UI
+- Plná integrace přes Iconify — dostupné ve všech frameworcích
 - Open source (MIT licence)
+
+### Vlastní ikony
+
+Pokud Tabler nepokrývá specifický kontext (např. brankářská rukavice, speciální produktový symbol), je možné vytvořit vlastní ikonu. Musí ale **vizuálně vycházet z Tabler setu**:
+
+- Stejný stroke-width: **2px**
+- Stejný viewport: **24×24**
+- Stejné zaoblení rohů a zakončení linií (round cap, round join)
+- Bez fillů — stroke only (výjimka: filled varianta pro active stav)
+
+:::caution[Schválení]
+Každou custom ikonu musí schválit brand tým před nasazením do produkce.
+:::
 
 <div class="bu1-template-grid">
   <section class="bu1-template-section">
     <span class="bu1-template-label">Preferované styly</span>
     <ul class="bu1-template-list">
-      <li><strong>Regular</strong> — výchozí pro UI (navigation, metadata, labels)</li>
-      <li><strong>Bold</strong> — pro zdůraznění nebo na tmavém pozadí</li>
-      <li><strong>Fill</strong> — pro aktivní a selected stavy</li>
+      <li><strong>Outline (výchozí)</strong> — stroke-width 2px, pro UI (navigation, metadata, labels)</li>
+      <li><strong>Filled</strong> — pro aktivní a selected stavy</li>
     </ul>
-    <p class="bu1-template-example">Nikdy nemíchej Regular a Thin v jedné komponentě.</p>
+    <p class="bu1-template-example">V jedné komponentě drž konzistentní styl — nemíchej outline a filled.</p>
   </section>
   <section class="bu1-template-section">
-    <span class="bu1-template-label">Zakázané styly</span>
+    <span class="bu1-template-label">Zakázané</span>
     <ul class="bu1-template-list">
-      <li><strong>Thin / Light</strong> — příliš slabé, nečitelné na malých velikostech</li>
-      <li>Míchání různých icon setů na stejné stránce</li>
+      <li>Míchání Tabler s jinými icon sety (FontAwesome, Material, Phosphor) na stejné stránce</li>
+      <li>Ikony s jiným stroke-width než 2px</li>
       <li>Custom ikony bez schválení brand týmem</li>
       <li>Emoji jako funkční ikony v UI</li>
     </ul>
@@ -92,22 +106,22 @@ Stav nesmí být komunikován pouze barvou ikony. Vždy doplň text nebo shape (
 
 ## Nejčastěji používané ikony
 
-| Kontext | Doporučená ikona | Phosphor název |
+| Kontext | Doporučená ikona | Tabler název |
 |---|---|---|
-| Košík | nákupní košík | `ShoppingCart` |
-| Vyhledávání | lupa | `MagnifyingGlass` |
-| Uživatel / účet | silueta osoby | `User` |
-| Filtr | tři linie/vrstvy | `Faders` |
-| Oblíbené | srdce | `Heart` / `HeartFill` (active) |
-| Zavřít / dismiss | ×  | `X` |
-| Zpět | šipka vlevo | `ArrowLeft` |
-| Doručení | box / dodávka | `Package` |
-| Vrácení zboží | šipka kruhem | `ArrowCounterClockwise` |
-| Velikost | pravítko | `Ruler` |
-| Sdílení | tři body spojené | `ShareNetwork` |
-| Upozornění / varování | trojúhelník | `Warning` |
-| Potvrzení / OK | fajfka | `CheckCircle` |
-| Info | písmeno i v kruhu | `Info` |
+| Košík | nákupní košík | `shopping-cart` |
+| Vyhledávání | lupa | `search` |
+| Uživatel / účet | silueta osoby | `user` |
+| Filtr | tři linie / funnel | `filter` |
+| Oblíbené | srdce | `heart` / `heart-filled` (active) |
+| Zavřít / dismiss | × | `x` |
+| Zpět | šipka vlevo | `arrow-left` |
+| Doručení | dodávka | `truck-delivery` |
+| Vrácení zboží | šipka kruhem | `arrow-back-up` |
+| Velikost | pravítko | `ruler` |
+| Sdílení | tři body spojené | `share` |
+| Upozornění / varování | trojúhelník | `alert-triangle` |
+| Potvrzení / OK | fajfka | `circle-check` |
+| Info | písmeno i v kruhu | `info-circle` |
 
 ## Do / Don't
 
@@ -125,11 +139,11 @@ Stav nesmí být komunikován pouze barvou ikony. Vždy doplň text nebo shape (
   <section class="bu1-template-section">
     <span class="bu1-template-label">Nedělej</span>
     <ul class="bu1-template-list">
-      <li>Nemíchej Phosphor s jinými icon sety (FontAwesome, Material)</li>
+      <li>Nemíchej Tabler s jinými icon sety (FontAwesome, Material, Phosphor)</li>
       <li>Nepoužívej ikony pod 12px — použij text nebo vynech</li>
       <li>Nepoužívej ikonu místo textu pokud je text jasnější</li>
       <li>Nepoužívej Hot Rose na ikony bez akčního kontextu</li>
-      <li>Nepoužívej Thin styl — příliš slabý pro sport brand</li>
+      <li>Nepoužívej stroke-width jiný než 2px — narušuje vizuální konzistenci</li>
     </ul>
   </section>
 </div>
