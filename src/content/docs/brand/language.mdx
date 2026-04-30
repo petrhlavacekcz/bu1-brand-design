@@ -53,10 +53,56 @@ sidebar:
 
 ## Terminologie
 
+Canonical slovník pro brankářskou a produktovou terminologii je `src/content/data/goalkeeper-glossary.json`. Udržujte ho aktuální pro všechny jazyky, které BU1 používá: `cs`, `sk`, `en`, `de`, `pl`, `fr`, `es`, `it`, `hu`, `ro`, `bg`, `hr`.
+
+Při přidání nebo změně termínu vždy:
+
+<ol class="bu1-template-list">
+  <li>upravte jeden termín ve všech jazykových mutacích ve slovníku</li>
+  <li>zkontrolujte, že český a slovenský výraz zní přirozeně pro brankáře i e-shop</li>
+  <li>ponechte názvy modelů, pěn a technologií beze změny</li>
+  <li>při psaní načítejte jen relevantní část slovníku, ne celý soubor do každého promptu</li>
+</ol>
+
+### Schválené výrazy pro rukavice
+
 <ul class="bu1-template-list">
-  <li>pro stejnou věc používejte vždy stejné pojmenování</li>
-  <li>když jednou zavedeme termín produktu nebo procesu, dál ho neměníme</li>
-  <li>nepřepínejte bez důvodu mezi různými názvy pro stejnou službu nebo nabídku</li>
+  <li><code>brankářské rukavice</code>, ne obecně jen <code>rukavice</code>, pokud může dojít k záměně</li>
+  <li><code>pěna</code>, konkrétně například <code>HG pěna</code> nebo <code>Contact Grip</code></li>
+  <li><code>grip</code> nebo <code>přilnavost</code> podle kontextu</li>
+  <li><code>cit pro míč</code>, <code>kontrola míče</code>, <code>jistota v rukou</code></li>
+  <li><code>střih</code>, <code>negativní střih</code>, <code>NC</code>, <code>fit</code> nebo <code>padnutí</code></li>
+  <li><code>dlaň</code>, <code>zápěstí</code>, <code>pásek</code>, <code>odnímatelné pásky</code></li>
+  <li><code>přírodní tráva</code>, <code>travnaté hřiště</code>, <code>umělá tráva</code>, <code>tvrdý povrch</code></li>
+</ul>
+
+### Reálné příklady použití
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">BU1 Light HG 2.0</span>
+    <p class="bu1-template-placeholder">Pro umělou trávu a tvrdší povrchy používejte formulace kolem odolnosti, HG pěny a jistoty v rukou.</p>
+    <p class="bu1-template-example"><strong>Dobře:</strong> BU1 Light HG 2.0 mají vylepšenou 4mm HG pěnu pro vyšší přilnavost a delší výdrž na umělé trávě.</p>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Junior BU1 Light HG 2.0</span>
+    <p class="bu1-template-placeholder">U juniorských produktů pište srozumitelně pro rodiče i mladé brankáře. Nepřehánějte výkonové sliby.</p>
+    <p class="bu1-template-example"><strong>Dobře:</strong> Junior BU1 Light HG 2.0 pomáhají mladým brankářům držet jistotu v rukou na umělé trávě i v hale.</p>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">BU1 Gator</span>
+    <p class="bu1-template-placeholder">U modelu na přírodní trávu nepište, že je určený na beton, halu nebo umělou trávu.</p>
+    <p class="bu1-template-example"><strong>Dobře:</strong> BU1 Gator kombinují lehký materiál, negativní střih a 4mm Contact Grip pro cit pro míč na travnatém hřišti.</p>
+  </section>
+</div>
+
+### Čemu se vyhnout
+
+<ul class="bu1-template-list">
+  <li><code>latex</code> jako automatický překlad pro českou produktovou copy, pokud systém schvaluje <code>pěna</code></li>
+  <li><code>uchopení míče</code> místo přirozenějšího <code>grip</code>, <code>přilnavost</code> nebo <code>jistota v rukou</code></li>
+  <li>míchání určení povrchu: BU1 Gator nepřepisujte jako rukavice na umělou trávu</li>
+  <li>vymýšlení nových modelů nebo variant mimo live zdroje</li>
 </ul>
 
 ## Stylové mantinely

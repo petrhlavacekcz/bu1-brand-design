@@ -16,17 +16,34 @@ Vždy načti relevantní canonical zdroje před zadáním úkolu:
 
 1. `src/content/data/brand-tokens.json` — barvy, typografie, metriky
 2. `src/content/data/prompt-meta.json` — vstupy, guardrails, zakázané vzory
-3. `src/content/docs/brand/tone-of-voice.mdx` — jak psát
-4. `src/content/docs/brand/language.mdx` — oslovování, emoji, terminologie
-5. `src/content/docs/brand/communication-channels.mdx` — jazyk, účel kanálu a sitemap indexy
-6. Relevantní task-specific soubor (product-description, instagram-post apod.)
-7. Šablona z `src/content/docs/templates/`
+3. `src/content/data/goalkeeper-glossary.json` — schválená brankářská terminologie pro aktivní jazyky
+4. `src/content/docs/brand/tone-of-voice.mdx` — jak psát
+5. `src/content/docs/brand/language.mdx` — oslovování, emoji, terminologie
+6. `src/content/docs/brand/communication-channels.mdx` — jazyk, účel kanálu a sitemap indexy
+7. Relevantní task-specific soubor (product-description, instagram-post apod.)
+8. Šablona z `src/content/docs/templates/`
 
 Pro webovou, SEO, blogovou a interní-linking práci ověř aktuální URL strukturu přes sitemap index podle trhu: <a href="https://bu1.cz/sitemap.xml" target="_blank" rel="noreferrer">bu1.cz/sitemap.xml</a> pro CZ/SK a <a href="https://bu1sport.com/sitemap.xml" target="_blank" rel="noreferrer">bu1sport.com/sitemap.xml</a> pro globální web a jazykové mutace.
 
 :::caution[Sitemap neověřuje produktová fakta]
 Ceny, dostupnost, produkty, varianty a aktuální claimy ověřuj v Shopify nebo jiném schváleném live zdroji. Sitemap používej jen pro URL strukturu.
 :::
+
+
+## Práce s reálnými příklady
+
+Příklady v promptech stavte na existujících produktech a ověřených faktech. Pokud pracujete s rukavicemi, použijte aktuální modely z live zdrojů a schválený slovník.
+
+<div class="bu1-template-grid">
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Správný vstup</span>
+    <p class="bu1-template-placeholder">Produkt: BU1 Light HG 2.0. Povrch: umělá tráva a tvrdší povrchy. Termíny: HG pěna, přilnavost, odolnost, jistota v rukou. Tón: vykání, čeština, bez prázdných superlativů.</p>
+  </section>
+  <section class="bu1-template-section">
+    <span class="bu1-template-label">Špatný vstup</span>
+    <p class="bu1-template-placeholder">Napiš něco prémiového o nových rukavicích pro každého brankáře. Přidej slevu a napiš to hodně prodejně.</p>
+  </section>
+</div>
 
 ## Guardrails — vždy platí
 
