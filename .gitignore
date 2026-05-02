@@ -24,3 +24,4 @@ pnpm-debug.log*
 .claude/
 .vscode/
 .playwright-cli/
+output/

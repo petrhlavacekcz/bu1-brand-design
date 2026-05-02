@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [2026-05-02] (housekeeping)
+
+### Changed
+- `astro.config.mjs` - znovu nastaveno `disable404Route: true`. Starlight injektoval vlastní `/404` route, která kolidovala s `[...slug]` rendrováním `src/content/docs/404.md`; vypnutím injekce zmizí build warning a custom česká 404 stránka se renderuje dál přes content collection.
+- `.gitignore` - přidáno `output/` pro lokální Playwright artefakty, aby se neocitly v gitu.
+
 ## [2026-05-02]
 
 ### Added

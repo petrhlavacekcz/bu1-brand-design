@@ -37,7 +37,7 @@ export default defineConfig({
 			},
 			customCss: ['./src/styles/starlight.css'],
 			title: 'BU1 Brand & Content System',
-			// disable404Route removed to allow custom 404 docs pages to render correctly
+			disable404Route: true,
 			description: 'Single source of truth for brand, design, AI, communication and e-commerce rules.',
 			sidebar: [
 				{
