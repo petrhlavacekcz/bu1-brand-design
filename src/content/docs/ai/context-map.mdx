@@ -1,0 +1,53 @@
+---
+title: Context Map
+description: Tokenově úsporné mapování úkolů na nejmenší nutný BU1 context.
+sidebar:
+  order: 0
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Agent Context</span>
+  <p>Nečti celý systém. Načti jen zdroje, které jsou nutné pro daný úkol.</p>
+</div>
+
+## Princip
+
+`src/content/docs/` zůstává canonical pro textová pravidla. JSON používej jen pro skutečně strukturovaná data, například design tokeny nebo slovník.
+
+Pro běžné generování nejdřív použij nejmenší relevantní context pack z `generated/agent-context/`. Když pack nestačí nebo upravuješ pravidlo, vrať se ke canonical MDX/JSON.
+
+## Task routing
+
+| Úkol | Nejprve načti | Doplň jen když je potřeba |
+|------|---------------|---------------------------|
+| Produktový popis | `generated/agent-context/product-description.md` | live Shopify fakta, relevantní locale slice slovníku |
+| Instagram post | `generated/agent-context/instagram-post.md` | konkrétní kanál z communication channels, produktová fakta |
+| E-mail | `generated/agent-context/email.md` | segment/list z Klaviyo, nabídka, produktová fakta |
+| Blog / SEO / interní linkování | `generated/agent-context/blog-article.md` | sitemap index, GSC/GA4 data, live Shopify fakta |
+| Design / UI | `generated/agent-context/design-ui.md` | `src/content/data/brand-tokens.json`, konkrétní komponenta |
+
+## Vstupy, které má mít každý produkční prompt
+
+- cíl výstupu
+- publikum nebo schválená persona
+- trh a jazyk
+- kanál
+- ověřená fakta
+- formát výstupu
+- hlavní CTA, pokud jde o konverzní výstup
+
+## Co do promptu nevkládat zbytečně
+
+- celý brand systém
+- celý vícejazyčný slovník
+- celý archiv
+- generated design exporty, pokud nejde o implementaci designu
+- staré příklady z `archive/`
+
+## Slovník
+
+`src/content/data/goalkeeper-glossary.json` je canonical strojový slovník. Do promptu vkládej jen aktivní jazyk a relevantní termíny. Celý slovník načti jen při úpravě slovníku nebo při vícejazyčné kontrole.
+
+## Produktová fakta
+
+Brand systém není katalog. Ceny, skladovost, produktové claimy, varianty a aktuální nabídky ověřuj v Shopify nebo jiném schváleném live zdroji.

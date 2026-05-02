@@ -17,7 +17,7 @@ import ColorCard from '../../../components/design/ColorCard.astro';
 Tři barvy tvoří základ celého vizuálního systému. Každá má pevně danou roli — nezaměňuj ji.
 
 <div class="bu1-swatch-grid">
-  <ColorCard name="Hot Rose" value="#D2147C" subtitle="Pantone 225 C · C0 M90 Y12 K5" role="CTA · Akce · Hover · Aktivní stav" text="light" />
+  <ColorCard name="Hot Rose" value="#D2147C" subtitle="Pantone 225 C · C0 M90 Y12 K5" role="Primary CTA · Akce · Výchozí stav" text="light" />
   <ColorCard name="Onyx" value="#141414" subtitle="Pantone Black 6 C · C0 M0 Y0 K91" role="Text · Základ · Tmavé pozadí" text="light" />
   <ColorCard name="White" value="#FFFFFF" subtitle="C0 M0 Y0 K0" role="Pozadí · Prostor · Inverzní text" />
 </div>
@@ -47,7 +47,7 @@ Hot Rose a Onyx lze derivovat mísením s bílou (tint) nebo černou (shade). Ni
   <section class="bu1-template-section">
     <span class="bu1-template-label">Hot Rose — Tints (světlejší)</span>
     <ul class="bu1-template-list">
-      <li><strong>10 %</strong> — hover stav na bílém pozadí</li>
+      <li><strong>10 %</strong> — soft accent na bílém pozadí</li>
       <li><strong>20 %</strong> — soft accent pozadí</li>
       <li><strong>40 %</strong> — disabled / neaktivní CTA</li>
       <li><strong>70 %</strong> — velmi jemný background akcent</li>
@@ -57,12 +57,12 @@ Hot Rose a Onyx lze derivovat mísením s bílou (tint) nebo černou (shade). Ni
   <section class="bu1-template-section">
     <span class="bu1-template-label">Hot Rose — Shades (tmavší)</span>
     <ul class="bu1-template-list">
-      <li><strong>20 %</strong> → <code>#A81063</code> — pressed / active stav CTA</li>
+      <li><strong>20 %</strong> → <code>#A81063</code> — tmavší růžový akcent, ne primary CTA hover</li>
       <li><strong>40 %</strong> → <code>#7E0D4A</code> — silný accent, velký text</li>
       <li><strong>60 %</strong> → <code>#540932</code> — tmavý pink pro speciální použití</li>
       <li><strong>80 %</strong> → <code>#2A0419</code> — near-black pink, jen výjimečně</li>
     </ul>
-    <p class="bu1-template-example">Derivuj přimísením černé (#141414) do Hot Rose. Shade 20 % = hover/active stav primary buttonu.</p>
+    <p class="bu1-template-example">Derivuj přimísením černé (#141414) do Hot Rose. Primary CTA hover je tmavý Onyx, ne růžový shade.</p>
   </section>
   <section class="bu1-template-section">
     <span class="bu1-template-label">Onyx — Tints (UI škála)</span>
@@ -89,7 +89,7 @@ Fluo barvy jsou doplněk pro **produktové barevné varianty** — potisk, barve
 <div class="bu1-swatch-grid">
   <ColorCard name="Safety Yellow" value="#FFE600" subtitle="RAL 1026 · Luminous series" role="Produktová varianta" />
   <ColorCard name="Neon Orange" value="#FF6B00" subtitle="RAL 2005 · Luminous series" role="Produktová varianta" />
-  <ColorCard name="Hot Pink" value="#FF3399" subtitle="Pantone 812 C (Neon Pink)" role="Produktová varianta" />
+  <ColorCard name="Hot Pink" value="#FF3399" subtitle="Pantone 812 C · RAL 4003 approx" role="Produktová varianta" />
   <ColorCard name="Neon Green" value="#00FF88" subtitle="RAL 6038 · Luminous series" role="Produktová varianta" />
   <ColorCard name="Acid Blue" value="#00CFFF" subtitle="Pantone 801 C" role="Produktová varianta" />
   <ColorCard name="Electric Purple" value="#CC00FF" subtitle="Pantone 807 C" role="Produktová varianta" text="light" />

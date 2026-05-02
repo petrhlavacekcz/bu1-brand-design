@@ -14,6 +14,7 @@ const spacing = tokens.spacing;
 const radius = tokens.radius;
 const shadow = tokens.shadow;
 const scale = typo.scale;
+const primaryStates = tokens.metrics.primaryButton.states;
 
 const cssVars = [
   `--bu1-color-primary: ${core.primary.value};`,
@@ -39,6 +40,13 @@ const cssVars = [
   `--bu1-text-accent: ${core.primary.value};`,
   `--bu1-border-base: ${core.black.value};`,
   `--bu1-border-accent: ${core.primary.value};`,
+  `--bu1-button-primary-bg: ${primaryStates.default.background};`,
+  `--bu1-button-primary-border: ${primaryStates.default.border};`,
+  `--bu1-button-primary-text: ${primaryStates.default.text};`,
+  `--bu1-button-primary-hover-bg: ${primaryStates.hover.background};`,
+  `--bu1-button-primary-hover-border: ${primaryStates.hover.border};`,
+  `--bu1-button-primary-active-bg: ${primaryStates.active.background};`,
+  `--bu1-button-primary-active-border: ${primaryStates.active.border};`,
   `--bu1-font-heading: "${typo.heading.family}", "${typo.heading.fallback[0]}", ${typo.heading.fallback[1]};`,
   `--bu1-font-body: "${typo.body.family}", "${typo.body.fallback[0]}", ${typo.body.fallback[1]};`,
   ...Object.entries(spacing).map(([key, value]) => `--bu1-space-${key}: ${value};`),
@@ -98,10 +106,21 @@ body {
 }
 
 .bu1-button--primary {
-  background: var(--bu1-bg-accent);
-  color: var(--bu1-text-inverse);
-  border-color: var(--bu1-border-accent);
+  background: var(--bu1-button-primary-bg);
+  color: var(--bu1-button-primary-text);
+  border-color: var(--bu1-button-primary-border);
   box-shadow: var(--bu1-shadow-cta);
+}
+
+.bu1-button--primary:hover {
+  background: var(--bu1-button-primary-hover-bg);
+  border-color: var(--bu1-button-primary-hover-border);
+}
+
+.bu1-button--primary:active {
+  background: var(--bu1-button-primary-active-bg);
+  border-color: var(--bu1-button-primary-active-border);
+  transform: translateY(1px);
 }
 
 .bu1-button--secondary {
@@ -152,8 +171,9 @@ const tailwindPreset = `const preset = {
           purple: '${core.fluorescent.electricPurple.value}'
         },
         action: {
-          primary: '${core.primary.value}',
-          primaryHover: '${core.black.value}',
+          primary: '${primaryStates.default.background}',
+          primaryHover: '${primaryStates.hover.background}',
+          primaryActive: '${primaryStates.active.background}',
           secondary: '${core.black.value}',
           secondaryHover: '${core.primary.value}'
         }

@@ -14,9 +14,9 @@ sidebar:
 
 Vždy načti relevantní canonical zdroje před zadáním úkolu:
 
-1. `src/content/data/brand-tokens.json` — barvy, typografie, metriky
-2. `src/content/data/prompt-meta.json` — vstupy, guardrails, zakázané vzory
-3. `src/content/data/goalkeeper-glossary.json` — schválená brankářská terminologie pro aktivní jazyky
+1. `src/content/docs/ai/context-map.mdx` — které malé zdroje načíst pro daný úkol
+2. `src/content/data/brand-tokens.json` — barvy, typografie, metriky
+3. `src/content/data/goalkeeper-glossary.json` — schválená brankářská terminologie pro aktivní jazyky; do promptu vkládej jen relevantní slice
 4. `src/content/docs/brand/tone-of-voice.mdx` — jak psát
 5. `src/content/docs/brand/language.mdx` — oslovování, emoji, terminologie
 6. `src/content/docs/brand/communication-channels.mdx` — jazyk, účel kanálu a sitemap indexy
@@ -56,12 +56,12 @@ Příklady v promptech stavte na existujících produktech a ověřených faktec
   <li>Používej vykání: `vy`, `vám`, `vaše`</li>
   <li>Emoji používej jen tam, kde dávají smysl pro daný kanál</li>
   <li>Neinventovat claims, slevy ani fakta bez podkladu</li>
-  <li>Neinventovat persony — tato vrstva je zatím pending</li>
+  <li>Neinventovat nové persony, jména ani motivace mimo canonical dokument</li>
 </ul>
 
 ## Práce s publikem
 
-Persony zatím nejsou dodané. Při psaní obsahu vždy specifikuj publikum provozně:
+Persony jsou canonical v `src/content/docs/brand/personas.mdx`. Pokud zadání neurčí konkrétní personu, specifikujte publikum provozně:
 
 <div class="bu1-template-grid">
   <section class="bu1-template-section">

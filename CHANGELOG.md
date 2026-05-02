@@ -1,5 +1,25 @@
 # CHANGELOG
 
+## [2026-05-02]
+
+### Added
+- `src/content/docs/brand/personas.mdx` - doplněny schválené BU1 persony jako jediný canonical MDX zdroj pro lidi i agenty.
+- `src/content/docs/ai/context-map.mdx` - přidána tokenově úsporná mapa, která agentům říká, které minimální zdroje načíst pro konkrétní typ úkolu.
+- `scripts/generate-agent-context.mjs` a `generated/agent-context/` - přidány malé task-specific context packy pro produktové popisy, Instagram, e-mail, blog/SEO a design/UI.
+- `scripts/check-generated.mjs` a npm script `check:generated` - přidána kontrola driftu generovaných brand a agentních výstupů.
+
+### Changed
+- `AGENTS.md`, `README.md`, `src/content/docs/governance/source-of-truth.mdx`, `src/content/docs/governance/change-process.mdx`, `src/content/docs/ai/prompting-principles.mdx` a `src/content/docs/index.mdx` - zpřesněn obecný princip single source of truth: textová pravidla patří primárně do MDX, JSON jen pro tokeny nebo skutečně strukturovaná data s jasným strojovým účelem.
+- `AGENTS.md`, `README.md` a `src/content/docs/governance/source-of-truth.mdx` - doplněno používání `generated/agent-context/` jako odvozené, ne-canonical vrstvy pro tokenově efektivní agentní čtení.
+- `package.json` - generování sjednoceno přes `generate:all`, aby build obnovil brand exporty i agentní context packy.
+- `src/content/docs/design/colors.mdx`, `src/content/docs/design/components.mdx`, `src/styles/starlight.css`, `src/content/data/brand-tokens.json` a `scripts/generate-brand-exports.mjs` - sjednocen primary CTA hover na tmavý Onyx stav, ne růžový shade.
+- `src/content/data/brand-tokens.json` a `src/content/docs/design/colors.mdx` - sjednocena reference pro fluorescent Hot Pink jako Pantone 812 C plus RAL 4003 approx.
+- `src/content/docs/brand/personas.mdx` a `src/content/docs/ai/prompting-principles.mdx` - zjednodušeny formulace tak, aby vycházely z obecného MDX-first pravidla místo popisu konkrétní neexistující paralelní vrstvy.
+
+### Removed
+- `src/content/data/personas.json` - odstraněn zbytečný pending JSON soubor, který by vytvářel paralelní vrstvu k `src/content/docs/brand/personas.mdx`.
+- `src/content/data/prompt-meta.json` - odstraněn textově duplicitní prompt metadata JSON; vstupy, guardrails a task routing jsou nyní v canonical MDX a odvozených context packách.
+
 ## [2026-04-30]
 
 ### Added

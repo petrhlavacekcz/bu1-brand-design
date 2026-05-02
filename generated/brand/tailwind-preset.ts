@@ -26,6 +26,7 @@ const preset = {
         action: {
           primary: '#D2147C',
           primaryHover: '#141414',
+          primaryActive: '#282828',
           secondary: '#141414',
           secondaryHover: '#D2147C'
         }

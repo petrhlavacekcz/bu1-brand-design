@@ -7,14 +7,15 @@ sidebar:
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">Source of Truth</span>
-  <p>Markdown + JSON jsou jediné autoritativní zdroje. Web je copy.</p>
+  <p>MDX drží textová pravidla. JSON drží jen tokeny nebo skutečně strukturovaná data. Web je copy.</p>
 </div>
 
 ## Canonical vrstvy
 
 <ul class="bu1-template-list">
-  <li>textové pravidla v `src/content/docs/`</li>
+  <li>textová pravidla, procesy, šablony a persony v `src/content/docs/`</li>
   <li>tokeny v `src/content/data/brand-tokens.json` (barvy, fonty, spacing, radius, shadow, logo metadata)</li>
+  <li>další JSON data jen tam, kde mají jasný strojový účel a neduplikují MDX</li>
 </ul>
 
 ## Odvozené výstupy
@@ -25,7 +26,8 @@ sidebar:
   <li>`generated/brand/tailwind-preset.ts`</li>
   <li>`generated/brand/shopify-tokens.liquid`</li>
   <li>`generated/brand/figma-variables.json`</li>
+  <li>`generated/agent-context/` pro tokenově úsporné agentní čtení</li>
   <li>`public/brand/logos/`</li>
 </ul>
 
-<p class="bu1-template-example">Jsou důležité pro integraci, ale neumýtni je mi canonical layer.</p>
+<p class="bu1-template-example">Jsou důležité pro integraci a agentní efektivitu, ale nejsou canonical layer. Při driftu regeneruj výstupy přes `npm run generate:all` a ověř `npm run check:generated`.</p>

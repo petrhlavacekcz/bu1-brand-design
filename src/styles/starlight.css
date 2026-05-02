@@ -798,8 +798,8 @@ starlight-theme-select label {
 
 /* Button state demos */
 .bu1-button-demo--hover {
-  background: #a80f62;
-  border-color: #a80f62;
+  background: #141414;
+  border-color: #141414;
   color: #fff;
 }
 
@@ -812,8 +812,8 @@ starlight-theme-select label {
 }
 
 .bu1-button-demo--active {
-  background: #8a0b50;
-  border-color: #8a0b50;
+  background: #282828;
+  border-color: #282828;
   color: #fff;
   transform: translateY(1px);
 }

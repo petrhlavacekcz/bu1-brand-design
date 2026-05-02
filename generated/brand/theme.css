@@ -22,6 +22,13 @@
   --bu1-text-accent: #D2147C;
   --bu1-border-base: #141414;
   --bu1-border-accent: #D2147C;
+  --bu1-button-primary-bg: #D2147C;
+  --bu1-button-primary-border: #D2147C;
+  --bu1-button-primary-text: #FFFFFF;
+  --bu1-button-primary-hover-bg: #141414;
+  --bu1-button-primary-hover-border: #141414;
+  --bu1-button-primary-active-bg: #282828;
+  --bu1-button-primary-active-border: #282828;
   --bu1-font-heading: "Oswald", "Arial Narrow", sans-serif;
   --bu1-font-body: "Nunito Sans", "Arial", sans-serif;
   --bu1-space-1: 0.25rem;
@@ -85,10 +92,21 @@ body {
 }
 
 .bu1-button--primary {
-  background: var(--bu1-bg-accent);
-  color: var(--bu1-text-inverse);
-  border-color: var(--bu1-border-accent);
+  background: var(--bu1-button-primary-bg);
+  color: var(--bu1-button-primary-text);
+  border-color: var(--bu1-button-primary-border);
   box-shadow: var(--bu1-shadow-cta);
+}
+
+.bu1-button--primary:hover {
+  background: var(--bu1-button-primary-hover-bg);
+  border-color: var(--bu1-button-primary-hover-border);
+}
+
+.bu1-button--primary:active {
+  background: var(--bu1-button-primary-active-bg);
+  border-color: var(--bu1-button-primary-active-border);
+  transform: translateY(1px);
 }
 
 .bu1-button--secondary {

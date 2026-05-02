@@ -3,14 +3,17 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "predev": "npm run generate:brand",
+    "predev": "npm run generate:all",
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "npm run generate:brand",
+    "prebuild": "npm run generate:all",
     "build": "astro build && node scripts/fix-llms-base.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "generate:brand": "node scripts/generate-brand-exports.mjs"
+    "generate:brand": "node scripts/generate-brand-exports.mjs",
+    "generate:agent": "node scripts/generate-agent-context.mjs",
+    "generate:all": "npm run generate:brand && npm run generate:agent",
+    "check:generated": "node scripts/check-generated.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.38.2",

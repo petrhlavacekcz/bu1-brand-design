@@ -23,18 +23,20 @@ Jako AI agent operující na tomto repozitáři MÁŠ NÁSLEDUJÍCÍ POVINNOSTI,
 ## SOURCE OF TRUTH
 
 Autoritativní jsou pouze tyto vrstvy:
-- `src/content/docs/`
-- `src/content/data/brand-tokens.json`
-- relevantní doprovodná JSON data v `src/content/data/`
+- `src/content/docs/` pro textová pravidla, procesy, šablony a persony
+- `src/content/data/brand-tokens.json` pro design tokeny a metriky
+- relevantní doprovodná JSON data v `src/content/data/`, pokud mají jasný strojový účel a neduplikují MDX
 
 Pravidla:
 - Markdown v `src/content/docs/` je canonical pro textová pravidla, procesy a šablony
 - `src/content/data/brand-tokens.json` je canonical pro design tokeny a metriky
+- JSON nepoužívej jako paralelní kopii textového pravidla z MDX
 - nic mimo content layer není zdroj pravdy
 
 Neber jako source of truth:
 - `archive/`
 - `generated/brand/`
+- `generated/agent-context/`
 - `public/brand/logos/`
 - build výstupy
 - UI snapshoty
@@ -46,23 +48,27 @@ Postup:
 1. najdi relevantní docs soubory
 2. najdi související JSON data
 3. ověř, zda jde o canonical pravidlo nebo jen odvozený export
-4. vytvoř výstup nebo změnu jen z canonical zdrojů
-5. ZAKONČENÍ: Vždy zapiš do `CHANGELOG.md`, co jsi přidal/upravil. Zkontroluj, že app lze spustit/buildnout.
+4. pro čtení použij nejmenší relevantní context pack z `generated/agent-context/`, pokud existuje
+5. pro editaci se vždy vrať ke canonical MDX/JSON zdroji
+6. vytvoř výstup nebo změnu jen z canonical zdrojů
+7. ZAKONČENÍ: Vždy zapiš do `CHANGELOG.md`, co jsi přidal/upravil. Zkontroluj, že app lze spustit/buildnout.
 
 Povinné čtení před generováním obsahu:
+- `src/content/docs/ai/context-map.mdx` nebo relevantní pack v `generated/agent-context/`
 - `src/content/docs/brand/tone-of-voice.mdx`
 - `src/content/data/brand-tokens.json`
 - relevantní soubor v `brand/`, `design/`, `ecommerce/`, `ai/`, `governance/` nebo `templates/`
 
 Poznámka k personám:
-- `src/content/docs/brand/personas.mdx` je zatím pending
-- persony nevymýšlej
-- neopírej o ně nová pravidla, dokud nejsou dodané
+- `src/content/docs/brand/personas.mdx` je canonical zdroj person
+- nevymýšlej nové persony, jména ani motivace mimo schválený dokument
 
 Pravidla práce:
 - nejdřív čti obsahovou vrstvu, až potom exporty
 - kombinuj pravidla napříč soubory, ale nevytvářej nové pravidlo bez opory v systému
 - při změně tokenů vždy regeneruj `generated/brand/`
+- při změně AI/brand/template pravidel regeneruj `generated/agent-context/`
+- před dokončením spusť `npm run check:generated`, pokud měníš generované vrstvy
 - drž jednu informaci na jednom místě
 
 ## RULES FOR AI OUTPUT
@@ -83,7 +89,7 @@ Při generování textu:
 - produkt a akce mají přednost před dekorací
 - jedna hlavní myšlenka na odstavec
 - jedna hlavní akce na jeden výstup, pokud kontext neříká jinak
-- nevymýšlej persony, pokud nejsou dodané
+- používej persony jen ze schváleného canonical dokumentu
 
 ## PROMPTING PATTERNS
 

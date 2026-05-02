@@ -1,7 +1,7 @@
 {
   "version": "2.1.2",
   "brand": "BU1SPORT",
-  "updatedAt": "2026-04-07",
+  "updatedAt": "2026-05-02",
   "guidelines": {
     "version": "1.0",
     "publishedAt": "2026-03-28",
@@ -17,25 +17,50 @@
     "primary": {
       "name": "Hot Rose",
       "value": "#D2147C",
-      "rgb": [210, 20, 124],
+      "rgb": [
+        210,
+        20,
+        124
+      ],
       "pantone": "225 C",
       "cmyk": "C0 M90 Y12 K5",
-      "roles": ["cta", "action", "hover", "active"]
+      "roles": [
+        "cta",
+        "action",
+        "primary-default"
+      ]
     },
     "black": {
       "name": "Onyx",
       "value": "#141414",
-      "rgb": [20, 20, 20],
+      "rgb": [
+        20,
+        20,
+        20
+      ],
       "pantone": "Black 6 C",
       "cmyk": "C0 M0 Y0 K91",
-      "roles": ["base", "text", "background", "contrast"]
+      "roles": [
+        "base",
+        "text",
+        "background",
+        "contrast"
+      ]
     },
     "white": {
       "name": "White",
       "value": "#FFFFFF",
-      "rgb": [255, 255, 255],
+      "rgb": [
+        255,
+        255,
+        255
+      ],
       "cmyk": "C0 M0 Y0 K0",
-      "roles": ["space", "background", "inverse"]
+      "roles": [
+        "space",
+        "background",
+        "inverse"
+      ]
     },
     "neutral": {
       "800": "#282828",
@@ -46,11 +71,29 @@
       "100": "#F8F8F8"
     },
     "pinkDerivationPercentages": {
-      "tints": [10, 20, 40, 70],
-      "shades": [20, 40, 60, 80]
+      "tints": [
+        10,
+        20,
+        40,
+        70
+      ],
+      "shades": [
+        20,
+        40,
+        60,
+        80
+      ]
     },
     "onyxDerivationPercentages": {
-      "tints": [5, 10, 25, 50, 75, 85, 90],
+      "tints": [
+        5,
+        10,
+        25,
+        50,
+        75,
+        85,
+        90
+      ],
       "deepHex": "#282828"
     },
     "fluorescent": {
@@ -66,8 +109,11 @@
       },
       "hotPink": {
         "value": "#FF3399",
-        "reference": "RAL 4003 approx",
-        "label": "Hot Pink"
+        "label": "Hot Pink",
+        "references": {
+          "pantone": "812 C",
+          "ralApprox": "4003"
+        }
       },
       "neonGreen": {
         "value": "#00FF88",
@@ -97,17 +143,42 @@
   "typography": {
     "heading": {
       "family": "Oswald",
-      "fallback": ["Arial Narrow", "sans-serif"],
-      "weights": [400, 600, 700],
+      "fallback": [
+        "Arial Narrow",
+        "sans-serif"
+      ],
+      "weights": [
+        400,
+        600,
+        700
+      ],
       "case": "uppercase",
-      "usage": ["headings", "cta", "display", "labels"]
+      "usage": [
+        "headings",
+        "cta",
+        "display",
+        "labels"
+      ]
     },
     "body": {
       "family": "Nunito Sans",
-      "fallback": ["Arial", "sans-serif"],
-      "weights": [400, 600, 700, 800],
+      "fallback": [
+        "Arial",
+        "sans-serif"
+      ],
+      "weights": [
+        400,
+        600,
+        700,
+        800
+      ],
       "case": "sentence",
-      "usage": ["body", "ui", "description", "price"]
+      "usage": [
+        "body",
+        "ui",
+        "description",
+        "price"
+      ]
     },
     "scale": {
       "display-sm": {
@@ -185,7 +256,45 @@
       "minHeight": "52px",
       "paddingX": "24px",
       "border": "2px solid",
-      "radius": "2px"
+      "radius": "2px",
+      "states": {
+        "default": {
+          "background": "#D2147C",
+          "border": "#D2147C",
+          "text": "#FFFFFF"
+        },
+        "hover": {
+          "background": "#141414",
+          "border": "#141414",
+          "text": "#FFFFFF",
+          "transition": "200ms ease"
+        },
+        "focus": {
+          "background": "#D2147C",
+          "border": "#D2147C",
+          "text": "#FFFFFF",
+          "outline": "3px #141414",
+          "offset": "2px"
+        },
+        "active": {
+          "background": "#282828",
+          "border": "#282828",
+          "text": "#FFFFFF",
+          "transform": "translateY(1px)",
+          "transition": "80ms"
+        },
+        "disabled": {
+          "background": "#E2E2E2",
+          "border": "#E2E2E2",
+          "text": "#858585"
+        },
+        "loading": {
+          "background": "#D2147C",
+          "border": "#D2147C",
+          "text": "hidden",
+          "spinner": "0.7s"
+        }
+      }
     },
     "secondaryButton": {
       "minHeight": "52px",
@@ -251,7 +360,11 @@
       "light": "#FDECEA",
       "dark": "#7B241C",
       "text": "#FFFFFF",
-      "usage": ["form validation", "destructive actions", "system errors"],
+      "usage": [
+        "form validation",
+        "destructive actions",
+        "system errors"
+      ],
       "wcag": "4.5:1 on white"
     },
     "success": {
@@ -259,7 +372,11 @@
       "light": "#E8F5E9",
       "dark": "#145523",
       "text": "#FFFFFF",
-      "usage": ["confirmations", "completed states", "positive feedback"],
+      "usage": [
+        "confirmations",
+        "completed states",
+        "positive feedback"
+      ],
       "wcag": "5.1:1 on white"
     },
     "warning": {
@@ -267,7 +384,11 @@
       "light": "#FFF3E0",
       "dark": "#7D3C07",
       "text": "#FFFFFF",
-      "usage": ["cautions", "non-blocking alerts", "degraded states"],
+      "usage": [
+        "cautions",
+        "non-blocking alerts",
+        "degraded states"
+      ],
       "wcag": "4.6:1 on white"
     },
     "info": {
@@ -275,7 +396,11 @@
       "light": "#E0F2FE",
       "dark": "#024671",
       "text": "#FFFFFF",
-      "usage": ["informational messages", "help text", "neutral system status"],
+      "usage": [
+        "informational messages",
+        "help text",
+        "neutral system status"
+      ],
       "wcag": "5.9:1 on white"
     }
   },
@@ -306,7 +431,6 @@
     "primaryCtaDominant": true,
     "expressCheckoutSecondary": true,
     "maxBadgesPerProduct": 2,
-    "gradients": "forbidden",
-    "personasStatus": "pending-input"
+    "gradients": "forbidden"
   }
 }

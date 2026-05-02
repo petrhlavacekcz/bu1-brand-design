@@ -1,46 +1,370 @@
 ---
 title: Persony
-description: Stav person pro BU1SPORT. Tato vrstva je zatím záměrně odložená a nesmí se domýšlet.
+description: Canonical persony BU1SPORT pro obsah, e-commerce a AI práci. Jediný zdroj pravdy je tento MDX dokument.
 sidebar:
   order: 4
 ---
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">Brand</span>
-  <p>Persony zatím nejsou dodané. Nepoužívejte vymyšlená jména ani psychologické domněnky jako zdroj pravidel.</p>
+  <p>Persony pomáhají rozhodnout, komu píšeme, co zdůraznit a čemu se vyhnout. Kanonickým zdrojem je tento dokument.</p>
 </div>
 
-:::caution[Pending]
-Dokud nebudou dodané schválené persony, nepište pravidla stylem „pro Adama“ nebo „pro Lenku“. Pracujte s ověřeným kontextem: trh, jazyk, kanál, typ zákazníka a konkrétní úkol.
+:::note[Single source of truth]
+Persony jsou textová a rozhodovací pravidla. Patří do `src/content/docs/brand/personas.mdx`. Pokud agent nebo člověk potřebuje persony, načte tento dokument. `src/content/data/` nepoužívejte jako paralelní zdroj person.
 :::
 
-## Co používat místo person
+## Jak persony používat
 
 <ul class="bu1-template-list">
-  <li>trh: CZ, SK nebo ostatní svět</li>
-  <li>kanál: web, Facebook, Instagram, TikTok, YouTube, Pinterest</li>
-  <li>role: hráč, rodič, trenér, klub, partner</li>
-  <li>úroveň: začátečník, pravidelný hráč, výkonnostní hráč</li>
-  <li>cíl sdělení: prodej, edukace, reference, novinka, servis</li>
+  <li>Použijte personu, pokud odpovídá cíli, kanálu a publiku zadání.</li>
+  <li>Když persona nesedí, pracujte provozně: trh, jazyk, kanál, role, úroveň a cíl sdělení.</li>
+  <li>Persona upravuje důraz sdělení, ne produktová fakta.</li>
+  <li>Produkt, cenu, dostupnost, varianty a claimy vždy ověřte v Shopify nebo jiném schváleném live zdroji.</li>
+  <li>Výchozí oslovení je vykání. Tykání nepoužívejte bez výslovně schválené kanálové výjimky.</li>
 </ul>
 
-## Co je zakázané
+## Přehled person
+
+| Persona | Role v rozhodování | Hlavní potřeba |
+|---|---|---|
+| Adam — mladý ambiciózní gólman | end-user a silný ovlivňovatel nákupu | vybrat rukavice, které mu sednou úrovní, stylem a použitím |
+| Lenka — rodič, který nechce udělat chybu | kupující a pečující rozhodovatel | koupit správně, bezpečně a bez zbytečného rizika |
+| Petr — výkonnostní dospělý brankář | zkušený uživatel a přímý kupující | najít spolehlivý model podle výkonu, gripu a odolnosti |
+| Vilém — trenér a doporučující autorita | odborný influencer | doporučit hráčům výbavu, která dává smysl podle úrovně a použití |
+| Antonín — klubový objednavatel | klubový decision-maker | nakoupit efektivně, přehledně a s jistotou dodání |
+| B2B partner / reseller | obchodní partner | pochopit sortiment, marži, dostupnost a podporu pro další prodej |
+
+## Adam — mladý ambiciózní gólman
+
+### Role v rozhodování
+
+Adam je mladý brankář, který pravidelně chytá a chce se posouvat. Produkt často neplatí sám, ale výrazně ovlivňuje výběr. Záleží mu na výkonu, vzhledu i pocitu, že používá vybavení jako skutečný brankář.
+
+### Co chce vyřešit
 
 <ul class="bu1-template-list">
-  <li>nevymýšlejte jména, věk ani nákupní motivace bez podkladu</li>
-  <li>neodvozujte tone of voice z neexistující persony</li>
-  <li>nepřepisujte kanálovou strategii podle domněnky o publiku</li>
+  <li>vybrat rukavice vhodné pro trénink i zápas</li>
+  <li>mít jistotu v rukou a dobrý grip</li>
+  <li>vypadat na hřišti dobře</li>
+  <li>rychle pochopit rozdíl mezi modely</li>
 </ul>
 
-## Jak budeme pokračovat
+### Čeho se bojí
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Teď</span>
-    <p class="bu1-template-placeholder">Píšeme podle trhu, kanálu, úrovně hráče a cíle komunikace.</p>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Později</span>
-    <p class="bu1-template-placeholder">Jakmile dorazí schválené persony, doplníme je sem i do datové vrstvy bez paralelní pravdy.</p>
-  </section>
-</div>
+<ul class="bu1-template-list">
+  <li>že zvolí špatný model</li>
+  <li>že rukavice rychle odejdou</li>
+  <li>že nebude mít dostatečnou kontrolu míče</li>
+  <li>že produkt nebude působit dost dobře mezi spoluhráči</li>
+</ul>
+
+### Co ho přesvědčí
+
+<ul class="bu1-template-list">
+  <li>jasné doporučení podle úrovně a použití</li>
+  <li>krátké video nebo rychlé srovnání modelů</li>
+  <li>reálný brankářský kontext</li>
+  <li>jednoduchá navigace velikostí a modelovou řadou</li>
+</ul>
+
+### Jak na něj mluvit
+
+Pište energicky, přímo a jednoduše. Ne dětinsky. Nepřehánějte. I u mladšího publika držte vykání, pokud není schválená výjimka pro konkrétní kanál.
+
+### Vhodný obsah a CTA
+
+<ul class="bu1-template-list">
+  <li>krátká videa, modelová srovnání, výběr podle úrovně, péče o rukavice</li>
+  <li>CTA: Vyberte si svůj model</li>
+  <li>CTA: Zjistěte, co vám sedne</li>
+  <li>CTA: Mrkněte na novou kolekci</li>
+</ul>
+
+### Nedělat
+
+<ul class="bu1-template-list">
+  <li>nemluvit na něj jako na malé dítě</li>
+  <li>neslibovat výkon, který produkt sám nezaručí</li>
+  <li>nepřepínat automaticky do tykání</li>
+</ul>
+
+## Lenka — rodič, který nechce udělat chybu
+
+### Role v rozhodování
+
+Lenka kupuje vybavení pro mladého brankáře. Chce dítě podpořit, ale nechce koupit špatný model, špatnou velikost nebo zbytečně drahý produkt. Často hledá jednoduché vysvětlení a potvrzení, že volba dává smysl.
+
+### Co chce vyřešit
+
+<ul class="bu1-template-list">
+  <li>vybrat správnou velikost a model</li>
+  <li>pochopit rozdíl mezi tréninkovým a zápasovým použitím</li>
+  <li>najít rozumný poměr ceny, odolnosti a kvality</li>
+  <li>mít jistotu při nákupu a případné výměně</li>
+</ul>
+
+### Čeho se bojí
+
+<ul class="bu1-template-list">
+  <li>že koupí špatnou velikost</li>
+  <li>že dítě rukavice rychle zničí</li>
+  <li>že přeplatí produkt, kterému nerozumí</li>
+  <li>že jí e-shop nepomůže při výběru</li>
+</ul>
+
+### Co ji přesvědčí
+
+<ul class="bu1-template-list">
+  <li>jednoduchý průvodce výběrem</li>
+  <li>tabulka velikostí a jasné doporučení podle věku/úrovně</li>
+  <li>recenze, zkušenosti rodičů a srozumitelný servis</li>
+  <li>férové vysvětlení, kdy se vyplatí levnější nebo dražší model</li>
+</ul>
+
+### Jak na ni mluvit
+
+Pište klidně, prakticky a podpůrně. Nepoužívejte povýšený tón. Nevytvářejte pocit, že „tomu nerozumí“. Vysvětlete volbu tak, aby se mohla rozhodnout bez stresu.
+
+### Vhodný obsah a CTA
+
+<ul class="bu1-template-list">
+  <li>průvodce velikostí, doporučení pro juniory, FAQ, recenze, e-mail a Facebook obsah</li>
+  <li>CTA: Vyberte správnou velikost</li>
+  <li>CTA: Najděte model pro mladého brankáře</li>
+  <li>CTA: Podívejte se na doporučení pro děti</li>
+</ul>
+
+### Nedělat
+
+<ul class="bu1-template-list">
+  <li>nezahlcovat technickými detaily bez vysvětlení</li>
+  <li>netlačit nejdražší model jako jedinou správnou volbu</li>
+  <li>nepoužívat strach jako hlavní prodejní argument</li>
+</ul>
+
+## Petr — výkonnostní dospělý brankář
+
+### Role v rozhodování
+
+Petr je zkušený brankář, který si vybavení často kupuje sám. Má vlastní preference a ví, co od rukavic čeká. Zajímá ho výkon, grip, střih, odolnost, použití na konkrétním povrchu a reálná zkušenost.
+
+### Co chce vyřešit
+
+<ul class="bu1-template-list">
+  <li>najít model pro svůj styl chytání</li>
+  <li>porovnat grip, střih, odolnost a použití</li>
+  <li>vybrat rukavice podle povrchu a intenzity tréninku</li>
+  <li>koupit bez zbytečné omáčky a neověřených slibů</li>
+</ul>
+
+### Čeho se bojí
+
+<ul class="bu1-template-list">
+  <li>že popis nebude odpovídat realitě</li>
+  <li>že produkt nevydrží deklarované použití</li>
+  <li>že výběr bude příliš obecný</li>
+  <li>že značka použije prázdné superlativy místo faktů</li>
+</ul>
+
+### Co ho přesvědčí
+
+<ul class="bu1-template-list">
+  <li>konkrétní technické informace</li>
+  <li>reálné srovnání modelů</li>
+  <li>jasné určení použití: zápas, trénink, tvrdší povrch, umělá tráva</li>
+  <li>praktické tipy na péči a životnost</li>
+</ul>
+
+### Jak na něj mluvit
+
+Pište věcně, přesně a bez nafukování. Petr ocení, když mu systém pomůže rozhodnout rychle. Nepotřebuje být přesvědčovaný prázdným nadšením.
+
+### Vhodný obsah a CTA
+
+<ul class="bu1-template-list">
+  <li>detail produktu, srovnání, testy, technické parametry, péče o rukavice</li>
+  <li>CTA: Porovnejte modely</li>
+  <li>CTA: Vyberte rukavice podle povrchu</li>
+  <li>CTA: Zobrazit technické detaily</li>
+</ul>
+
+### Nedělat
+
+<ul class="bu1-template-list">
+  <li>nepoužívat vágní fráze jako „prémiový zážitek“</li>
+  <li>nezamlčovat limity použití</li>
+  <li>nepsat stejný text pro všechny modely</li>
+</ul>
+
+## Vilém — trenér a doporučující autorita
+
+### Role v rozhodování
+
+Vilém trénuje brankáře a často ovlivňuje, co si hráči nebo rodiče koupí. Nemusí být přímý kupující. Je autorita, která potřebuje doporučovat jednoduše, odpovědně a podle úrovně hráče.
+
+### Co chce vyřešit
+
+<ul class="bu1-template-list">
+  <li>doporučit vhodný model podle úrovně a použití</li>
+  <li>vysvětlit rodičům i hráčům rozdíl mezi variantami</li>
+  <li>najít výbavu, která dává smysl pro tréninkový režim</li>
+  <li>mít po ruce jasné argumenty bez obchodního přehánění</li>
+</ul>
+
+### Čeho se bojí
+
+<ul class="bu1-template-list">
+  <li>že doporučí nevhodný produkt</li>
+  <li>že značka bude slibovat víc, než produkt zvládne</li>
+  <li>že informace nebudou dostatečně praktické</li>
+  <li>že výběr nebude rozlišovat začátečníka a výkonnostního hráče</li>
+</ul>
+
+### Co ho přesvědčí
+
+<ul class="bu1-template-list">
+  <li>edukativní obsah a jasná modelová logika</li>
+  <li>doporučení podle věku, úrovně a povrchu</li>
+  <li>praktické argumenty pro rodiče i hráče</li>
+  <li>transparentní popis limitů a péče o produkt</li>
+</ul>
+
+### Jak na něj mluvit
+
+Pište partnersky a odborně. Ne příliš prodejně. Vilém ocení materiál, který může použít jako doporučení nebo vysvětlení pro ostatní.
+
+### Vhodný obsah a CTA
+
+<ul class="bu1-template-list">
+  <li>edukační články, srovnávací tabulky, doporučení podle úrovně, trenérské checklisty</li>
+  <li>CTA: Doporučte model podle úrovně</li>
+  <li>CTA: Podívejte se na srovnání rukavic</li>
+  <li>CTA: Sdílejte průvodce s hráči</li>
+</ul>
+
+### Nedělat
+
+<ul class="bu1-template-list">
+  <li>nebrat ho automaticky jako hromadného nákupčího</li>
+  <li>nepsat povrchně bez praktické hodnoty</li>
+  <li>nepoužívat prodejní tlak tam, kde má fungovat odbornost</li>
+</ul>
+
+## Antonín — klubový objednavatel
+
+### Role v rozhodování
+
+Antonín řeší objednávky za klub. Může být předseda, sekretář, vedoucí týmu nebo jiná odpovědná osoba. Zajímá ho rozpočet, jednoduchá domluva, dostupnost, přehlednost a spolehlivost dodavatele.
+
+### Co chce vyřešit
+
+<ul class="bu1-template-list">
+  <li>nakoupit vybavení pro více hráčů nebo tým</li>
+  <li>udržet rozpočet a přehled objednávky</li>
+  <li>mít jistotu termínu, dostupnosti a komunikace</li>
+  <li>řešit méně detailů ručně</li>
+</ul>
+
+### Čeho se bojí
+
+<ul class="bu1-template-list">
+  <li>že objednávka bude nepřehledná</li>
+  <li>že dodání nebude spolehlivé</li>
+  <li>že klub nebude mít jasné podmínky</li>
+  <li>že bude muset řešit výměny a reklamace složitě</li>
+</ul>
+
+### Co ho přesvědčí
+
+<ul class="bu1-template-list">
+  <li>jasné klubové podmínky a kontakt</li>
+  <li>přehledná nabídka podle kategorií a velikostí</li>
+  <li>možnost domluvy pro klubový nákup</li>
+  <li>důvěryhodná komunikace bez přehnaného marketingu</li>
+</ul>
+
+### Jak na něj mluvit
+
+Pište prakticky, stručně a s důrazem na proces. Antonín nepotřebuje lifestyle. Potřebuje vědět, co lze objednat, jak to proběhne a na koho se obrátit.
+
+### Vhodný obsah a CTA
+
+<ul class="bu1-template-list">
+  <li>klubová nabídka, B2B/klubový kontakt, objednávkový přehled, podmínky spolupráce</li>
+  <li>CTA: Domluvte klubovou objednávku</li>
+  <li>CTA: Pošlete nám poptávku</li>
+  <li>CTA: Zjistěte možnosti pro klub</li>
+</ul>
+
+### Nedělat
+
+<ul class="bu1-template-list">
+  <li>nefixovat personu na konkrétní věk nebo jednu funkci v klubu</li>
+  <li>nekomplikovat sdělení zbytečnou kreativitou</li>
+  <li>neslibovat skladovost nebo termíny bez ověření</li>
+</ul>
+
+## B2B partner / reseller
+
+### Role v rozhodování
+
+B2B partner nebo reseller řeší další prodej. Není to jedna konkrétní osoba, ale obchodní role. Zajímá ho sortiment, marže, dostupnost, obchodní podmínky, servis a marketingová podpora.
+
+### Co chce vyřešit
+
+<ul class="bu1-template-list">
+  <li>pochopit, které produkty mají obchodní potenciál</li>
+  <li>znát dostupnost, varianty a podmínky spolupráce</li>
+  <li>dostat materiály, které usnadní další prodej</li>
+  <li>minimalizovat riziko nejasné komunikace se zákazníkem</li>
+</ul>
+
+### Čeho se bojí
+
+<ul class="bu1-template-list">
+  <li>že nebude mít stabilní informace o sortimentu</li>
+  <li>že obchodní podmínky nebudou jasné</li>
+  <li>že podpora značky nebude dostatečná</li>
+  <li>že produkty nepůjdou jednoduše vysvětlit zákazníkům</li>
+</ul>
+
+### Co ho přesvědčí
+
+<ul class="bu1-template-list">
+  <li>přehledný sortiment a jasná produktová logika</li>
+  <li>spolehlivá komunikace a obchodní kontakt</li>
+  <li>materiály pro prodej: fotky, krátké popisy, benefity, srovnání</li>
+  <li>jasná pravidla značky a terminologie</li>
+</ul>
+
+### Jak na něj mluvit
+
+Pište obchodně, konkrétně a bez emocí navíc. Vysvětlete, proč sortiment dává smysl pro jeho zákazníky. Nezaměňujte B2B partnera za koncového hráče.
+
+### Vhodný obsah a CTA
+
+<ul class="bu1-template-list">
+  <li>B2B prezentace, sortimentní přehled, produktová data, prodejní argumenty, brand podklady</li>
+  <li>CTA: Kontaktujte nás kvůli spolupráci</li>
+  <li>CTA: Požádejte o B2B podmínky</li>
+  <li>CTA: Získejte podklady pro prodej</li>
+</ul>
+
+### Nedělat
+
+<ul class="bu1-template-list">
+  <li>nedávat mu umělé jméno, pokud nejde o konkrétního člověka</li>
+  <li>nepoužívat spotřebitelský tón místo obchodního</li>
+  <li>neuvádět marže, dostupnost nebo termíny bez ověření</li>
+</ul>
+
+## Pravidla pro AI agenty
+
+<ul class="bu1-template-list">
+  <li>Než použijete personu, načtěte tento dokument jako canonical zdroj.</li>
+  <li>Nevymýšlejte další jména, věk, motivace ani psychologické profily bez schválení.</li>
+  <li>Personu kombinujte s trhem, jazykem, kanálem a cílem výstupu.</li>
+  <li>Pokud zadání neříká, pro kterou personu se píše, použijte provozní publikum: hráč, rodič, trenér, klub nebo partner.</li>
+  <li>Persony nikdy nejsou zdroj produktových faktů, cen, dostupnosti ani claimů.</li>
+</ul>
