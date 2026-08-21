@@ -1,76 +1,121 @@
 ---
 title: CTA Rules
-description: Canonical pravidla pro primární CTA, sekundární akce a inverse button v tmavém kontextu.
+description: Canonical CTA hierarchie pro editorial storefront — Ink pro běžný commerce krok, Hot Rose pro checkout a skutečné promo.
 sidebar:
   order: 2
 ---
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">CTA Hierarchy</span>
-  <p>Add to Cart je hlavní rozhodnutí. Všechno ostatní musí být slabší.</p>
+  <p>Jedna hlavní akce. Běžný commerce je Ink. Hot Rose zůstává vzácný obchodní signál.</p>
 </div>
 
-## Tři typy tlačítek
+## Základní princip
 
-<div class="bu1-ui-grid">
-  <div class="bu1-demo-box">
-    <p class="bu1-card-title">Primary</p>
-    <div class="bu1-button-row">
-      <span class="bu1-button-demo bu1-button-demo--primary">Přidat do košíku</span>
-    </div>
-    <p style="margin-top:0.75rem;font-size:0.875rem;">Hot Rose bg · Bílý text · Hlavní konverzní akce</p>
-  </div>
-  <div class="bu1-demo-box">
-    <p class="bu1-card-title">Secondary</p>
-    <div class="bu1-button-row">
-      <span class="bu1-button-demo bu1-button-demo--secondary">Více informací</span>
-    </div>
-    <p style="margin-top:0.75rem;font-size:0.875rem;">Bílý bg · Onyx border/text · Vedlejší akce</p>
-  </div>
-  <div class="bu1-demo-box" style="background:#141414;">
-    <p class="bu1-card-title" style="color:#fff;">Inverse</p>
-    <div class="bu1-button-row">
-      <span class="bu1-button-demo bu1-button-demo--inverse">Zobrazit kolekci</span>
-    </div>
-    <p style="margin-top:0.75rem;font-size:0.875rem;color:#e2e2e2;">Průhledný bg · Bílý border/text · Pouze na tmavém pozadí</p>
-  </div>
-</div>
+CTA síla se neurčuje tím, že všechno hlavní obarvíme Hot Rose. Na novém storefrontu se hierarchie staví kontrastem, velikostí, pozicí a jednou jasnou dominantní akcí.
+
+## Storefront CTA types
+
+### Primary commerce
+
+**Ink background · White text · hranatý button**
+
+Použití:
+
+- `Přidat do košíku`;
+- `Prohlédnout rukavice` v běžném storefront hero;
+- hlavní akce collection / editorial commerce bloku.
+
+Výchozí vlastnosti:
+
+- background `#111110`;
+- text `#FFFFFF`;
+- radius `0`;
+- min-height přibližně `52px`;
+- výrazná horizontální padding;
+- Nunito Sans 800 uppercase;
+- volitelná dlouhá tenká šipka.
+
+### Checkout / promo action
+
+**Hot Rose background · White text**
+
+Použití:
+
+- `Pokračovat k pokladně`;
+- skutečná časově omezená promo akce;
+- akční purchase step, kde rose nese jasný obchodní význam.
+
+Hot Rose nepoužívej jen proto, že jde o button.
+
+### Secondary / arrow link
+
+Použití:
+
+- vedlejší navigační akce;
+- další kategorie;
+- `Zjistit více` tam, kde není nutné plné tlačítko.
+
+Vizuál:
+
+- text Ink;
+- underline / bottom border;
+- dlouhá šipka;
+- hover může přejít do Hot Rose.
+
+### Inverse
+
+Na Ink / tmavé ploše:
+
+- White text;
+- White border nebo plný White/Ink kontrast podle kontextu;
+- bez automatického Rose fill.
 
 ## Hierarchie
 
-<div class="bu1-demo-box">
-  <p class="bu1-card-title">Správně — jasná hierarchie</p>
-  <div class="bu1-button-row">
-    <span class="bu1-button-demo bu1-button-demo--primary">Přidat do košíku</span>
-    <span class="bu1-button-demo bu1-button-demo--secondary">Více info</span>
-  </div>
-  <p style="margin-top:0.75rem;font-size:0.875rem;">Hlavní CTA dominuje. Vedlejší akce je jasně slabší.</p>
-</div>
+Na jedné akční ploše má být maximálně **jedna dominantní primary action**.
 
-## Metriky
+Příklad PDP:
 
-| Vlastnost | Hodnota |
-|-----------|---------|
-| Min. výška | `52px` |
-| Padding X | `24px` |
-| Border | `2px solid` |
-| Border radius | `2px` |
-| Kontrast (White on Pink) | `5.08:1 — AA` |
+1. `Přidat do košíku` — Ink primary;
+2. express checkout — oddělený a slabší;
+3. `Tabulka velikostí` — text / arrow link;
+4. `Pokračovat k pokladně` v cart/checkout step — Hot Rose.
 
-## Pravidla
+## Product accent a CTA
 
-<ul class="bu1-template-list">
-  <li>Add to Cart je největší a nejsilnější CTA v buy boxu — vždy Primary</li>
-  <li>Shop Pay a express checkout musí být oddělené a vizuálně slabší</li>
-  <li>Žádné dvě stejně silné akce vedle sebe</li>
-  <li>Inverse button patří výhradně na tmavé pozadí — nikdy na bílém</li>
-  <li>Na jedné akční ploše maximálně jedno Primary tlačítko</li>
-</ul>
+Product accent není automaticky CTA barva.
 
-## Kontext inverse buttonu
+V campaign / launch assetu může lokální product accent podpořit:
 
-<ul class="bu1-template-list">
-  <li>Hero sekce s tmavým nebo Onyx pozadím</li>
-  <li>Dark mode kampaňový blok</li>
-  <li>CTA překrývající tmavý obrázek</li>
-</ul>
+- linku;
+- část headline;
+- malý badge;
+- výjimečně CTA, pokud je kontrastní a brief to explicitně určí.
+
+Na core storefrontu zůstává primary commerce CTA Ink.
+
+## Text CTA
+
+- 2–4 slova, pokud to jde;
+- konkrétní akce;
+- žádné dvě různé hlavní akce ve stejném banneru;
+- vykání zůstává platné tam, kde CTA používá osobní sloveso;
+- action labels typu `Přidat`, `Zavřít`, `Hlídat` jsou provozní infinitivy.
+
+## Do
+
+- používej Ink pro běžný Add to Cart;
+- rezervuj Rose pro checkout / promo / sale význam;
+- používej dlouhou tenkou šipku jako opakující se action motif;
+- nech CTA dostatečně velké pro touch;
+- drž jednu dominantní akci.
+
+## Don't
+
+- nedělej každé primary CTA růžové;
+- nepoužívej product accent jako globální button color;
+- nedávej dva stejně silné buttony vedle sebe;
+- nepoužívej rounded-pill CTA jako výchozí storefront pattern;
+- nepoužívej inverse button na světlé ploše;
+- nepřidávej fake urgency do CTA.
