@@ -1,0 +1,183 @@
+---
+title: Storefront Expression
+description: Canonical vizuální jazyk BU1 e-shopu — monochromatický editorial commerce, kde je produkt jediným hrdinou.
+sidebar:
+  order: 0
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Storefront Expression</span>
+  <p>Scéna pro jediného hrdinu. UI je tiché. Produkt nese barvu, energii a emoci.</p>
+</div>
+
+## North Star
+
+**Scéna pro jediného hrdinu.**
+
+BU1 storefront je monochromatický editorial commerce. Bílá plocha, teplé šedé dlaždice a inkoustová typografie vytvářejí klidnou scénu. Produktová fotografie je nejsilnější vizuální prvek na obrazovce.
+
+Tento dokument je expression layer. Nemění název značky, logo, tone of voice, produktová fakta ani business pravidla. Ty zůstávají v canonical brand a live product zdrojích.
+
+## Vrstvy systému
+
+1. **Core Brand** — logo, voice, language, positioning, schválené názvy a fakta.
+2. **Storefront Expression** — layout, commerce typografie, produktové plochy, CTA hierarchie, spacing a interakce webu.
+3. **Campaign / Creative Expression** — bannery, paid social, launch creative a další formáty, které mohou být vizuálně odvážnější, ale stále vycházejí z core brandu a reálného produktu.
+
+Expression layer nikdy nepřepisuje produktová fakta, logo pravidla ani tone of voice.
+
+## Vizuální principy
+
+### Product first
+Produkt je hrdina. UI ho rámuje, neinterpretuje za něj.
+
+- produktová fotografie má přednost před dekorativní grafikou;
+- u rukavic preferuj čistý výřez, detail materiálu a reálné PDP media;
+- nikdy negeneruj prompt-only náhradu reálného BU1 produktu;
+- produkt může přetékat přes hranu dlaždice a vytvářet hloubku bez stínu.
+
+### Quiet interface
+
+- základní plochy: bílá, ink, teplá šedá;
+- žádné gradienty;
+- žádné barevné dekorativní panely;
+- radius výchozí `0`;
+- žádné stíny v běžném layoutu;
+- hloubku tvoří vrstvení, crop a měřítko produktu.
+
+### Editorial typography
+
+Storefront používá **Anton + Nunito Sans**.
+
+- Anton = hero, page title, section heading, product name, výrazné ceny;
+- Nunito Sans = body, UI, filtry, labels, meta, tlačítka;
+- Anton vždy uppercase;
+- Anton a Oswald se na jednom storefront surface nekombinují.
+
+Podrobnosti viz `design/typography`.
+
+### Mobile first
+
+Mobil je primární návrhový kontext.
+
+- hlavní akce musí být dostupná bez hledání;
+- produkt nesmí být zmenšen na dekoraci kvůli desktopové kompozici;
+- category subnav může být horizontálně scrollovatelný místo zalomení;
+- PDP může používat sticky add-to-cart bar;
+- informační hustotu redukuj, ne pouze skládej desktop pod sebe.
+
+## Barevný model storefrontu
+
+### Foundation
+
+- **Ink:** `#111110` pro text, buttony a aktivní stavy.
+- **Paper:** `#FFFFFF` pro hlavní plochu.
+- **Tile:** `#F1F1EF` pro produktové a kategoriální dlaždice.
+- **Line:** `#E2E2DF` pro 1px dělicí linky a rámečky.
+- **Muted:** `#5F5F5B` a `#8A8A85` pro sekundární a terciární text.
+
+### Hot Rose
+
+Hot Rose `#D2147C` je vzácný semantický brand accent. Na storefrontu je vyhrazen zejména pro:
+
+- slevu a slevovou cenu;
+- `Výprodej`;
+- promo / akční badge, pokud jde skutečně o promo;
+- checkout / pokračování k pokladně;
+- cart counter nebo progress, kde signalizuje aktivní obchodní stav;
+- hover akčního odkazu.
+
+**Běžné Add to Cart není automaticky Hot Rose.** Standardní storefront Add to Cart je Ink.
+
+### Product Accent
+
+Produktová barva může být volitelný lokální accent pro launch hero nebo creative surface.
+
+Příklad: BU1 MiKos může v launch creative použít cyan z reálného produktu, protože tato barva patří produktu, ne globálnímu UI.
+
+Pravidla:
+
+- barva musí být odvozena z reálného produktu / schválené kampaně;
+- nesmí se stát globální navigační nebo systémovou barvou;
+- na listing/PDP core UI zůstává dominantní neutrální scéna;
+- pokud product accent soutěží s produktem, nepoužij ho;
+- Hot Rose se nepřidává jen proto, aby výstup „vypadal jako BU1“.
+
+## Geometrie a depth
+
+- výchozí radius: `0`;
+- 1px linky místo card shadows;
+- buttony jsou hranaté;
+- produktové výřezy mohou být rotované přibližně `6–14°`, pokud to zlepšuje kompozici a nezkresluje produkt;
+- produktový asset se nikdy nedeformuje;
+- jediný běžný stín je povolen pro overlay vrstvy, například mega menu nebo modal.
+
+## Layout baseline
+
+Desktop reference:
+
+- page X: `56px`;
+- grid gap: `14px`;
+- product grid: 4 sloupce;
+- section top rhythm: přibližně `84px`;
+- velký block gap: přibližně `96px`.
+
+Mobile reference:
+
+- page X: `18px`;
+- grid gap: `12px`;
+- product grid: 2 sloupce;
+- section top rhythm: přibližně `56px`.
+
+Hodnoty jsou rytmus, ne důvod ignorovat responsivitu nebo accessibility.
+
+## Commerce hierarchie
+
+### Product card
+
+1. produktový obraz;
+2. badge pouze když nese reálnou informaci;
+3. název produktu;
+4. cena;
+5. velikosti / dostupnost jako lehký sekundární signál.
+
+### PDP
+
+1. produktová galerie;
+2. název;
+3. cena a ověřené product facts;
+4. volby variant;
+5. Add to Cart;
+6. doplňky / upsell;
+7. detailní informace a důvěra.
+
+### Hero
+
+Hero není plakát nalepený na e-shop. Musí vždy řešit:
+
+- co je produkt / kategorie;
+- proč má návštěvník pokračovat;
+- jednu hlavní akci;
+- dostatek negativního prostoru pro rychlé skenování.
+
+## Do
+
+- nechávej barvu především produktu;
+- používej warm-gray tile jako stage pro packshot;
+- používej Anton jako editorial headline, ne jako body font;
+- drž dlouhé tenké šipky jako opakující se motion/action motif;
+- používej reálné BU1 product assets a oficiální logo assety;
+- zachovej ceny v českém zápisu `2 099 Kč`, procenta `−20 %`.
+
+## Don't
+
+- nedělej z Hot Rose univerzální primary color každé komponenty;
+- nepřidávej product accent do globální navigace;
+- nevymýšlej logo, produkt, pěnu, střih ani ambasadora;
+- nepoužívej glow, gradient, glassmorphism ani náhodné rounded cards;
+- nekombinuj Anton a Oswald na jedné storefront ploše;
+- nepoužívej AI render jako náhradu za přesný packshot existujícího produktu.
+
+## Zdroj směru
+
+Tato expression layer vychází ze schváleného redesign směru z srpna 2026. Referenční artboardy slouží jako vizuální contract; canonical pravidla musí být udržována zde a ve strukturovaných design tokenech, ne ve screenshotu nebo exportovaném HTML.
