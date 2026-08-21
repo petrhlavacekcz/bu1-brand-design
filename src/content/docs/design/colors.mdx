@@ -1,6 +1,6 @@
 ---
 title: Colors
-description: Canonical paleta BU1SPORT — core barvy, neutrály, fluo doplněk, tints & shades a pravidla použití.
+description: Canonical barevný systém BU1SPORT — core brand, storefront foundation, sémantika a product-led creative accents.
 sidebar:
   order: 2
 ---
@@ -9,274 +9,144 @@ import ColorCard from '../../../components/design/ColorCard.astro';
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">Color System</span>
-  <p>Tři core barvy. Jasné role. Silný kontrast. Žádný chaos, žádné gradienty.</p>
+  <p>Nejdřív neutrální scéna. Potom produkt. Hot Rose má význam, ne povinnost.</p>
 </div>
 
-## Core palette
+## Barevný systém má tři vrstvy
 
-Tři barvy tvoří základ celého vizuálního systému. Každá má pevně danou roli — nezaměňuj ji.
+1. **Core Brand** — stabilní barvy značky.
+2. **Storefront Foundation** — neutrální editorial scéna pro commerce.
+3. **Product / Campaign Accent** — volitelná lokální barva odvozená z reálného produktu nebo schválené kampaně.
+
+Tyto vrstvy se nesmí zaměňovat. Product accent se nikdy nestává globální UI barvou a Hot Rose se nepřidává jen proto, aby asset „vypadal jako BU1“.
+
+## Core Brand
 
 <div class="bu1-swatch-grid">
-  <ColorCard name="Hot Rose" value="#D2147C" subtitle="Pantone 225 C · C0 M90 Y12 K5" role="Primary CTA · Akce · Výchozí stav" text="light" />
-  <ColorCard name="Onyx" value="#141414" subtitle="Pantone Black 6 C · C0 M0 Y0 K91" role="Text · Základ · Tmavé pozadí" text="light" />
-  <ColorCard name="White" value="#FFFFFF" subtitle="C0 M0 Y0 K0" role="Pozadí · Prostor · Inverzní text" />
+  <ColorCard name="Hot Rose" value="#D2147C" subtitle="Pantone 225 C · C0 M90 Y12 K5" role="Brand accent · Promo · Sleva · Checkout" text="light" />
+  <ColorCard name="Onyx" value="#141414" subtitle="Pantone Black 6 C · C0 M0 Y0 K91" role="Core black · Text · Inverse background" text="light" />
+  <ColorCard name="White" value="#FFFFFF" subtitle="C0 M0 Y0 K0" role="Prostor · Pozadí · Inverzní text" />
 </div>
 
-:::note[Tisková reference]
-Pantone hodnoty jsou aproximace — pro fyzický tisk vždy ověř na fyzickém vzorníku. Hot Rose ≈ Pantone 225 C. Onyx ≈ Pantone Black 6 C.
-:::
+### Hot Rose discipline
 
-## Neutral UI scale
+Hot Rose `#D2147C` je vzácný signál. Primárně znamená:
 
-Neutrály drží UI čitelné bez toho, aby soupeřily s Hot Rose. Používej je na pozadí, bordery a sekundární text.
+- slevu nebo slevovou cenu;
+- akční / promo stav;
+- `Výprodej`;
+- checkout / pokračování k pokladně;
+- cart counter nebo obchodní progress;
+- hover akčního odkazu.
+
+**Hot Rose není univerzální primary button color.** Na editorial storefrontu je běžné `Přidat do košíku` Ink / černé. Rose je nejsilnější tehdy, když je vzácná.
+
+Nepoužívej Hot Rose jako:
+
+- dekorativní pozadí celé sekce;
+- povinný accent v každém banneru;
+- náhradu product accentu;
+- globální barvu selected state;
+- recolor produktu nebo loga mimo schválené logo varianty.
+
+## Storefront Foundation
+
+Storefront používá teplejší monochromatickou scénu než původní obecná UI škála.
 
 <div class="bu1-swatch-grid">
-  <ColorCard name="Neutral 800" value="#282828" role="Téměř černá, silný text na světlém bg" text="light" />
-  <ColorCard name="Neutral 700" value="#575757" role="Sekundární text, ikony" text="light" />
-  <ColorCard name="Neutral 600" value="#858585" role="Placeholder, disabled text" />
-  <ColorCard name="Neutral 300" value="#E2E2E2" role="Border, oddělovač" />
-  <ColorCard name="Neutral 200" value="#F1F1F1" role="Jemné pozadí, hover stav" />
-  <ColorCard name="Neutral 100" value="#F8F8F8" role="Stránkové pozadí, alternativní sekce" />
+  <ColorCard name="Ink" value="#111110" role="Storefront text · Button · Active state" text="light" />
+  <ColorCard name="Paper" value="#FFFFFF" role="Hlavní plocha · Prostor" />
+  <ColorCard name="Tile" value="#F1F1EF" role="Produktová a kategoriální stage" />
+  <ColorCard name="Tile Deep" value="#E9E9E6" role="Jemné vrstvení v neutrální scéně" />
+  <ColorCard name="Line" value="#E2E2DF" role="1px border · Divider" />
+  <ColorCard name="Muted" value="#5F5F5B" role="Sekundární text" text="light" />
+  <ColorCard name="Faint" value="#8A8A85" role="Meta · Původní cena · Terciární text" />
 </div>
 
-## Tints & Shades
+### Pravidlo tiché scény
 
-Hot Rose a Onyx lze derivovat mísením s bílou (tint) nebo černou (shade). Nikdy nepřidávej jinou barvu — zachovej čistotu palety.
+Novou commerce komponentu navrhuj nejdřív v Foundation barvách. Barvu přidej teprve tehdy, když má jasnou sémantickou nebo produktovou roli.
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Hot Rose — Tints (světlejší)</span>
-    <ul class="bu1-template-list">
-      <li><strong>10 %</strong> — soft accent na bílém pozadí</li>
-      <li><strong>20 %</strong> — soft accent pozadí</li>
-      <li><strong>40 %</strong> — disabled / neaktivní CTA</li>
-      <li><strong>70 %</strong> — velmi jemný background akcent</li>
-    </ul>
-    <p class="bu1-template-example">Derivuj přimísením bílé (#FFFFFF) do Hot Rose (#D2147C).</p>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Hot Rose — Shades (tmavší)</span>
-    <ul class="bu1-template-list">
-      <li><strong>20 %</strong> → <code>#A81063</code> — tmavší růžový akcent, ne primary CTA hover</li>
-      <li><strong>40 %</strong> → <code>#7E0D4A</code> — silný accent, velký text</li>
-      <li><strong>60 %</strong> → <code>#540932</code> — tmavý pink pro speciální použití</li>
-      <li><strong>80 %</strong> → <code>#2A0419</code> — near-black pink, jen výjimečně</li>
-    </ul>
-    <p class="bu1-template-example">Derivuj přimísením černé (#141414) do Hot Rose. Primary CTA hover je tmavý Onyx, ne růžový shade.</p>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Onyx — Tints (UI škála)</span>
-    <ul class="bu1-template-list">
-      <li><strong>5 %</strong> → <code>#1E1E1E</code> — téměř Onyx</li>
-      <li><strong>10 %</strong> → <code>#282828</code> — Neutral 800</li>
-      <li><strong>25 %</strong> → <code>#484848</code> — silný sekundární text</li>
-      <li><strong>50 %</strong> → <code>#7C7C7C</code> — střed</li>
-      <li><strong>75 %</strong> → <code>#CACACA</code> — světlý border</li>
-      <li><strong>85 %</strong> → <code>#DEDEDE</code> — approx Neutral 300</li>
-      <li><strong>90 %</strong> → <code>#E9E9E9</code> — jemné pozadí</li>
-    </ul>
-  </section>
-</div>
+Žádný UI prvek nesmí barevně soutěžit s produktovou fotografií.
 
-:::caution[Pravidlo derivace]
-Tints a shades slouží pro UI stavy (hover, active, disabled) a jemné pozadí. Nikdy je nepoužívej jako náhražku core barev v hlavních elementech.
-:::
+## Product Accent
 
-## Fluorescent palette
+Product accent je **lokální** barva vytažená z reálného produktu nebo schváleného launch systému.
 
-Fluo barvy jsou doplněk pro **produktové barevné varianty** — potisk, barvení materiálu a sportovní vybavení. Nikdy jako UI barva nebo pozadí.
+Povolené použití:
 
-<div class="bu1-swatch-grid">
-  <ColorCard name="Safety Yellow" value="#FFE600" subtitle="RAL 1026 · Luminous series" role="Produktová varianta" />
-  <ColorCard name="Neon Orange" value="#FF6B00" subtitle="RAL 2005 · Luminous series" role="Produktová varianta" />
-  <ColorCard name="Hot Pink" value="#FF3399" subtitle="Pantone 812 C · RAL 4003 approx" role="Produktová varianta" />
-  <ColorCard name="Neon Green" value="#00FF88" subtitle="RAL 6038 · Luminous series" role="Produktová varianta" />
-  <ColorCard name="Acid Blue" value="#00CFFF" subtitle="Pantone 801 C" role="Produktová varianta" />
-  <ColorCard name="Electric Purple" value="#CC00FF" subtitle="Pantone 807 C" role="Produktová varianta" text="light" />
-</div>
+- malá linka / rule;
+- část campaign headline;
+- technická anotace;
+- malý launch badge;
+- vybraný detail v landing/creative surface.
 
-:::note[Tisková reference fluorescent]
-RAL Luminous series pro žlutou, oranžovou a zelenou. Pantone 801–807 C pro modrou a fialovou. Pro tisk použij konkrétní referenci.
-:::
+Zakázané použití:
 
-## WCAG kontrasty
+- global nav;
+- globální CTA systém;
+- systémové statusy;
+- recolor loga;
+- velké dekorativní backgroundy bez důvodu;
+- druhý a třetí konkurenční accent současně.
 
-<table class="bu1-spec-table">
-  <thead><tr><th>Kombinace</th><th>Poměr</th><th>Úroveň</th><th>Použití</th></tr></thead>
-  <tbody>
-    <tr>
-      <td><span style="display:inline-block;padding:0.2rem 0.6rem;background:#141414;color:#fff;border-radius:2px;font-size:0.8rem;">White on Black</span></td>
-      <td><strong>18.42:1</strong></td>
-      <td style="color:#15803d;font-weight:700;">AAA</td>
-      <td>Hlavní text, inverse layout</td>
-    </tr>
-    <tr>
-      <td><span style="display:inline-block;padding:0.2rem 0.6rem;background:#fff;color:#141414;border:1px solid #e2e2e2;border-radius:2px;font-size:0.8rem;">Black on White</span></td>
-      <td><strong>18.42:1</strong></td>
-      <td style="color:#15803d;font-weight:700;">AAA</td>
-      <td>Body text, commerce</td>
-    </tr>
-    <tr>
-      <td><span style="display:inline-block;padding:0.2rem 0.6rem;background:#D2147C;color:#fff;border-radius:2px;font-size:0.8rem;">White on Pink</span></td>
-      <td><strong>5.08:1</strong></td>
-      <td style="color:#15803d;font-weight:700;">AA</td>
-      <td>CTA button text — splňuje AA</td>
-    </tr>
-    <tr>
-      <td><span style="display:inline-block;padding:0.2rem 0.6rem;background:#fff;color:#D2147C;border:1px solid #e2e2e2;border-radius:2px;font-size:0.8rem;">Pink on White</span></td>
-      <td><strong>5.08:1</strong></td>
-      <td style="color:#15803d;font-weight:700;">AA</td>
-      <td>Accent text na světlém bg</td>
-    </tr>
-    <tr>
-      <td><span style="display:inline-block;padding:0.2rem 0.6rem;background:#141414;color:#D2147C;border-radius:2px;font-size:0.8rem;">Pink on Black</span></td>
-      <td><strong>3.62:1</strong></td>
-      <td style="color:#b91c1c;font-weight:700;">Fail</td>
-      <td>Jen velký text 18pt+ nebo dekorativní prvky</td>
-    </tr>
-    <tr>
-      <td><span style="display:inline-block;padding:0.2rem 0.6rem;background:#575757;color:#fff;border-radius:2px;font-size:0.8rem;">White on N700</span></td>
-      <td><strong>7.23:1</strong></td>
-      <td style="color:#15803d;font-weight:700;">AAA</td>
-      <td>Secondary text, ikony na tmavém bg</td>
-    </tr>
-  </tbody>
-</table>
+### Příklad — BU1 MiKos
 
-:::caution[Pink on Black — 3.62:1]
-Kombinace Pink na Black nesplňuje AA pro běžný text (minimum 4.5:1). Použij ji **pouze pro velký text (18pt+ / 24px+) nebo čistě dekorativní prvky**. Nikdy pro body text nebo malé labels.
-:::
+MiKos má vlastní cyan detail. V launch banneru může cyan nést část titulku nebo tenkou grafickou linku. Není potřeba vedle něj automaticky přidávat Hot Rose. Na standardním PDP/listingu zůstává UI neutrální a cyan nese především samotný produkt.
 
-## Barvy v praxi
+## Product colors
 
-Každá barva má jasný kontext. Překračovat tyto role znamená narušit systém.
+Fluorescenční a další barevné varianty produktu jsou legitimní **na produktu**. Nejsou automaticky UI paletou.
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Hot Rose</span>
-    <ul class="bu1-template-list">
-      <li>Primární CTA button (Add to Cart, Koupit)</li>
-      <li>Hover stav odkazů a tlačítek</li>
-      <li>Aktivní stav navigace</li>
-      <li>Promo / sale badge pozadí</li>
-      <li>Akcent v campaign hero</li>
-    </ul>
-    <p class="bu1-template-example">Nepoužívej jako dekoraci, pozadí celé sekce nebo na velké plochy bez účelu.</p>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Onyx</span>
-    <ul class="bu1-template-list">
-      <li>Všechen body text a nadpisy</li>
-      <li>Tmavé stránkové pozadí (dark mode)</li>
-      <li>Border na commerce elementech</li>
-      <li>Sekundární button (White bg, Onyx border/text)</li>
-      <li>Header a footer</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">White</span>
-    <ul class="bu1-template-list">
-      <li>Výchozí stránkové pozadí (light mode)</li>
-      <li>Card a tile povrch</li>
-      <li>Inverzní text na tmavém nebo růžovém bg</li>
-      <li>Breathing room v layoutu</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Neutrals</span>
-    <ul class="bu1-template-list">
-      <li>100, 200 — jemné pozadí, hover stav</li>
-      <li>300 — border, oddělovač</li>
-      <li>600 — placeholder, disabled text</li>
-      <li>700 — sekundární text, metadata</li>
-      <li>800 — silný text, téměř Onyx</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Fluorescent</span>
-    <ul class="bu1-template-list">
-      <li>Produktové barevné varianty (potisk, materiál)</li>
-      <li>Barevný čip v selektoru variant</li>
-    </ul>
-    <p class="bu1-template-example">Nikdy jako UI barva, pozadí, text nebo button fill.</p>
-  </section>
-</div>
+| Produktová barva | Reference |
+|---|---|
+| Safety Yellow | `#FFE600` · RAL 1026 |
+| Neon Orange | `#FF6B00` · RAL 2005 |
+| Hot Pink | `#FF3399` · Pantone 812 C |
+| Neon Green | `#00FF88` · RAL 6038 |
+| Acid Blue | `#00CFFF` · Pantone 801 C |
+| Electric Purple | `#CC00FF` · Pantone 807 C |
+
+Tyto reference nepoužívej k přebarvování produktů. Skutečný asset produktu je source of truth.
 
 ## Sémantické barvy
 
-Sémantické barvy komunikují **systémové stavy** — validaci, potvrzení, varování, informaci. Jsou odděleny od brand palety a nikdy se nesmí míchat s Hot Rose nebo fluorescentními barvami.
+Systémové stavy zůstávají oddělené od brand a product accentů.
 
 <div class="bu1-swatch-grid">
-  <ColorCard name="Error" value="#C0392B" subtitle="Světlá: #FDECEA · Tmavá: #7B241C" role="Form validace · Destruktivní akce · Systémové chyby" text="light" />
-  <ColorCard name="Success" value="#1E7E34" subtitle="Světlá: #E8F5E9 · Tmavá: #145523" role="Potvrzení · Dokončené stavy · Pozitivní feedback" text="light" />
-  <ColorCard name="Warning" value="#B7590A" subtitle="Světlá: #FFF3E0 · Tmavá: #7D3C07" role="Varování · Neblokující alert · Degradovaný stav" text="light" />
-  <ColorCard name="Info" value="#0369A1" subtitle="Světlá: #E0F2FE · Tmavá: #024671" role="Informace · Help text · Neutrální systémový status" text="light" />
+  <ColorCard name="Success" value="#1E7E34" role="Potvrzení · Dokončený stav" text="light" />
+  <ColorCard name="Error" value="#C0392B" role="Chyba · Destruktivní akce" text="light" />
+  <ColorCard name="Warning" value="#B7590A" role="Varování" text="light" />
+  <ColorCard name="Info" value="#0369A1" role="Systémová informace" text="light" />
 </div>
 
-<table class="bu1-spec-table">
-  <thead><tr><th>Token</th><th>Hlavní barva</th><th>Light bg</th><th>WCAG na bílé</th></tr></thead>
-  <tbody>
-    <tr>
-      <td><code>--bu1-color-error</code></td>
-      <td><span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:0.875rem;height:0.875rem;background:#C0392B;border-radius:2px;flex-shrink:0;"></span>#C0392B</span></td>
-      <td><code style="background:#FDECEA;padding:0.1rem 0.3rem;">#FDECEA</code></td>
-      <td>4.5:1 AA</td>
-    </tr>
-    <tr>
-      <td><code>--bu1-color-success</code></td>
-      <td><span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:0.875rem;height:0.875rem;background:#1E7E34;border-radius:2px;flex-shrink:0;"></span>#1E7E34</span></td>
-      <td><code style="background:#E8F5E9;padding:0.1rem 0.3rem;">#E8F5E9</code></td>
-      <td>5.1:1 AA</td>
-    </tr>
-    <tr>
-      <td><code>--bu1-color-warning</code></td>
-      <td><span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:0.875rem;height:0.875rem;background:#B7590A;border-radius:2px;flex-shrink:0;"></span>#B7590A</span></td>
-      <td><code style="background:#FFF3E0;padding:0.1rem 0.3rem;">#FFF3E0</code></td>
-      <td>4.6:1 AA</td>
-    </tr>
-    <tr>
-      <td><code>--bu1-color-info</code></td>
-      <td><span style="display:inline-flex;align-items:center;gap:0.4rem;"><span style="display:inline-block;width:0.875rem;height:0.875rem;background:#0369A1;border-radius:2px;flex-shrink:0;"></span>#0369A1</span></td>
-      <td><code style="background:#E0F2FE;padding:0.1rem 0.3rem;">#E0F2FE</code></td>
-      <td>5.9:1 AA</td>
-    </tr>
-  </tbody>
-</table>
+Stav nesmí být komunikován pouze barvou. Vždy jej spoj s textem, ikonou nebo tvarem.
 
-:::caution[Sémantické barvy nejsou brand barvy]
-Error červená, Success zelená, Warning oranžová a Info modrá nereprezentují BU1SPORT brand. Jsou to UI-state signály. Nikdy je nepoužívej v kampani, na produktové karty nebo jako dekoraci.
-:::
+## Kontrast
 
-## Žádné gradienty
+- White on Onyx / Ink: vysoký kontrast, vhodný pro text.
+- Ink on Paper: výchozí commerce kombinace.
+- White on Hot Rose: `5.08:1`, AA pro běžný text.
+- Pink on black není vhodný pro malý body text.
+- Product accent musí projít kontrastní kontrolou v konkrétní kombinaci; jeho původ na produktu automaticky neznamená přístupnost v UI.
 
-Gradienty nejsou součástí BU1SPORT design systému. Nepoužívej je nikde — ani v commerce, ani v kampani, ani jako overlay.
+## Tints & shades
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Místo gradientu použij</span>
-    <ul class="bu1-template-list">
-      <li>Plnou barvu — Onyx, White nebo Hot Rose</li>
-      <li>Čistý přechod kontextu přes layout (light sekce → dark sekce)</li>
-      <li>Rgba průhlednost pro overlay přes fotku (max 60 % opacity)</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Zakázáno</span>
-    <ul class="bu1-template-list">
-      <li>CSS linear-gradient nebo radial-gradient v brand výstupech</li>
-      <li>Přechod z jedné brand barvy do druhé</li>
-      <li>Soft overlay přes produktové fotografie</li>
-    </ul>
-  </section>
-</div>
+Tints a shades core barev používej jen pro technické stavy a jemné plochy. Nezakládej jimi novou brand paletu. Storefront foundation má vlastní explicitní neutral tokeny; nederivuj je pokaždé ad hoc.
 
-## Exporty
+## Do
 
-Canonical zdroj je `src/content/data/brand-tokens.json`.
-Odvozené exporty generuj přes `npm run generate:brand`:
+- nech barvu primárně produktu;
+- používej Ink/Paper/Tile jako výchozí commerce scénu;
+- používej Rose tam, kde skutečně znamená promo/slevu/checkout;
+- dokumentuj product accent v campaign briefu;
+- ověř kontrast textu a CTA.
 
-- `generated/brand/tokens.css` — CSS custom properties
-- `generated/brand/theme.css` — component classes
-- `generated/brand/tailwind-preset.ts` — Tailwind konfigurace
-- `generated/brand/shopify-tokens.liquid` — Shopify variables
-- `generated/brand/figma-variables.json` — Figma tokens
+## Don't
+
+- nepoužívej Hot Rose mechanicky v každém assetu;
+- nezaváděj náhodnou barvu jen kvůli „oživení“;
+- nepřebarvuj logo product accentem;
+- nepoužívej gradienty jako základní vizuální jazyk;
+- nemíchej více lokálních product accentů v jednom jednoduchém banneru;
+- nevytvářej paralelní paletu mimo canonical tokeny.
