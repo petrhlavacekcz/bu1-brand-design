@@ -24,7 +24,10 @@ Pro běžné generování nejdřív použij nejmenší relevantní context pack 
 | Instagram post | `generated/agent-context/instagram-post.md` | konkrétní kanál z communication channels, produktová fakta |
 | E-mail | `generated/agent-context/email.md` | segment/list z Klaviyo, nabídka, produktová fakta |
 | Blog / SEO / interní linkování | `generated/agent-context/blog-article.md` | sitemap index, GSC/GA4 data, live Shopify fakta |
-| Design / UI | `generated/agent-context/design-ui.md` | `src/content/data/brand-tokens.json`, konkrétní komponenta |
+| Core design / obecné UI | `generated/agent-context/design-ui.md` | `src/content/data/brand-tokens.json`, konkrétní komponenta |
+| Storefront / homepage / PDP / collection | `src/content/docs/ecommerce/storefront-expression.mdx` | `design/typography.mdx`, `design/colors.mdx`, `ecommerce/cta-rules.mdx`, live product assets |
+| Banner / paid social / launch creative | `src/content/docs/design/creative-expression.mdx` | `design/product-photography.mdx`, `design/logo-usage.mdx`, live product facts/assets |
+| AI-assisted product visual | `src/content/docs/design/product-photography.mdx` | exact PDP/Shopify media, `design/creative-expression.mdx` |
 
 ## Vstupy, které má mít každý produkční prompt
 
@@ -35,6 +38,13 @@ Pro běžné generování nejdřív použij nejmenší relevantní context pack 
 - ověřená fakta
 - formát výstupu
 - hlavní CTA, pokud jde o konverzní výstup
+
+Pro branded visual navíc:
+
+- exact product source nebo explicitní `unbranded_scene` režim;
+- schválený logo asset, pokud má být logo viditelné;
+- zvolená expression: `core`, `storefront` nebo `campaign-editorial`;
+- případný product accent a jeho zdroj.
 
 ## Co do promptu nevkládat zbytečně
 
@@ -50,4 +60,6 @@ Pro běžné generování nejdřív použij nejmenší relevantní context pack 
 
 ## Produktová fakta
 
-Brand systém není katalog. Ceny, skladovost, produktové claimy, varianty a aktuální nabídky ověřuj v Shopify nebo jiném schváleném live zdroji.
+Brand systém není katalog. Ceny, skladovost, produktové claimy, varianty, ambasadoři a aktuální nabídky ověřuj v Shopify nebo jiném schváleném live zdroji.
+
+**Design reference není product source.** Screenshot, moodboard ani generovaný asset nesmí přepsat vzhled nebo fakta skutečného produktu.
