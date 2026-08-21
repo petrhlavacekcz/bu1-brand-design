@@ -1,66 +1,54 @@
 {
-  "version": "2.1.2",
+  "version": "3.0.0",
   "brand": "BU1SPORT",
-  "updatedAt": "2026-05-02",
+  "updatedAt": "2026-08-21",
   "guidelines": {
-    "version": "1.0",
-    "publishedAt": "2026-03-28",
-    "platform": "Shopify Symmetry"
+    "version": "2.0",
+    "publishedAt": "2026-08-21",
+    "platform": "Shopify editorial storefront / Symmetry implementation"
   },
   "principles": [
     "Product first.",
-    "Pink is action, not decoration.",
-    "Commerce must stay readable.",
-    "Campaign can be louder than commerce."
+    "The interface is a quiet stage for the product.",
+    "Pink is semantic, not mandatory.",
+    "Storefront is monochrome by default.",
+    "Campaign can borrow one verified accent from the real product.",
+    "Commerce must stay readable."
   ],
   "colors": {
     "primary": {
       "name": "Hot Rose",
       "value": "#D2147C",
-      "rgb": [
-        210,
-        20,
-        124
-      ],
+      "rgb": [210, 20, 124],
       "pantone": "225 C",
       "cmyk": "C0 M90 Y12 K5",
-      "roles": [
-        "cta",
-        "action",
-        "primary-default"
-      ]
+      "roles": ["brand-accent", "promo", "sale", "checkout"]
     },
     "black": {
       "name": "Onyx",
       "value": "#141414",
-      "rgb": [
-        20,
-        20,
-        20
-      ],
+      "rgb": [20, 20, 20],
       "pantone": "Black 6 C",
       "cmyk": "C0 M0 Y0 K91",
-      "roles": [
-        "base",
-        "text",
-        "background",
-        "contrast"
-      ]
+      "roles": ["core-base", "text", "background", "contrast"]
     },
     "white": {
       "name": "White",
       "value": "#FFFFFF",
-      "rgb": [
-        255,
-        255,
-        255
-      ],
+      "rgb": [255, 255, 255],
       "cmyk": "C0 M0 Y0 K0",
-      "roles": [
-        "space",
-        "background",
-        "inverse"
-      ]
+      "roles": ["space", "background", "inverse"]
+    },
+    "storefront": {
+      "ink": "#111110",
+      "paper": "#FFFFFF",
+      "tile": "#F1F1EF",
+      "tileDeep": "#E9E9E6",
+      "line": "#E2E2DF",
+      "muted": "#5F5F5B",
+      "faint": "#8A8A85",
+      "outOfStock": "#C6C6C2",
+      "outOfStockBackground": "#FAFAF8"
     },
     "neutral": {
       "800": "#282828",
@@ -71,65 +59,20 @@
       "100": "#F8F8F8"
     },
     "pinkDerivationPercentages": {
-      "tints": [
-        10,
-        20,
-        40,
-        70
-      ],
-      "shades": [
-        20,
-        40,
-        60,
-        80
-      ]
+      "tints": [10, 20, 40, 70],
+      "shades": [20, 40, 60, 80]
     },
     "onyxDerivationPercentages": {
-      "tints": [
-        5,
-        10,
-        25,
-        50,
-        75,
-        85,
-        90
-      ],
+      "tints": [5, 10, 25, 50, 75, 85, 90],
       "deepHex": "#282828"
     },
     "fluorescent": {
-      "safetyYellow": {
-        "value": "#FFE600",
-        "reference": "RAL 1026",
-        "label": "Safety Yellow"
-      },
-      "neonOrange": {
-        "value": "#FF6B00",
-        "reference": "RAL 2005",
-        "label": "Neon Orange"
-      },
-      "hotPink": {
-        "value": "#FF3399",
-        "label": "Hot Pink",
-        "references": {
-          "pantone": "812 C",
-          "ralApprox": "4003"
-        }
-      },
-      "neonGreen": {
-        "value": "#00FF88",
-        "reference": "RAL 6038",
-        "label": "Neon Green"
-      },
-      "acidBlue": {
-        "value": "#00CFFF",
-        "reference": "Pantone 801 C",
-        "label": "Acid Blue"
-      },
-      "electricPurple": {
-        "value": "#CC00FF",
-        "reference": "Pantone 807 C",
-        "label": "Electric Purple"
-      }
+      "safetyYellow": {"value": "#FFE600", "reference": "RAL 1026", "label": "Safety Yellow"},
+      "neonOrange": {"value": "#FF6B00", "reference": "RAL 2005", "label": "Neon Orange"},
+      "hotPink": {"value": "#FF3399", "label": "Hot Pink", "references": {"pantone": "812 C", "ralApprox": "4003"}},
+      "neonGreen": {"value": "#00FF88", "reference": "RAL 6038", "label": "Neon Green"},
+      "acidBlue": {"value": "#00CFFF", "reference": "Pantone 801 C", "label": "Acid Blue"},
+      "electricPurple": {"value": "#CC00FF", "reference": "Pantone 807 C", "label": "Electric Purple"}
     },
     "contrast": {
       "whiteOnBlack": "18.42:1",
@@ -138,98 +81,60 @@
       "whiteOnPink": "5.08:1",
       "pinkOnBlack": "3.62:1",
       "blackOnPink": "3.62:1"
+    },
+    "productAccent": {
+      "mode": "campaign-local",
+      "source": "verified real product or approved campaign",
+      "allowedUses": ["campaign-rule", "headline-fragment", "technical-annotation", "small-launch-badge"],
+      "forbiddenUses": ["global-navigation", "global-system-state", "logo-recolor", "automatic-primary-cta"],
+      "maxConcurrentAccents": 1
     }
   },
   "typography": {
     "heading": {
       "family": "Oswald",
-      "fallback": [
-        "Arial Narrow",
-        "sans-serif"
-      ],
-      "weights": [
-        400,
-        600,
-        700
-      ],
+      "fallback": ["Arial Narrow", "sans-serif"],
+      "weights": [400, 600, 700],
       "case": "uppercase",
-      "usage": [
-        "headings",
-        "cta",
-        "display",
-        "labels"
-      ]
+      "usage": ["core-brand", "legacy-content-surfaces"]
+    },
+    "storefrontDisplay": {
+      "family": "Anton",
+      "fallback": ["Arial Narrow", "sans-serif"],
+      "weights": [400],
+      "case": "uppercase",
+      "usage": ["storefront-hero", "storefront-page-title", "section-heading", "product-title", "editorial-campaign"]
     },
     "body": {
       "family": "Nunito Sans",
-      "fallback": [
-        "Arial",
-        "sans-serif"
-      ],
-      "weights": [
-        400,
-        600,
-        700,
-        800
-      ],
+      "fallback": ["Arial", "sans-serif"],
+      "weights": [400, 600, 700, 800],
       "case": "sentence",
-      "usage": [
-        "body",
-        "ui",
-        "description",
-        "price"
-      ]
+      "usage": ["body", "ui", "description", "price", "labels", "buttons"]
+    },
+    "expressionRouting": {
+      "core": ["Oswald", "Nunito Sans"],
+      "storefront": ["Anton", "Nunito Sans"],
+      "campaign-editorial": ["Anton", "Nunito Sans"],
+      "rule": "Never mix Anton and Oswald on the same surface."
     },
     "scale": {
-      "display-sm": {
-        "size": "2.5rem",
-        "px": 40,
-        "weight": 700,
-        "family": "Oswald",
-        "usage": "Hero, campaign"
-      },
-      "heading-lg": {
-        "size": "2rem",
-        "px": 32,
-        "weight": 700,
-        "family": "Oswald",
-        "usage": "H1 produktu"
-      },
-      "heading-md": {
-        "size": "1.5rem",
-        "px": 24,
-        "weight": 700,
-        "family": "Oswald",
-        "usage": "H2, sekce"
-      },
-      "title-lg": {
-        "size": "1.25rem",
-        "px": 20,
-        "weight": 700,
-        "family": "Oswald",
-        "usage": "Product card title"
-      },
-      "price": {
-        "size": "1.375rem",
-        "px": 22,
-        "weight": 800,
-        "family": "Nunito Sans",
-        "usage": "Cena všude"
-      },
-      "body": {
-        "size": "1rem",
-        "px": 16,
-        "weight": 600,
-        "family": "Nunito Sans",
-        "usage": "Popis, UI text"
-      },
-      "label": {
-        "size": "0.875rem",
-        "px": 14,
-        "weight": 700,
-        "family": "Nunito Sans",
-        "usage": "Badge, meta"
-      }
+      "display-sm": {"size": "2.5rem", "px": 40, "weight": 700, "family": "Oswald", "usage": "Core brand display"},
+      "heading-lg": {"size": "2rem", "px": 32, "weight": 700, "family": "Oswald", "usage": "Core heading"},
+      "heading-md": {"size": "1.5rem", "px": 24, "weight": 700, "family": "Oswald", "usage": "Core section"},
+      "title-lg": {"size": "1.25rem", "px": 20, "weight": 700, "family": "Oswald", "usage": "Core title"},
+      "price": {"size": "1.375rem", "px": 22, "weight": 800, "family": "Nunito Sans", "usage": "Dense commerce price"},
+      "body": {"size": "1rem", "px": 16, "weight": 600, "family": "Nunito Sans", "usage": "Body and UI"},
+      "label": {"size": "0.875rem", "px": 14, "weight": 700, "family": "Nunito Sans", "usage": "Badge and meta"}
+    },
+    "storefrontScale": {
+      "heroDesktop": {"family": "Anton", "px": 88, "weight": 400, "lineHeight": 1.04, "case": "uppercase"},
+      "heroMobile": {"family": "Anton", "px": 46, "weight": 400, "lineHeight": 1.18, "case": "uppercase"},
+      "headlineDesktop": {"family": "Anton", "px": 44, "weight": 400, "lineHeight": 1.04, "case": "uppercase"},
+      "headlineMobile": {"family": "Anton", "px": 33, "weight": 400, "lineHeight": 1.12, "case": "uppercase"},
+      "productTitle": {"family": "Anton", "px": 16, "weight": 400, "lineHeight": 1.2, "letterSpacing": "0.02em", "case": "uppercase"},
+      "body": {"family": "Nunito Sans", "px": 15, "weight": 400, "lineHeight": 1.55},
+      "label": {"family": "Nunito Sans", "px": 12, "weight": 800, "lineHeight": 1.3, "letterSpacing": "0.1em", "case": "uppercase"}
     }
   },
   "spacing": {
@@ -241,196 +146,124 @@
     "6": "1.5rem",
     "8": "2rem",
     "10": "2.5rem",
-    "12": "3rem"
+    "12": "3rem",
+    "storefront": {
+      "gridGapDesktop": "14px",
+      "gridGapMobile": "12px",
+      "pageXDesktop": "56px",
+      "pageXMobile": "18px",
+      "sectionTopDesktop": "84px",
+      "sectionTopMobile": "56px",
+      "blockGapDesktop": "96px",
+      "blockGapMobile": "56px"
+    }
   },
   "radius": {
+    "none": "0",
     "sm": "2px",
-    "md": "8px"
+    "md": "8px",
+    "counter": "9px"
   },
   "shadow": {
     "card": "none",
-    "cta": "none"
+    "cta": "none",
+    "overlay": "0 24px 48px -24px rgba(17,17,16,.25)"
   },
   "metrics": {
     "primaryButton": {
       "minHeight": "52px",
       "paddingX": "24px",
-      "border": "2px solid",
-      "radius": "2px",
+      "border": "1px solid",
+      "radius": "0",
       "states": {
-        "default": {
-          "background": "#D2147C",
-          "border": "#D2147C",
-          "text": "#FFFFFF"
-        },
-        "hover": {
-          "background": "#141414",
-          "border": "#141414",
-          "text": "#FFFFFF",
-          "transition": "200ms ease"
-        },
-        "focus": {
-          "background": "#D2147C",
-          "border": "#D2147C",
-          "text": "#FFFFFF",
-          "outline": "3px #141414",
-          "offset": "2px"
-        },
-        "active": {
-          "background": "#282828",
-          "border": "#282828",
-          "text": "#FFFFFF",
-          "transform": "translateY(1px)",
-          "transition": "80ms"
-        },
-        "disabled": {
-          "background": "#E2E2E2",
-          "border": "#E2E2E2",
-          "text": "#858585"
-        },
-        "loading": {
-          "background": "#D2147C",
-          "border": "#D2147C",
-          "text": "hidden",
-          "spinner": "0.7s"
-        }
+        "default": {"background": "#111110", "border": "#111110", "text": "#FFFFFF"},
+        "hover": {"background": "#282828", "border": "#282828", "text": "#FFFFFF", "transition": "150ms ease"},
+        "focus": {"background": "#111110", "border": "#111110", "text": "#FFFFFF", "outline": "3px #D2147C", "offset": "2px"},
+        "active": {"background": "#282828", "border": "#282828", "text": "#FFFFFF", "transform": "translateY(1px)", "transition": "80ms"},
+        "disabled": {"background": "#E2E2DF", "border": "#E2E2DF", "text": "#8A8A85"}
       }
+    },
+    "checkoutButton": {
+      "minHeight": "52px",
+      "paddingX": "24px",
+      "border": "1px solid #D2147C",
+      "radius": "0",
+      "background": "#D2147C",
+      "text": "#FFFFFF"
     },
     "secondaryButton": {
       "minHeight": "52px",
       "paddingX": "24px",
-      "border": "2px solid",
-      "radius": "2px"
+      "border": "1px solid #111110",
+      "radius": "0"
     },
     "variantChip": {
       "minHeight": "48px",
       "paddingX": "14px",
-      "border": "2px solid",
-      "radius": "2px"
+      "border": "1px solid #E2E2DF",
+      "radius": "0"
     },
     "productCard": {
-      "padding": "16px",
-      "border": "1px solid",
-      "radius": "2px"
+      "padding": "0",
+      "border": "0",
+      "radius": "0",
+      "photoBackground": "#F1F1EF"
     }
   },
   "logo": {
     "minHeight": "24px",
     "families": [
-      {
-        "id": "bu1sport-long",
-        "label": "BU1SPORT Long",
-        "variants": [
-          "white-on-black",
-          "black-on-white",
-          "white-on-hot-rose",
-          "hot-rose-on-black"
-        ]
-      },
-      {
-        "id": "bu1sport-znak",
-        "label": "BU1SPORT Znak",
-        "variants": [
-          "white-on-black",
-          "black-on-white",
-          "white-on-hot-rose"
-        ]
-      },
-      {
-        "id": "bu1-znak",
-        "label": "BU1 Znak",
-        "variants": [
-          "white-on-black",
-          "black-on-white",
-          "white-on-hot-rose"
-        ]
-      }
+      {"id": "bu1sport-long", "label": "BU1SPORT Long", "variants": ["white-on-black", "black-on-white", "white-on-hot-rose", "hot-rose-on-black"]},
+      {"id": "bu1sport-znak", "label": "BU1SPORT Znak", "variants": ["white-on-black", "black-on-white", "white-on-hot-rose"]},
+      {"id": "bu1-znak", "label": "BU1 Znak", "variants": ["white-on-black", "black-on-white", "white-on-hot-rose"]}
     ],
-    "forbidden": [
-      "distort",
-      "rotate",
-      "recombine",
-      "apply effects",
-      "use unapproved colors"
-    ]
+    "forbidden": ["distort", "rotate", "recombine", "apply effects", "use unapproved colors", "generative redraw", "product-accent recolor"],
+    "aiRule": "Logo is a deterministic asset, never a prompt-generated element."
   },
   "semantic": {
-    "error": {
-      "value": "#C0392B",
-      "light": "#FDECEA",
-      "dark": "#7B241C",
-      "text": "#FFFFFF",
-      "usage": [
-        "form validation",
-        "destructive actions",
-        "system errors"
-      ],
-      "wcag": "4.5:1 on white"
-    },
-    "success": {
-      "value": "#1E7E34",
-      "light": "#E8F5E9",
-      "dark": "#145523",
-      "text": "#FFFFFF",
-      "usage": [
-        "confirmations",
-        "completed states",
-        "positive feedback"
-      ],
-      "wcag": "5.1:1 on white"
-    },
-    "warning": {
-      "value": "#B7590A",
-      "light": "#FFF3E0",
-      "dark": "#7D3C07",
-      "text": "#FFFFFF",
-      "usage": [
-        "cautions",
-        "non-blocking alerts",
-        "degraded states"
-      ],
-      "wcag": "4.6:1 on white"
-    },
-    "info": {
-      "value": "#0369A1",
-      "light": "#E0F2FE",
-      "dark": "#024671",
-      "text": "#FFFFFF",
-      "usage": [
-        "informational messages",
-        "help text",
-        "neutral system status"
-      ],
-      "wcag": "5.9:1 on white"
-    }
+    "error": {"value": "#C0392B", "light": "#FDECEA", "dark": "#7B241C", "text": "#FFFFFF", "usage": ["form validation", "destructive actions", "system errors"], "wcag": "4.5:1 on white"},
+    "success": {"value": "#1E7E34", "light": "#E8F5E9", "dark": "#145523", "text": "#FFFFFF", "usage": ["confirmations", "completed states", "positive feedback"], "wcag": "5.1:1 on white"},
+    "warning": {"value": "#B7590A", "light": "#FFF3E0", "dark": "#7D3C07", "text": "#FFFFFF", "usage": ["cautions", "non-blocking alerts", "degraded states"], "wcag": "4.6:1 on white"},
+    "info": {"value": "#0369A1", "light": "#E0F2FE", "dark": "#024671", "text": "#FFFFFF", "usage": ["informational messages", "help text", "neutral system status"], "wcag": "5.9:1 on white"}
   },
   "motion": {
-    "duration": {
-      "instant": "80ms",
-      "fast": "150ms",
-      "base": "200ms",
-      "slow": "300ms",
-      "slower": "500ms"
+    "duration": {"instant": "80ms", "fast": "150ms", "base": "200ms", "slow": "300ms", "slower": "500ms"},
+    "easing": {"standard": "cubic-bezier(0.2, 0, 0, 1)", "enter": "cubic-bezier(0, 0, 0.2, 1)", "exit": "cubic-bezier(0.4, 0, 1, 1)", "emphasized": "cubic-bezier(0.2, 0, 0, 1.4)"},
+    "principles": ["Motion supports hierarchy, not decoration.", "Enter animations use ease-out — content arrives calmly.", "Exit animations use ease-in — content leaves decisively.", "Interactive feedback must complete within 200ms.", "Always respect prefers-reduced-motion."]
+  },
+  "expressions": {
+    "storefront": {
+      "northStar": "Scéna pro jediného hrdinu",
+      "surface": "monochrome-editorial-commerce",
+      "displayFont": "Anton",
+      "bodyFont": "Nunito Sans",
+      "foundation": ["#111110", "#FFFFFF", "#F1F1EF", "#E2E2DF"],
+      "primaryCommerceCta": "#111110",
+      "checkoutCta": "#D2147C",
+      "productAccent": "optional-local",
+      "radiusDefault": "0",
+      "cardShadow": "none",
+      "gradients": "forbidden"
     },
-    "easing": {
-      "standard": "cubic-bezier(0.2, 0, 0, 1)",
-      "enter": "cubic-bezier(0, 0, 0.2, 1)",
-      "exit": "cubic-bezier(0.4, 0, 1, 1)",
-      "emphasized": "cubic-bezier(0.2, 0, 0, 1.4)"
-    },
-    "principles": [
-      "Motion supports hierarchy, not decoration.",
-      "Enter animations use ease-out — content arrives calmly.",
-      "Exit animations use ease-in — content leaves decisively.",
-      "Interactive feedback must complete within 200ms.",
-      "Always respect prefers-reduced-motion."
-    ]
+    "campaignEditorial": {
+      "inherits": "storefront",
+      "canBeLouder": true,
+      "exactProductRequiredWhenVisible": true,
+      "exactLogoAssetRequiredWhenVisible": true,
+      "productAccent": "optional-one-color",
+      "preferredProductionModes": ["manual_product_exact", "product_composite", "product_exact"]
+    }
   },
   "usageRules": {
     "productFirst": true,
+    "quietInterface": true,
     "primaryCtaDominant": true,
     "expressCheckoutSecondary": true,
     "maxBadgesPerProduct": 2,
-    "gradients": "forbidden"
+    "gradients": "forbidden",
+    "hotRoseIsMandatory": false,
+    "productAccentIsGlobalUi": false,
+    "exactProductForBrandedCreative": true,
+    "exactLogoForBrandedCreative": true
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: Logo Usage
-description: Schválené rodiny loga, jejich varianty, pravidla použití a zakázané úpravy.
+description: Schválené rodiny loga, jejich varianty, pravidla použití a exact-asset pravidla pro AI creative.
 sidebar:
   order: 1
 ---
@@ -19,18 +19,16 @@ import bu1ZnakWhitePink from '../../../assets/logos/bu1-znak-white-on-hot-rose.s
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">Logo System</span>
-  <p>Dvě rodiny loga. Tři barevné varianty každé. Žádné improvizace mimo systém.</p>
+  <p>Logo je asset, ne prompt. Používej pouze schválené soubory a varianty.</p>
 </div>
 
 ## Dvě rodiny loga
 
-**BU1SPORT** — horizontální wordmark s bulldog ikonou. Hlavní identita pro plné plochy, header, hero.
+**BU1SPORT** — horizontální wordmark s ikonou. Hlavní identita pro header, footer, hero a větší brand plochy.
 
-**BU1 Znak** — kompaktní čtvercový symbol. Pro malé formáty, favicon, profilové obrázky, výšivky.
+**BU1 Znak** — kompaktní symbol. Pro malé formáty, favicon, profilové obrázky a výrobní aplikace.
 
 ## BU1SPORT Long
-
-Hlavní logo — horizontální formát s wordmarkem.
 
 <div class="bu1-logo-grid">
   <LogoCard src={bu1sportLongWhiteBlack.src} alt="BU1SPORT Long White on Black" label="White on Black" background="#141414" />
@@ -41,8 +39,6 @@ Hlavní logo — horizontální formát s wordmarkem.
 
 ## BU1SPORT Znak
 
-Symbolická verze — bulldog bez wordmarku.
-
 <div class="bu1-logo-grid">
   <LogoCard src={bu1sportZnakWhiteBlack.src} alt="BU1SPORT Znak White on Black" label="White on Black" background="#141414" symbol={true} />
   <LogoCard src={bu1sportZnakBlackWhite.src} alt="BU1SPORT Znak Black on White" label="Black on White" background="#FFFFFF" symbol={true} />
@@ -50,8 +46,6 @@ Symbolická verze — bulldog bez wordmarku.
 </div>
 
 ## BU1 Znak
-
-Kompaktní značka pro malé formáty.
 
 <div class="bu1-logo-grid">
   <LogoCard src={bu1ZnakWhiteBlack.src} alt="BU1 Znak White on Black" label="White on Black" background="#141414" symbol={true} />
@@ -62,40 +56,45 @@ Kompaktní značka pro malé formáty.
 ## Výběr varianty podle pozadí
 
 | Pozadí | Použij variantu |
-|--------|----------------|
-| Bílé nebo světlé | Black on White |
-| Tmavé (Onyx, černá) | White on Black |
-| Hot Rose plocha | White on Hot Rose |
-| Tmavé, kam chceš pink akcent | Hot Rose on Black (střídmě) |
+|---|---|
+| Bílé / Paper / světlé Tile | Black on White |
+| Ink / Onyx / černá | White on Black |
+| Hot Rose | White on Hot Rose |
+| Tmavé se záměrným brand accentem | Hot Rose on Black, střídmě |
+
+Product accent není schválená logo barva. Logo se nepřebarvuje cyanem MiKos ani jinou lokální product barvou.
+
+## AI / generative creative
+
+**Logo je deterministic brand layer.**
+
+- generativní model nesmí být požádán, aby „nakreslil BU1 logo“;
+- nevkládej fake wordmark, slogan nebo přepis loga pomocí Anton/Oswald;
+- v AI-assisted banneru nejdřív vytvoř background / scene, potom vlož exact SVG/PNG logo;
+- pokud exact asset není dostupný, logo vynech a označ asset jako draft;
+- logo vytištěné na reálném produktu zůstává součástí exact product photography a nesmí se retušovat do jiné podoby.
+
+## Logo v storefront hero
+
+Pokud je hero součástí webu a header už nese BU1SPORT logo, hero **nemusí logo znovu opakovat**. Tím se sníží vizuální šum a produkt zůstane hrdinou.
+
+V samostatném banneru / paid-social assetu lze použít exact wordmark nebo znak podle prostoru a channel convention.
 
 ## Minimální velikost a ochranná zóna
 
-- **Minimální výška loga:** `24px` (pro digitální použití)
-- **Ochranná zóna:** kolem každé verze loga zachovej volný prostor rovnající se alespoň výšce písmene „B" ve wordmarku
-- Uvnitř ochranné zóny nesmí být žádný jiný text, grafika ani výrazný vizuální prvek
+- minimální digitální výška: `24px`;
+- ochranná zóna: alespoň výška písmene `B` ve wordmarku;
+- v ochranné zóně není jiný text, CTA ani výrazný detail produktu;
+- u malého prostoru pod přibližně 120px šířky preferuj kompaktní Znak.
 
-## Zakázané úpravy
+## Nikdy
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Nikdy</span>
-    <ul class="bu1-template-list">
-      <li>Deformovat nebo měnit proporce</li>
-      <li>Rotovat nebo šikmit</li>
-      <li>Rekombinovat elementy mimo schválené varianty</li>
-      <li>Přidávat efekty (stín, oříznutí, glow)</li>
-      <li>Použít jinou než schválenou barvu</li>
-      <li>Přidávat text do ochranné zóny</li>
-      <li>Používat logo na rušném nebo nízkokontrastním pozadí</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Kdy použít BU1 Znak místo wordmarku</span>
-    <ul class="bu1-template-list">
-      <li>Favicon a app ikony</li>
-      <li>Profilové fotky na sociálních sítích</li>
-      <li>Výšivky a malé výrobní aplikace</li>
-      <li>Prostor menší než 120px šířky</li>
-    </ul>
-  </section>
-</div>
+- nedeformovat proporce;
+- nerotovat / nešikmit;
+- nerekominovat elementy;
+- nepřidávat shadow, glow, outline nebo crop effect;
+- nepoužívat neschválené barvy;
+- nepoužívat product accent pro recolor loga;
+- nepoužívat generativní napodobeninu;
+- nepokládat na rušné / nízkokontrastní místo;
+- nepřidávat text do ochranné zóny.

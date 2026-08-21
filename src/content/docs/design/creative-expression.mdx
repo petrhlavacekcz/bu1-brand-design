@@ -1,0 +1,188 @@
+---
+title: Creative Expression
+description: Pravidla pro bannery, paid social, launch creative a další vizuály nad core brandem a storefront směrem.
+sidebar:
+  order: 8
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Creative Expression</span>
+  <p>Kampaň může být hlasitější než commerce. Produkt ale zůstává přesný a značka se nevymýšlí.</p>
+</div>
+
+## Role této vrstvy
+
+Campaign / Creative Expression je odvozená vrstva pro:
+
+- homepage hero kampaně;
+- bannery a display;
+- Meta / Instagram / TikTok statiky;
+- product launch assets;
+- seasonal promo;
+- creative testing.
+
+Core brand a storefront expression jsou nadřazené. Creative může měnit kompozici, měřítko, světlo, crop a lokální product accent. Nesmí měnit logo, produktová fakta, přesný vzhled produktu ani tone of voice.
+
+## Creative stack
+
+1. **Objective** — co má asset udělat.
+2. **Audience / market / channel** — kde poběží a komu.
+3. **Verified product** — reálné PDP/Shopify assets a fakta.
+4. **Visual mechanism** — například monumental product, macro texture, scale contrast, negative space, repetition, exploded detail.
+5. **Expression** — monochrome stage + případný product accent.
+6. **Deterministic brand layer** — oficiální logo, typography, CTA, price, legal text.
+7. **QA** — product fidelity, logo fidelity, claim fidelity, readability.
+
+## Exact-product rule
+
+Když je vidět konkrétní BU1 produkt, preferuj:
+
+- reálný packshot / PDP image jako finální foreground;
+- reálnou fotografii sportovce s produktem;
+- deterministický composite nad generovaným nebo fotografickým pozadím.
+
+Prompt-only generování přesného produktu není akceptační cesta pro produkční asset.
+
+AI může vytvořit scénu, texturu, světlo nebo background plate. Finální produktový výřez musí zůstat přesný.
+
+## Logo rule
+
+Logo je asset, ne prompt.
+
+- používej pouze schválené SVG/PNG varianty z design systému;
+- logo nepřepisuj textem a nenechávej generativní model „nakreslit BU1 logo“;
+- nedeformuj, nerotuj ani nepřidávej efekty;
+- pokud exact logo asset není dostupný, raději logo vynech než improvizuj;
+- produktové logo vytištěné na reálném packshotu se samozřejmě zachovává jako součást produktu.
+
+## Color behavior
+
+### Foundation first
+
+Začni vždy monochromaticky:
+
+- Ink / black;
+- Paper / white;
+- warm gray tile;
+- muted gray.
+
+### Brand accent
+
+Hot Rose slouží pro obchodní / promo význam. Nepřidávej ho mechanicky do každého banneru.
+
+### Product accent
+
+Pro product launch může vizuál převzít jednu barvu přímo z reálného produktu.
+
+Použití:
+
+- linka / rule;
+- jedna část headline;
+- technická anotace;
+- malý badge nebo detail;
+- lokální CTA pouze pokud to nekoliduje s conversion hierarchy.
+
+Nepoužití:
+
+- globální logo recolor;
+- systémová navigace;
+- plošné barevné pozadí bez vazby na produkt;
+- další konkurenční accent současně.
+
+## Visual mechanisms
+
+Povolené mechanismy nejsou šablony. Jsou to stavební principy:
+
+### Monumental product
+Produkt je zvětšený do dominantního měřítka, člověk nebo prostor dává scale reference.
+
+### Product cutout editorial
+Čistý packshot přesahuje warm-gray tile. Minimum dekorace. Funguje dobře pro storefront hero a launch static.
+
+### Macro material
+Detail pěny, textury, švu nebo zápěstí. Vhodné jen pokud detail pochází z reálného assetu nebo fotografie.
+
+### Negative space
+Silný produkt zabírá jednu část plochy, druhá zůstává klidná pro headline a CTA.
+
+### Repetition
+Více reálných variant / úhlů produktu v rytmu. Nepřekreslovat jeden produkt do falešných variant.
+
+### Human proof
+Skutečný hráč/ambasador s ověřenou identitou a reálným produktem. Nevymýšlet atleta ani endorsement.
+
+## Banner anatomy
+
+### Web hero
+
+- produkt = dominantní visual;
+- headline max 2–4 krátké řádky;
+- jeden proof/detail;
+- jedno CTA;
+- text pokud možno HTML, ne raster;
+- logo v headeru/web layoutu není nutné duplikovat uvnitř hero.
+
+### Paid social static
+
+- produkt nebo benefit čitelný do 1–2 sekund;
+- jeden hook;
+- minimální supporting copy;
+- logo jen exact asset;
+- price jen pokud je aktuální a ověřená;
+- preferuj 1:1 / 4:5 kompozici s bezpečnými okraji pro crop.
+
+### Story / Reel cover
+
+- 9:16;
+- headline nad nebo vedle produktu, ne přes klíčové části rukavice;
+- spodní bezpečná zóna pro platform UI;
+- minimum malého textu.
+
+### Display
+
+- jedna myšlenka;
+- velký produkt;
+- krátký headline;
+- CTA jako deterministická UI vrstva;
+- nezahlcovat technickými claims.
+
+## Type
+
+Pro editorial storefront / campaign expression používej Anton + Nunito Sans.
+
+- Anton = headline / product name;
+- Nunito Sans = UI / body / CTA / price meta;
+- neimituj logo typografií;
+- display headline může být veliký, ale musí mít správný line-height pro českou diakritiku.
+
+## Production modes
+
+- `product_exact` — reálný produktový asset bez změny vzhledu;
+- `manual_product_exact` — člověk / deterministic tooling skládá exact product do scény;
+- `product_composite` — exact produkt + generovaný background, povinná visual QA;
+- `unbranded_scene` — generovaná scéna bez konkrétního BU1 produktu;
+- `brief_only` — návrh bez renderu.
+
+Pro paid media a homepage launch preferuj `manual_product_exact` nebo `product_composite`.
+
+## QA checklist
+
+- [ ] Produkt odpovídá reálnému PDP assetu
+- [ ] Logo je exact schválený asset nebo není přítomné
+- [ ] Žádný model nepřekreslil BU1 wordmark / symbol
+- [ ] Product accent pochází z produktu a není globální UI barvou
+- [ ] Hot Rose má skutečnou semantickou roli
+- [ ] Claim, cena, střih, pěna a ambasador jsou ověřené
+- [ ] Jedna hlavní akce
+- [ ] Mobilní / platform crop nepoškozuje produkt ani text
+- [ ] Text má dostatečný kontrast
+
+## Anti-patterns
+
+- „BU1 style“ rukavice vymyšlené z promptu;
+- falešný wordmark nebo slogan;
+- pink wash přes každý asset;
+- generický tmavý stadion bez vazby na produkt a bez vlastního důvodu;
+- více neonových accentů zároveň;
+- 5 benefitů, 3 CTA a cena v jednom malém banneru;
+- screenshot-like chaos místo editorial hierarchy.

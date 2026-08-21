@@ -1,99 +1,152 @@
 ---
 title: UI Rules
-description: Provozní ecommerce pravidla pro BU1SPORT napříč card, PDP, hero a CTA vrstvou.
+description: Provozní ecommerce pravidla pro nový editorial storefront BU1SPORT.
 sidebar:
   order: 1
 ---
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">UI Rules</span>
-  <p>Produkt je první. Commerce musí být čitelná. Kampaň může být výrazná, ale nesmí rozbít tok.</p>
+  <p>Produkt je první. UI je tiché. Commerce musí být jasná bez barevného hluku.</p>
 </div>
+
+## Expression
+
+Storefront se řídí `storefront-expression`. Core ecommerce UI je:
+
+- Paper / White stage;
+- Ink text a primary commerce actions;
+- warm-gray Tile pro product / category plochy;
+- 1px Line borders;
+- radius `0` jako výchozí;
+- žádné card shadows;
+- Anton + Nunito Sans;
+- Hot Rose pouze se skutečnou promo / sale / checkout rolí.
 
 ## Vizuální priorita
 
-Toto pořadí je pevné — oko zákazníka musí zachytit elementy v tomto pořadí:
+### Product listing
 
-<ol class="bu1-template-list">
-  <li><strong>Název produktu</strong> — největší a nejsilnější text v buy boxu</li>
-  <li><strong>Cena</strong> — viditelná okamžitě, bez hoveru nebo kliknutí</li>
-  <li><strong>Hlavní CTA</strong> — Add to Cart, Hot Rose Primary button</li>
-  <li><strong>Varianty</strong> — velikost, barva, provedení jako chips</li>
-</ol>
+1. produktový obraz;
+2. název;
+3. cena;
+4. velikosti / dostupnost;
+5. badge pouze pokud nese reálnou informaci.
 
-:::note[DOM pořadí vs vizuální pořadí]
-Skutečné pořadí HTML elementů se může z technických důvodů (SEO, přístupnost) lišit. Vizuální priorita pomocí CSS je neměnná.
-:::
+Badge nesmí přebít produkt.
 
-## Product listing
+### PDP
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Standardní karta</span>
-    <ol class="bu1-template-list">
-      <li>Obrázek produktu</li>
-      <li>Badge (max 2, volitelný)</li>
-      <li>Název</li>
-      <li>Cena</li>
-      <li>Doplňkový signál (výprodej, dostupnost)</li>
-    </ol>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">PDP (Product Detail Page)</span>
-    <ol class="bu1-template-list">
-      <li>Hero detail fotky, často v tmavém kontextu</li>
-      <li>Název — Oswald Heading Lg</li>
-      <li>Cena — Nunito Sans 800, viditelná bez scrollu</li>
-      <li>Varianty — size chips pod názvem nebo cenou</li>
-      <li>Add to Cart — Primary button, dominantní</li>
-      <li>Badge maximálně 2, ne dominantní</li>
-    </ol>
-  </section>
-</div>
+1. produktová galerie;
+2. název produktu;
+3. cena a stručná ověřená product facts;
+4. varianty — střih, velikost, barva;
+5. Add to Cart;
+6. doplňky / upsell;
+7. detailní parametry, péče, doprava, recenze.
 
-## Praktická pravidla
+Cena musí být viditelná bez hoveru nebo interakce. Add to Cart musí být jasně dominantní v buy-boxu, ale nemusí být Hot Rose — standard je Ink.
 
-<ul class="bu1-template-list">
-  <li>Cena musí být vidět bez hoveru nebo jakékoliv interakce</li>
-  <li>Add to Cart musí být vizuálně silnější než všechny ostatní akce</li>
-  <li>Shop Pay a express checkout jsou oddělené a slabší</li>
-  <li>Badge je doplněk, ne hlavní vizuální fokus</li>
-  <li>Maximálně 2 badge na produkt</li>
-  <li>Žádné dva Primary buttony vedle sebe</li>
-</ul>
+## Product cards
 
-## Light mode a Dark mode
+- photo surface: warm-gray Tile;
+- bez radiusu a bez stínu;
+- produkt může opticky přetékat / být lehce rotovaný, pokud zůstane exact;
+- název: Anton uppercase;
+- cena: čitelná okamžitě;
+- původní cena: Faint + strike-through;
+- slevová cena / badge může použít Hot Rose;
+- velikosti: malý sekundární Nunito Sans text;
+- max 2 badge, v praxi preferuj 0–1.
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Light mode — výchozí pro commerce</span>
-    <ul class="bu1-template-list">
-      <li>Bílé pozadí (#FFFFFF)</li>
-      <li>Onyx text (#141414)</li>
-      <li>Neutral 300 bordery</li>
-      <li>Hot Rose Primary CTA</li>
-      <li>Použití: vše — product listing, PDP, cart, checkout</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Dark mode — hero a kampaň</span>
-    <ul class="bu1-template-list">
-      <li>Onyx pozadí (#141414)</li>
-      <li>Bílý text (#FFFFFF)</li>
-      <li>Hot Rose akcent</li>
-      <li>Inverse button (průhledný, bílý border)</li>
-      <li>Použití: hero sekce, kampaňové bannery, feature blok</li>
-    </ul>
-    <p class="bu1-template-example">Dark mode nepatří do product card, product listing, cart nebo checkout.</p>
-  </section>
-</div>
+## Variants and filters
 
-## Žádné gradienty v commerce
+- chips a size cells jsou hranaté;
+- default = Paper + Line border + Ink text;
+- selected = Ink fill + White text;
+- unavailable = světlý neutral + strike-through / disabled treatment;
+- selected state nesmí být komunikován pouze barvou.
 
-Gradienty nejsou povoleny v žádném commerce kontextu:
+## CTA
 
-<ul class="bu1-template-list">
-  <li>Žádný gradient přes produktovou fotografii</li>
-  <li>Žádný gradient jako pozadí karty nebo sekce</li>
-  <li>Místo gradientu použij plnou barvu nebo čistý přechod kontextu přes layout</li>
-</ul>
+Viz `cta-rules`.
+
+- Add to Cart = Ink primary;
+- Checkout = Hot Rose;
+- secondary action = underline / arrow link nebo outline;
+- žádné dva stejně silné primary buttony vedle sebe.
+
+## Hero
+
+Storefront hero má fungovat jako editorial commerce, ne jako generický reklamní plakát.
+
+- produkt je největší vizuální signál;
+- text je krátký;
+- jedna akce;
+- negativní prostor je funkční součást layoutu;
+- background může být Paper, Tile nebo Ink;
+- product accent je povolen lokálně podle design/creative-expression;
+- pokud je hero uvnitř webu, neduplikuj logo bez důvodu — header už značku nese.
+
+## Mega menu
+
+- bílá / Paper plocha;
+- jasné sloupce podle user intent;
+- feature product tile může používat warm-gray stage;
+- pouze overlay vrstva může mít jemný stín;
+- stránka pod menu může být ztmavena scrimem;
+- `Výprodej` může nést Hot Rose jako semantický signal.
+
+## Cart
+
+- čitelný line-item layout;
+- summary panel může použít Tile;
+- běžné edit / remove akce jsou neutrální;
+- `Pokračovat k pokladně` = Hot Rose;
+- doprava zdarma progress může použít Hot Rose, pokud jde o obchodní progress;
+- sklad / error používá semantic colors, ne brand accent.
+
+## Mobile
+
+Mobile není desktop poskládaný pod sebe.
+
+- page X přibližně 18px;
+- product listing 2 sloupce;
+- dostatečné touch targets;
+- category subnav může horizontálně scrollovat;
+- PDP může mít sticky Add to Cart;
+- hero headline a product crop musí být navrženy samostatně pro 390px class viewport;
+- footer může přejít do accordion rows.
+
+## Dark surfaces
+
+Ink / dark surface je povolen pro:
+
+- announcement bar;
+- footer;
+- campaign / hero block;
+- overlay.
+
+Core listing, PDP buy-box, cart line-items a formuláře zůstávají převážně světlé kvůli čitelnosti a product-first scéně.
+
+## Gradienty
+
+Gradienty nejsou součástí canonical storefront jazyka. Pokud campaign art direction výjimečně potřebuje fotografický světelný přechod, musí jít o součást reálné / generované fotografie, ne UI gradient token.
+
+## Do
+
+- navrhuj komponenty nejdřív černobíle;
+- nech produkt nést barvu;
+- používej Tile místo card shadow;
+- invertuj selected state do Ink;
+- používej exact product imagery;
+- drž mobile-first hierarchy.
+
+## Don't
+
+- nepoužívej pink jako default Add to Cart;
+- nezaobluj vše;
+- nepřidávej stíny kartám;
+- nevkládej product accent do globální UI;
+- nevyráběj vizuální hierarchii pomocí pěti barev;
+- nevymýšlej product claims nebo availability z designového kontextu.

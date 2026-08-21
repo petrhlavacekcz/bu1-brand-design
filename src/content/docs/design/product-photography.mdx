@@ -1,0 +1,125 @@
+---
+title: Product Photography
+description: Pravidla pro přesné produktové výřezy, PDP media, editorial crop a AI-assisted compositing.
+sidebar:
+  order: 7
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">Product Photography</span>
+  <p>Produkt není dekorace. Musí odpovídat tomu, co zákazník skutečně koupí.</p>
+</div>
+
+## Source hierarchy
+
+Pro konkrétní BU1 produkt používej zdroje v tomto pořadí:
+
+1. reálné PDP / Shopify product media;
+2. schválené produktové fotografie z interního archivu;
+3. schválené fotografie ambasadora / hráče;
+4. manuální nebo deterministický composite s exact product cutoutem;
+5. generovaná scéna bez konkrétního produktu.
+
+Prompt-only rekonstrukce existující rukavice není product source.
+
+## Packshot rules
+
+- zachovej přesný tvar, střih, švy, loga, barevné bloky a zápěstí;
+- nevyhlazuj unikátní pattern produktu;
+- produkt lze škálovat, cropovat a mírně rotovat, ale ne deformovat;
+- nezrcadli produkt, pokud by tím vznikla fakticky neexistující verze loga, textu nebo konstrukce;
+- u páru rukavic používej reálný pár / oba reálné pohledy, ne AI klon jedné rukavice.
+
+## Storefront photography
+
+Storefront je tichá stage:
+
+- preferuj čisté transparentní nebo neutrální packshoty;
+- warm-gray tile `#F1F1EF` je výchozí plocha pro listing a mnoho editorial blocks;
+- shadow není potřebný; pokud má source přirozený kontaktní stín, může zůstat jemný;
+- product cutout může přetékat přes dlaždici a být rotován přibližně `6–14°`;
+- crop musí zachovat čitelnost charakteristických prvků modelu.
+
+## PDP
+
+PDP galerie má primárně vysvětlovat produkt, ne vytvářet kampaň.
+
+Minimum doporučených rolí:
+
+- full backhand / hero;
+- palm / grip;
+- side / wrist construction;
+- detail pěny nebo střihu;
+- on-hand / match or training context, pokud existuje přesná fotografie.
+
+## Campaign / banner compositing
+
+Nejbezpečnější AI-assisted workflow:
+
+`background plate` → `exact product cutout` → `deterministic typography/logo/CTA` → `visual QA`
+
+AI generátor může vytvořit:
+
+- prostředí;
+- světlo;
+- stín / povrch;
+- abstraktní texture;
+- prostorovou scénu;
+- nebrandovaného člověka, pokud nepotřebujeme konkrétního ambasadora ani exact gear.
+
+AI generátor nesmí být jediným zdrojem:
+
+- přesného BU1 produktu;
+- BU1 loga;
+- produktového textu / modelového označení;
+- ambasadora;
+- technického detailu, který má sloužit jako důkaz claimu.
+
+## Background behavior
+
+Výchozí campaign background není automaticky tmavý stadion.
+
+Preferuj podle konceptu:
+
+- Paper / white editorial space;
+- warm gray tile;
+- Ink / black high-contrast field;
+- jednoduchý studiový povrch;
+- skutečné fotbalové prostředí, pokud má narativní funkci.
+
+Dramatický stadion používej jen pokud podporuje konkrétní message, ne jako generický „sport look“.
+
+## Product color
+
+Barva produktu je legitimní součást vizuální identity konkrétního assetu.
+
+- UI scénu nech neutrální;
+- product accent může zopakovat jednu skutečnou barvu z produktu v malé grafické vrstvě;
+- nepřebarvuj samotný produkt do brand palety;
+- nevynucuj Hot Rose vedle produktu, pokud spolu vizuálně soupeří.
+
+## BU1 MiKos example
+
+Pro BU1 MiKos Senior:
+
+- source: live PDP / exact packshot;
+- dominantní produktová barva: krémová + ink pattern + cyan detail;
+- campaign product accent může být cyan;
+- Hot Rose není povinný;
+- ověřené facts pro senior model musí pocházet z live PDP, například spolupráce s Mirkem Kosem, Contact Grip, NC střih a dva odnímatelné pásky;
+- junior facts se nesmí míchat do senior assetu.
+
+## QA
+
+Před publikací přibliž product source a final asset vedle sebe a kontroluj:
+
+- siluetu a délku prstů;
+- počet / orientaci grafických prvků;
+- umístění loga;
+- barvy;
+- wrist / strap konstrukci;
+- text a model marking;
+- případnou dlaň / foam;
+- zda crop nebo retuš nezměnily skutečnou funkci produktu.
+
+Pokud exactness nelze rozumně ověřit, výstup není `product_exact`.
