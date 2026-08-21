@@ -1,143 +1,160 @@
 ---
 title: Typography
-description: Canonical font pair, váhy, škála s line-height hodnotami a vizuální hierarchie BU1SPORT.
+description: Canonical typografický systém BU1SPORT — core voice a editorial storefront expression.
 sidebar:
   order: 3
 ---
 
 <div class="bu1-section-intro">
   <span class="bu1-kicker">Typography</span>
-  <p>Dva fonty. Dvě role. Oswald pro sílu a akci. Nunito Sans pro čitelnost.</p>
+  <p>Jeden body font. Dvě povolené display expression. Na jednom surface je nikdy nemíchej.</p>
 </div>
 
-## Font pair
+## Typography layers
 
-<div class="bu1-type-grid">
-  <div class="bu1-type-sample">
-    <p class="bu1-card-title">Oswald</p>
-    <div class="bu1-type-heading" style="font-size:2.25rem;line-height:1;margin-bottom:0.75rem;">BU1SPORT</div>
-    <ul style="font-size:0.875rem;padding-left:1rem;margin:0;">
-      <li>Nadpisy, CTA, display, price v kampani</li>
-      <li>Vždy <strong>uppercase</strong></li>
-      <li>Váhy: 400 · 600 · 700</li>
-      <li>Google Fonts — volně dostupný</li>
-    </ul>
-  </div>
-  <div class="bu1-type-sample">
-    <p class="bu1-card-title">Nunito Sans</p>
-    <div class="bu1-type-body" style="font-size:1.1rem;font-weight:700;line-height:1.5;margin-bottom:0.75rem;">Vybavení pro výkon. Každý detail má svůj důvod.</div>
-    <ul style="font-size:0.875rem;padding-left:1rem;margin:0;">
-      <li>Body text, UI, popis, cena, badge</li>
-      <li>Sentence case</li>
-      <li>Váhy: 400 · 600 · 700 · 800</li>
-      <li>Google Fonts — volně dostupný</li>
-    </ul>
-  </div>
-</div>
+BU1 používá jeden stabilní UI/body hlas a dvě povolené display expression podle kontextu.
 
-## Typografická škála
+### Core / legacy brand display
 
-<div style="margin: 1rem 0 2rem;">
-  <div class="bu1-type-row">
-    <div class="bu1-type-row__meta"><code>display-sm</code><br/>40px · lh 1.0</div>
-    <div class="bu1-type-heading" style="font-size:2.5rem;font-weight:700;line-height:1;">BU1SPORT</div>
-  </div>
-  <div class="bu1-type-row">
-    <div class="bu1-type-row__meta"><code>heading-lg</code><br/>32px · lh 1.05</div>
-    <div class="bu1-type-heading" style="font-size:2rem;font-weight:700;line-height:1.05;">Brankářské rukavice</div>
-  </div>
-  <div class="bu1-type-row">
-    <div class="bu1-type-row__meta"><code>heading-md</code><br/>24px · lh 1.1</div>
-    <div class="bu1-type-heading" style="font-size:1.5rem;font-weight:700;line-height:1.1;">Light HG Série</div>
-  </div>
-  <div class="bu1-type-row">
-    <div class="bu1-type-row__meta"><code>title-lg</code><br/>20px · lh 1.2</div>
-    <div class="bu1-type-heading" style="font-size:1.25rem;font-weight:700;line-height:1.2;">BU1 Light HG 2.0</div>
-  </div>
-  <div class="bu1-type-row">
-    <div class="bu1-type-row__meta"><code>price</code><br/>22px · lh 1.1 · w800</div>
-    <div class="bu1-type-body" style="font-size:1.375rem;font-weight:800;line-height:1.1;">1 999 Kč</div>
-  </div>
-  <div class="bu1-type-row">
-    <div class="bu1-type-row__meta"><code>body</code><br/>16px · lh 1.5 · w600</div>
-    <div class="bu1-type-body" style="font-size:1rem;font-weight:600;line-height:1.5;">Vylepšená HG pěna. Vyšší přilnavost na umělé trávě.</div>
-  </div>
-  <div class="bu1-type-row">
-    <div class="bu1-type-row__meta"><code>label</code><br/>14px · lh 1.2 · w700</div>
-    <div class="bu1-type-body" style="font-size:0.875rem;font-weight:700;line-height:1.2;text-transform:uppercase;letter-spacing:0.04em;">Novinka</div>
-  </div>
-</div>
+**Oswald** zůstává povolený pro stávající core brand a obsahové surfaces, kde je již canonical součástí systému.
 
-## Metriky škály
+- uppercase;
+- váhy 400 / 600 / 700;
+- nepoužívat společně s Anton na jednom surface.
 
-<table class="bu1-spec-table">
-  <thead>
-    <tr><th>Token</th><th>Font</th><th>Size</th><th>Weight</th><th>Line-height</th><th>Case</th></tr>
-  </thead>
-  <tbody>
-    <tr><td><code>display-sm</code></td><td>Oswald</td><td>40px / 2.5rem</td><td>700</td><td>1.0</td><td>UPPERCASE</td></tr>
-    <tr><td><code>heading-lg</code></td><td>Oswald</td><td>32px / 2rem</td><td>700</td><td>1.05</td><td>UPPERCASE</td></tr>
-    <tr><td><code>heading-md</code></td><td>Oswald</td><td>24px / 1.5rem</td><td>700</td><td>1.1</td><td>UPPERCASE</td></tr>
-    <tr><td><code>title-lg</code></td><td>Oswald</td><td>20px / 1.25rem</td><td>700</td><td>1.2</td><td>UPPERCASE</td></tr>
-    <tr><td><code>price</code></td><td>Nunito Sans</td><td>22px / 1.375rem</td><td>800</td><td>1.1</td><td>Sentence</td></tr>
-    <tr><td><code>body</code></td><td>Nunito Sans</td><td>16px / 1rem</td><td>600</td><td>1.5</td><td>Sentence</td></tr>
-    <tr><td><code>label</code></td><td>Nunito Sans</td><td>14px / 0.875rem</td><td>700</td><td>1.2</td><td>UPPERCASE</td></tr>
-  </tbody>
-</table>
+### Storefront / editorial display
 
-## Font váhy
+**Anton** je canonical display font pro nový storefront a navazující editorial campaign expression.
 
-<div class="bu1-type-grid">
-  <div class="bu1-type-sample">
-    <p class="bu1-card-title">Oswald</p>
-    <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:0.5rem;">
-      <div class="bu1-type-heading" style="font-size:1.25rem;font-weight:400;">Regular 400</div>
-      <div class="bu1-type-heading" style="font-size:1.25rem;font-weight:600;">SemiBold 600</div>
-      <div class="bu1-type-heading" style="font-size:1.25rem;font-weight:700;">Bold 700</div>
-    </div>
-  </div>
-  <div class="bu1-type-sample">
-    <p class="bu1-card-title">Nunito Sans</p>
-    <div style="display:flex;flex-direction:column;gap:0.6rem;margin-top:0.5rem;">
-      <div class="bu1-type-body" style="font-size:1rem;font-weight:400;">Regular 400 — delší body text</div>
-      <div class="bu1-type-body" style="font-size:1rem;font-weight:600;">SemiBold 600 — body, UI popis</div>
-      <div class="bu1-type-body" style="font-size:1rem;font-weight:700;">Bold 700 — badge, label, meta</div>
-      <div class="bu1-type-body" style="font-size:1rem;font-weight:800;">ExtraBold 800 — cena</div>
-    </div>
-  </div>
-</div>
+- vždy uppercase;
+- váha 400;
+- používá se pro hero, page title, section headline, product name a vybrané výrazné ceny;
+- díky své kondenzaci funguje jako titulková grafika, ne jako body text.
 
-## Hierarchie v produktovém kontextu
+### UI / body
 
-<div class="bu1-demo-box" style="max-width:28rem;">
-  <div class="bu1-type-heading" style="font-size:1.25rem;font-weight:700;line-height:1.2;margin-bottom:0.35rem;">BU1 Light HG 2.0</div>
-  <div class="bu1-type-body" style="font-size:1.375rem;font-weight:800;line-height:1.1;margin-bottom:0.75rem;">1 999 Kč</div>
-  <div class="bu1-type-body" style="font-size:1rem;font-weight:600;line-height:1.5;margin-bottom:1rem;color:#575757;">Vylepšená HG pěna. Vyšší přilnavost. Pro umělou trávu a tvrdší povrchy.</div>
-  <span class="bu1-button-demo bu1-button-demo--primary" style="font-size:0.875rem;">Přidat do košíku</span>
-</div>
-<p style="font-size:0.875rem;color:#858585;margin-top:0.75rem;">Pořadí: název → cena → popis → CTA. Tohle oko zákazníka skenuje v tomto pořadí.</p>
+**Nunito Sans** je společný font pro body, UI, labels, filtry, buttony, helper text a většinu provozní typografie.
 
-## Do / Don't
+- váhy 400 / 600 / 700 / 800;
+- sentence case pro body;
+- uppercase + tracking pro technické labels a buttony.
 
-<div class="bu1-template-grid">
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Dělej</span>
-    <ul class="bu1-template-list">
-      <li>Oswald vždy uppercase pro nadpisy a CTA</li>
-      <li>Nunito Sans pro body, cenu a UI text</li>
-      <li>Cena má váhu 800 — výraznější než okolní text</li>
-      <li>Dodržuj line-height hodnoty ze škály</li>
-      <li>Label a badge — uppercase + letter-spacing 0.04em</li>
-    </ul>
-  </section>
-  <section class="bu1-template-section">
-    <span class="bu1-template-label">Nedělej</span>
-    <ul class="bu1-template-list">
-      <li>Nepřidávej třetí font</li>
-      <li>Nepoužívej Oswald v lowercase pro nadpisy</li>
-      <li>Nepoužívej cenu menší nebo stejnou jako popis</li>
-      <li>Nepřidávej italic — není součástí systému</li>
-      <li>Nepoužívej arbitrary font-size mimo škálu</li>
-    </ul>
-  </section>
-</div>
+## Pravidlo expression
+
+**Anton a Oswald se na jedné stránce / banneru / komponentě nekombinují.**
+
+Nejdřív určete expression:
+
+- `core` → Oswald + Nunito Sans;
+- `storefront` → Anton + Nunito Sans;
+- `campaign-editorial` → Anton + Nunito Sans, pokud kampaň navazuje na storefront;
+- stávající legacy asset není důvod míchat oba display fonty.
+
+## Storefront hierarchy
+
+Reference jsou optické baseline, ne důvod ignorovat responzivní typografii.
+
+| Role | Font | Desktop | Mobile | Weight | Case |
+|---|---|---:|---:|---:|---|
+| Hero display | Anton | 84–88 px | 44–48 px | 400 | UPPERCASE |
+| Page title | Anton | 56–76 px | 40–48 px | 400 | UPPERCASE |
+| Section headline | Anton | 40–44 px | 30–34 px | 400 | UPPERCASE |
+| Product/card title | Anton | 14–18 px | 14–16 px | 400 | UPPERCASE |
+| PDP price emphasis | Anton nebo Nunito Sans podle layoutu | 28–34 px | 24–30 px | 400 / 800 | — |
+| Body | Nunito Sans | 15–16 px | 14–16 px | 400–600 | Sentence |
+| Label | Nunito Sans | 11–12 px | 11–12 px | 800 | UPPERCASE |
+| Button / action | Nunito Sans | 13–14 px | 13–14 px | 800 | UPPERCASE |
+
+## Dva hlasy
+
+### Anton = identita a rytmus
+
+Používej pro:
+
+- hero headline;
+- název kategorie;
+- název produktu;
+- výrazný section title;
+- cenu, pokud má fungovat jako editorial number.
+
+Nepoužívej pro:
+
+- body;
+- dlouhé technické popisy;
+- formuláře;
+- tooltipy;
+- recenze;
+- dlouhé CTA věty.
+
+### Nunito Sans = provoz a čitelnost
+
+Používej pro:
+
+- body;
+- ceny v hustším commerce kontextu;
+- varianty a velikosti;
+- meta;
+- labels;
+- buttony;
+- tabulky;
+- trust text;
+- akordeony.
+
+## Česká diakritika
+
+Anton s českou diakritikou potřebuje více vertikálního prostoru než anglický headline.
+
+- jednořádkový titulek může používat line-height přibližně `1.04`;
+- víceřádkový český headline používej typicky `1.18–1.24` podle velikosti a konkrétního zalomení;
+- kontroluj háčky, čárky a kroužky vizuálně;
+- nezmenšuj line-height jen proto, aby se headline vešel do screenshotu.
+
+## Český zápis
+
+- cena: `2 099 Kč`;
+- procenta: `−20 %`;
+- minus: typografické `−` (U+2212), ne spojovník;
+- jednopísmenné předložky v produkční sazbě važ nedělitelnou mezerou;
+- výčty mohou používat středotečku `·`;
+- názvy modelů zachovávej přesně, například `BU1 MiKos`, `BU1 FloW`.
+
+## Buttons and labels
+
+Buttony a technické labels jsou Nunito Sans 800, uppercase, se zvýšeným trackingem.
+
+Storefront typicky používá:
+
+- font-size `13–14px`;
+- letter-spacing `0.05–0.08em`;
+- krátký text;
+- jednu jasnou akci.
+
+## Product context
+
+Správné vizuální pořadí na storefront PDP není dáno jen velikostí fontu:
+
+1. produktová galerie;
+2. název produktu;
+3. cena a product facts;
+4. varianty;
+5. Add to Cart.
+
+Typografie tuto hierarchii podporuje, ale nesmí z produktu udělat sekundární dekoraci.
+
+## Do
+
+- používej Anton pro nový storefront;
+- používej Nunito Sans pro UI a body;
+- kontroluj českou diakritiku na reálném breakpointu;
+- drž product names přesně;
+- používej ceny a procenta s českou sazbou;
+- rozhodni expression před návrhem.
+
+## Don't
+
+- nemíchej Anton a Oswald na jednom surface;
+- nepoužívej třetí font;
+- nepoužívej Anton na dlouhý body text;
+- nepřepisuj logo pomocí Anton/Oswald;
+- nepoužívej arbitrary font sizes bez hierarchie;
+- nepoužívej italic jako běžnou součást systému.
