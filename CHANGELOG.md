@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## [2026-09-09]
+
+### Added
+- `src/content/docs/design/campaign-art-direction.mdx` - přidán canonical campaign směr „editorial commerce, not sports poster“, light-first canvas, práce s whitespace, referenční hierarchie a oddělení photography layer od finální sazby.
+- `src/content/docs/ai/image-generation.mdx` - přidán Product Fidelity Lock, zákaz generovaných standalone BU1 log a produkční typografie, pravidla práce s autoritativní produktovou referencí a QA pro AI vizuály.
+- `generated/agent-context/campaign-image.md` - přidán malý odvozený context pack pro campaign a image generation úlohy.
+
+### Changed
+- `src/content/docs/brand/photo-style.mdx` - campaign a social pozadí změněno na light-first White/Neutral default; Onyx je záměrný treatment podle konceptu a Hot Rose už není výchozí campaign canvas.
+- `src/content/docs/ecommerce/ui-rules.mdx` - dark mode změněn z výchozího campaign režimu na volitelný hero/campaign treatment; light mode je výchozí i pro campaign canvas.
+- `src/content/docs/ai/context-map.mdx` a `AGENTS.md` - doplněno routování campaign/image úloh na nový context pack a canonical image-generation pravidla.
+- `scripts/generate-agent-context.mjs` - generátor rozšířen o `campaign-image.md`, aby odvozený context nevznikal ručně a nedriftoval.
+
 ## [2026-05-02] (housekeeping)
 
 ### Changed

@@ -82,6 +82,16 @@ const packs = [
       'ecommerce/product-card.mdx'
     ],
     includeTokenSummary: true
+  },
+  {
+    file: 'campaign-image.md',
+    title: 'BU1 Campaign / Image Generation Context',
+    purpose: 'Generuj campaign photography layer bez driftu produktu a finální brand prvky skládej deterministicky.',
+    docs: [
+      'ai/image-generation.mdx',
+      'design/campaign-art-direction.mdx'
+    ],
+    includeTokenSummary: true
   }
 ];
 

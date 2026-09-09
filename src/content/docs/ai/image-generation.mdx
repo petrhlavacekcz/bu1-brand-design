@@ -1,0 +1,100 @@
+---
+title: Image Generation
+description: Guardrails pro AI generování produktových a campaign vizuálů BU1SPORT bez driftu produktu, loga a design systému.
+sidebar:
+  order: 4
+---
+
+<div class="bu1-section-intro">
+  <span class="bu1-kicker">AI Image</span>
+  <p>Generuj scénu. Ne redesign produktu. Produktová identita, logo a finální typografie musí zůstat pod kontrolou.</p>
+</div>
+
+## Povinné vstupy
+
+Před generováním musí být jasné:
+
+<ul class="bu1-template-list">
+  <li>cíl assetu</li>
+  <li>kanál a poměr stran</li>
+  <li>ověřená produktová fakta</li>
+  <li>autoritativní produktová reference</li>
+  <li>schválená vizuální reference, pokud existuje</li>
+  <li>požadovaná photography layer a co se doplní až ve finální sazbě</li>
+</ul>
+
+## Product Fidelity Lock
+
+AI může produkt znovu nasvítit, zasadit do prostředí nebo re-renderovat. Nesmí ho redesignovat.
+
+Zachovej všechny identifikační prvky viditelné v referenci:
+
+<ul class="bu1-template-list">
+  <li>siluetu a proporce</li>
+  <li>panely, švy a konstrukci</li>
+  <li>materiály a textury</li>
+  <li>barvy a vzory</li>
+  <li>fyzické logo, nápisy a jejich umístění</li>
+  <li>funkční prvky jako grip, silikon, manžeta nebo pásek</li>
+</ul>
+
+Pokud reference neukazuje stranu nebo detail nutný pro claim, **nevymýšlej ho**. Použij jinou kompozici nebo si vyžádej správnou referenci.
+
+## Logo a typography lock
+
+Standalone BU1 logo negeneruj.
+
+Použij schválený SVG asset z `public/brand/logos/` až ve finální sazbě. Logo fyzicky vytištěné nebo našité na produktu může zůstat součástí re-renderu pouze tehdy, když odpovídá referenci.
+
+Produkční headline, CTA, badge a další text negeneruj uvnitř fotografie. Skládej je deterministicky podle canonical typography, colors a components pravidel.
+
+Nevytvářej nové lockupy typu `BU1 | produkt`, nové symboly ani pseudo-wordmarky.
+
+## Co smí AI měnit
+
+<ul class="bu1-template-list">
+  <li>pozadí a prostředí</li>
+  <li>světlo a stín</li>
+  <li>úhel kamery, pokud zůstává produkt věrný</li>
+  <li>reálný sportovní kontext</li>
+  <li>vodu, trávu, míč nebo další scénický prvek, pokud má obsahový důvod</li>
+</ul>
+
+## Co AI nesmí měnit
+
+<ul class="bu1-template-list">
+  <li>konstrukční nebo designové detaily produktu</li>
+  <li>logo nebo jeho proporce</li>
+  <li>barvu produktu kvůli kompozici</li>
+  <li>claimy, parametry nebo varianty</li>
+  <li>stranu produktu, kterou reference neukazuje, pomocí domýšlení</li>
+</ul>
+
+## Vizuální reference
+
+Schválené reference jsou autoritativní pro feel, layout, hustotu, crop a míru dekorace, pokud nejsou v konfliktu s canonical pravidlem.
+
+Když reference ukazuje čistý editorial-commerce systém, nepřekládej zadání automaticky do generického „cinematic sports ad“ stylu.
+
+## Produkční workflow
+
+1. Ověř produktová fakta.
+2. Vyber správnou produktovou referenci pro konkrétní claim.
+3. Načti `design/campaign-art-direction.mdx`, `brand/photo-style.mdx`, tokeny a logo pravidla.
+4. Vygeneruj photography layer bez standalone loga a produkční typografie.
+5. Porovnej produkt side-by-side s referencí.
+6. Až potom přidej logo, typography, CTA a badge deterministicky.
+7. Exportuj formát podle kanálu.
+
+## QA — fail znamená regenerate
+
+Asset neprojde, pokud:
+
+<ul class="bu1-template-list">
+  <li>AI změnila produktové detaily</li>
+  <li>vzniklo nové nebo deformované BU1 logo</li>
+  <li>barvy neodpovídají skutečnému produktu</li>
+  <li>efekty konkurují produktu</li>
+  <li>vizuál působí jako jiný brand než schválené reference</li>
+  <li>claim ukazuje nesprávnou část produktu</li>
+</ul>

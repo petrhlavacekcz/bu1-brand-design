@@ -55,6 +55,7 @@ Postup:
 
 Povinné čtení před generováním obsahu:
 - `src/content/docs/ai/context-map.mdx` nebo relevantní pack v `generated/agent-context/`
+- pro campaign vizuál nebo image generation preferuj `generated/agent-context/campaign-image.md`; pro editaci použij `src/content/docs/ai/image-generation.mdx` a `src/content/docs/design/campaign-art-direction.mdx`
 - `src/content/docs/brand/tone-of-voice.mdx`
 - `src/content/data/brand-tokens.json`
 - relevantní soubor v `brand/`, `design/`, `ecommerce/`, `ai/`, `governance/` nebo `templates/`
@@ -154,6 +155,28 @@ Výstup:
 - hero line
 - krátké body
 - jedna hlavní akce
+
+### Generování campaign vizuálu
+
+Vstup:
+- cíl assetu
+- kanál a formát
+- ověřená produktová fakta
+- autoritativní produktová reference
+- schválené vizuální reference, pokud existují
+- copy a CTA pro finální sazbu
+
+Postup:
+  - načti `generated/agent-context/campaign-image.md` nebo canonical `src/content/docs/ai/image-generation.mdx`
+  - načti `src/content/docs/design/campaign-art-direction.mdx`
+  - respektuj `src/content/docs/brand/photo-style.mdx`, `src/content/docs/design/logo-usage.mdx` a `src/content/data/brand-tokens.json`
+  - nejdřív vytvoř photography layer, potom deterministicky přidej logo, typografii a CTA
+
+Výstup:
+- produkt věrný referenci
+- editorial-commerce kompozice
+- žádné generované standalone logo nebo produkční typography
+- jeden jasný message a jedna hlavní akce
 
 ## DO NOT
 
